@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <GVL Name="GVL_Devices" Id="{b5393e15-89a3-428e-a5f3-f52f4df95fb9}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	(*Rack Mounted Turbo Pumps*)
+	{attribute 'TcLinkTo' := 	'.i_xFaultNC		:=	TIIB[MRCO_PLC_E06_EL1004]^Channel 1^Input;
+								 .i_xAtSpdNO		:=	TIIB[MRCO_PLC_E06_EL1004]^Channel 2^Input;
+								 .q_xStart			:=	TIIB[MRCO_PLC_E07_EL2794]^Channel 1^Output;			 
+	'} 
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:PTM:01
+		io: io
+	'}
+	MRCO_MAIN_PTM_01 : FB_PTM_Agilent;
+	
+	{attribute 'TcLinkTo' := 	'.i_xFaultNC		:=	TIIB[MRCO_PLC_E06_EL1004]^Channel 3^Input;
+								 .i_xAtSpdNO		:=	TIIB[MRCO_PLC_E06_EL1004]^Channel 4^Input;
+								 .q_xStart			:=	TIIB[MRCO_PLC_E07_EL2794]^Channel 3^Output;			 
+	'} 
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:PTM:02
+		io: io
+	'}
+	MRCO_MAIN_PTM_02 : FB_PTM_Agilent;
+	
+	{attribute 'TcLinkTo' := 	'.i_xFaultNC		:=	TIIB[MRCO_PLC_E08_EL1004]^Channel 1^Input;
+								 .i_xAtSpdNO		:=	TIIB[MRCO_PLC_E08_EL1004]^Channel 2^Input;
+								 .q_xStart			:=	TIIB[MRCO_PLC_E07_EL2794]^Channel 2^Output;			 
+	'} 
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:PTM:03
+		io: io
+	'}
+	MRCO_MAIN_PTM_03 : FB_PTM_Agilent;
+	
+	{attribute 'TcLinkTo' := 	'.i_xFaultNC		:=	TIIB[MRCO_PLC_E08_EL1004]^Channel 3^Input;
+								 .i_xAtSpdNO		:=	TIIB[MRCO_PLC_E08_EL1004]^Channel 4^Input;
+								 .q_xStart			:=	TIIB[MRCO_PLC_E07_EL2794]^Channel 4^Output;			 
+	'} 
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:PTM:04
+		io: io
+	'}
+	MRCO_MAIN_PTM_04 : FB_PTM_Agilent;
+	
+	{attribute 'TcLinkTo' := 	'.q_xReset 			:=	TIIB[MRCO_PNL1_EP02_EP2624-0002]^Channel 2^Output;
+								 .q_xPump  			:=	TIIB[CVMI_PNL1_EP01_EP2624-0002]^Channel 1^Output;
+								 .i_xAtSPD			:=	TIIB[CVMI_PNL1_EP01_EP2338-0002]^Channel 2^Input;	
+								 .i_xFault			:=	TIIB[CVMI_PNL1_EP01_EP2338-0002]^Channel 2^Input;		 
+	'} 
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:PTM:01
+		io: io
+	'}
+	MRCO_ROUGH_PTM_01 : FB_PTM_Agilent;
+
+	
+(*Pirani MKS 275 Gauges*)
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP05_EP3174-0002]^AI Standard Channel 1^Value
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:GPI:01
+		io: io
+	'}
+	MRCO_MAIN_GPI_01 : FB_MKS275;
+	
+	
+(*MicroPirani MKS 925 Gauges*)
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP04_EP3174-0002]^AI Standard Channel 1^Value
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:GPI:01
+		io: io
+	'}
+	MRCO_ROUGH_GPI_01 : FB_9XX;
+	
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP04_EP3174-0002]^AI Standard Channel 2^Value
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:GPI:02
+		io: io
+	'}
+	MRCO_ROUGH_GPI_02 : FB_9XX;
+	
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP04_EP3174-0002]^AI Standard Channel 3^Value
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:GPI:03
+		io: io
+	'}
+	MRCO_ROUGH_GPI_03 : FB_9XX;
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP04_EP3174-0002]^AI Standard Channel 4^Value
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:GPI:04
+		io: io
+	'}
+	MRCO_ROUGH_GPI_04 : FB_9XX;
+	
+(*Hot Cathode MKS 909 Gauges*)
+	{attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP05_EP3174-0002]^AI Standard Channel 2^Value;
+								 .q_xHV_DIS		:= 	TIIB[MRCO_PNL1_EP06_EP2624-0002]^Channel 2^Output
+	'}	
+	{attribute 'pytmc' := '
+		pv: MRCO:MAIN:GHC:01
+		io: io
+	'}
+	MRCO_MAIN_GHC_01 : FB_MKS909;
+	
+(*Normally Closed Valve with Readback*)
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 2^Input;
+								 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 3^Output
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:VRC:01
+		io: io
+	'}
+	MRCO_ROUGH_VRC_01 : FB_VRC;
+	
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 5^Input;
+								 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 6^Input;
+								 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 7^Output
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:VRC:02
+		io: io
+	'}
+	MRCO_ROUGH_VRC_02 : FB_VRC;
+
+	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 1^Input;
+								 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 2^Input;
+								 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 3^Output
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:ROUGH:VRC:03
+		io: io
+	'}
+	MRCO_ROUGH_VRC_03 : FB_VRC;
+	
+(*Pfeiffer*)
+	// They share the same serial port
+	st_Pfeiffer_CTRL_CVMI_CATCH_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_CATCH_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_CATCH_PTM_01 			: FB_PFEIFFER_COM;
+	
+	st_Pfeiffer_CTRL_CVMI_ROUGH_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_ROUGH_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_ROUGH_PTM_01 			: FB_PFEIFFER_COM;
+	
+	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_01 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_KTOF_PTM_01 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_KTOF_PTM_01 			: FB_PFEIFFER_COM;
+	
+	st_Pfeiffer_CTRL_CVMI_KTOF_PTM_02 		: ARRAY[1..20] OF ST_PfeifferControl;
+	st_Pfeiffer_RBK_CVMI_KTOF_PTM_02 			: ARRAY[1..20] OF ST_PfeifferStatus;
+	fb_PfeifferCom_CVMI_KTOF_PTM_02 			: FB_PFEIFFER_COM;
+	
+(*Varian/Agilent serial goes through Moxa serial ports*)
+	
+	
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
