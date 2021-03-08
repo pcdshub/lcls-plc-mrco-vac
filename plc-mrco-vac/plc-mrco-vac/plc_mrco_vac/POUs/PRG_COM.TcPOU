@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="PRG_COM" Id="{50784fdb-bba2-4ee0-b840-723c7138edf7}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM PRG_COM
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[(*Instanitate Serial port com function *) 
+fbSerialLineControl_MRCO_MAIN_PTM_01(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_MRCO_MAIN_PTM_01),
+	pComOut:=ADR(stComOut_MRCO_MAIN_PTM_01),
+	SizeComIn:= SIZEOF(stComIn_MRCO_MAIN_PTM_01),
+	TxBuffer:= SerialTXBuffer_MRCO_MAIN_PTM_01,
+	RxBuffer:= SerialRXBuffer_MRCO_MAIN_PTM_01,
+	Error=> ,
+	ErrorID=> );
+	
+fbSerialLineControl_MRCO_MAIN_PTM_02(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_MRCO_MAIN_PTM_02),
+	pComOut:=ADR(stComOut_MRCO_MAIN_PTM_02),
+	SizeComIn:= SIZEOF(stComIn_MRCO_MAIN_PTM_02),
+	TxBuffer:= SerialTXBuffer_MRCO_MAIN_PTM_02,
+	RxBuffer:= SerialRXBuffer_MRCO_MAIN_PTM_02,
+	Error=> ,
+	ErrorID=> );
+	
+fbSerialLineControl_MRCO_MAIN_PTM_03(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_MRCO_MAIN_PTM_03),
+	pComOut:=ADR(stComOut_MRCO_MAIN_PTM_03),
+	SizeComIn:= SIZEOF(stComIn_MRCO_MAIN_PTM_03),
+	TxBuffer:= SerialTXBuffer_MRCO_MAIN_PTM_03,
+	RxBuffer:= SerialRXBuffer_MRCO_MAIN_PTM_03,
+	Error=> ,
+	ErrorID=> );
+	
+fbSerialLineControl_MRCO_MAIN_PTM_04(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_MRCO_MAIN_PTM_04),
+	pComOut:=ADR(stComOut_MRCO_MAIN_PTM_04),
+	SizeComIn:= SIZEOF(stComIn_MRCO_MAIN_PTM_04),
+	TxBuffer:= SerialTXBuffer_MRCO_MAIN_PTM_04,
+	RxBuffer:= SerialRXBuffer_MRCO_MAIN_PTM_04,
+	Error=> ,
+	ErrorID=> );
+	
+fbSerialLineControl_MRCO_ROUGH_PTM_01(
+	Mode:= SERIALLINEMODE_EL6_22B,
+	pComIn:= ADR(stComIn_MRCO_ROUGH_PTM_01),
+	pComOut:=ADR(stComOut_MRCO_ROUGH_PTM_01),
+	SizeComIn:= SIZEOF(stComIn_MRCO_ROUGH_PTM_01),
+	TxBuffer:= SerialTXBuffer_MRCO_ROUGH_PTM_01,
+	RxBuffer:= SerialRXBuffer_MRCO_ROUGH_PTM_01,
+	Error=> ,
+	ErrorID=> );]]></ST>
+    </Implementation>
+  </POU>
+</TcPlcObject>
