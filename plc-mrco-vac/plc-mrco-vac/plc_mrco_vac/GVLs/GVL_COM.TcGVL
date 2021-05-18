@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
   <GVL Name="GVL_COM" Id="{40d720fb-d229-4759-8016-b62736517e09}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -73,7 +73,7 @@ VAR_GLOBAL
                                                             .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                                                             .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
     '}
-    stComIn_MRCO_MAIN_PTM_01        AT %Q*  :       EL6outData22B;
+    stComOut_MRCO_MAIN_PTM_01        AT %Q*  :       EL6outData22B;
     
     {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Status;
                                                             .D[0]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
@@ -125,7 +125,7 @@ VAR_GLOBAL
                                                             .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
                                                             .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
     '}
-    stComIn_MRCO_MAIN_PTM_03        AT %Q*  :       EL6outData22B;
+    stComOut_MRCO_MAIN_PTM_03        AT %Q*  :       EL6outData22B;
     
     {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
                                                             .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
@@ -177,7 +177,7 @@ VAR_GLOBAL
                                                             .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                                                             .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
     '}
-    stComIn_MRCO_MAIN_PTM_02        AT %Q*  :       EL6outData22B;
+    stComOut_MRCO_MAIN_PTM_02        AT %Q*  :       EL6outData22B;
     
     {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Status;
                                                             .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
@@ -229,7 +229,7 @@ VAR_GLOBAL
                                                             .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
                                                             .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
     '}
-    stComIn_MRCO_MAIN_PTM_04        AT %Q*  :       EL6outData22B;
+    stComOut_MRCO_MAIN_PTM_04        AT %Q*  :       EL6outData22B;
     
     {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
                                                             .D[0]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
@@ -281,7 +281,7 @@ VAR_GLOBAL
                                                             .D[20]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
                                                             .D[21]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
     '}
-    stComIn_MRCO_ROUGH_PTM_01        AT %Q*  :       EL6outData22B;
+    stComOut_MRCO_ROUGH_PTM_01        AT %Q*  :       EL6outData22B;
     
 END_VAR]]></Declaration>
   </GVL>
