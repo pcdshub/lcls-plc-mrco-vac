@@ -1,4 +1,4 @@
-IOC_TOP=/reg/g/pcds/epics/ioc/common/ads-ioc/0.4.1
+IOC_TOP=/reg/g/pcds/epics/ioc/common/ads-ioc/R0.4.1
 IOC_INSTANCE_PATH := $(shell pwd)
 
 # Set PRODUCTION_IOC to 1 to move from a testing to a production IOC:
@@ -9,7 +9,7 @@ PROJECT_PATH := ../../plc-mrco-vac/plc-mrco-vac.tsproj
 PLC := plc_mrco_vac
 
 PYTMC_OPTS := 
-PREFIX := PLC:$(PLC)
+PREFIX := PLC:MRCO:VAC
 
 # With two $$, as in $$(IOC) below, this will be expanded in the
 # environment of st.cmd:
