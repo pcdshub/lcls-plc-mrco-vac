@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+  <GVL Name="GVL_COM" Id="{40d720fb-d229-4759-8016-b62736517e09}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+    // Define COM Ports/Buffers incl. library Tc2_SerialCom
+    SerialRXBuffer_MRCO_MAIN_PTM_01 : ComBuffer;
+    SerialTXBuffer_MRCO_MAIN_PTM_01 : ComBuffer;
+    SerialRXBuffer_MRCO_MAIN_PTM_02 : ComBuffer;
+    SerialTXBuffer_MRCO_MAIN_PTM_02 : ComBuffer;
+    SerialRXBuffer_MRCO_MAIN_PTM_03 : ComBuffer;
+    SerialTXBuffer_MRCO_MAIN_PTM_03 : ComBuffer;
+    SerialRXBuffer_MRCO_MAIN_PTM_04 : ComBuffer;
+    SerialTXBuffer_MRCO_MAIN_PTM_04 : ComBuffer;
+    SerialRXBuffer_MRCO_ROUGH_PTM_01 : ComBuffer;
+    SerialTXBuffer_MRCO_ROUGH_PTM_01 : ComBuffer;
+    
+    // Serial Terminal
+    fbSerialLineControl_MRCO_MAIN_PTM_01 : SerialLineControl;
+    fbSerialLineControl_MRCO_MAIN_PTM_02 : SerialLineControl;
+    fbSerialLineControl_MRCO_MAIN_PTM_03 : SerialLineControl;
+    fbSerialLineControl_MRCO_MAIN_PTM_04 : SerialLineControl;
+    fbSerialLineControl_MRCO_ROUGH_PTM_01 : SerialLineControl;
+       
+    //SERIAL IO
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
+                                                            .D[0]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+    '}
+    stComIn_MRCO_MAIN_PTM_01        AT %I*  :       EL6inData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                                                            .D[0]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+    '}
+    stComOut_MRCO_MAIN_PTM_01        AT %Q*  :       EL6outData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Status;
+                                                            .D[0]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 21;
+    '}
+    stComIn_MRCO_MAIN_PTM_03        AT %I*  :       EL6inData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Ctrl;
+                                                            .D[0]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E11_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
+    '}
+    stComOut_MRCO_MAIN_PTM_03        AT %Q*  :       EL6outData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
+                                                            .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+    '}
+    stComIn_MRCO_MAIN_PTM_02        AT %I*  :       EL6inData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                                                            .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+    '}
+    stComOut_MRCO_MAIN_PTM_02        AT %Q*  :       EL6outData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Status;
+                                                            .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM TxPDO-Map Inputs Channel 2^Data In 21;
+    '}
+    stComIn_MRCO_MAIN_PTM_04        AT %I*  :       EL6inData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Ctrl;
+                                                            .D[0]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 0;
+                                                            .D[1]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 1;
+                                                            .D[2]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 2;
+                                                            .D[3]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 3;
+                                                            .D[4]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 4;
+                                                            .D[5]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 5;
+                                                            .D[6]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 6;
+                                                            .D[7]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 7;
+                                                            .D[8]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 8;
+                                                            .D[9]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 9;
+                                                            .D[10]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 10;
+                                                            .D[11]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 11;
+                                                            .D[12]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 12;
+                                                            .D[13]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 13;
+                                                            .D[14]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 14;
+                                                            .D[15]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 15;
+                                                            .D[16]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 16;
+                                                            .D[17]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 17;
+                                                            .D[18]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 18;
+                                                            .D[19]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 19;
+                                                            .D[20]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 20;
+                                                            .D[21]:=TIIB[MRCO_PLC_E12_EL6002]^COM RxPDO-Map Outputs Channel 2^Data Out 21;
+    '}
+    stComOut_MRCO_MAIN_PTM_04        AT %Q*  :       EL6outData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Status;
+                                                            .D[0]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 0;
+                                                            .D[1]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 1;
+                                                            .D[2]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 2;
+                                                            .D[3]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 3;
+                                                            .D[4]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 4;
+                                                            .D[5]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 5;
+                                                            .D[6]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
+                                                            .D[7]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
+                                                            .D[8]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
+                                                            .D[9]:=TIIB[MMRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+                                                            .D[10]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
+                                                            .D[11]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
+                                                            .D[12]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
+                                                            .D[13]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 13;
+                                                            .D[14]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 14;
+                                                            .D[15]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 15;
+                                                            .D[16]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 16;
+                                                            .D[17]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 17;
+                                                            .D[18]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 18;
+                                                            .D[19]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 19;
+                                                            .D[20]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 20;
+                                                            .D[21]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 21;
+    '}
+    stComIn_MRCO_ROUGH_PTM_01        AT %I*  :       EL6inData22B;
+    
+    {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Ctrl;
+                                                            .D[0]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 0;
+                                                            .D[1]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 1;
+                                                            .D[2]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 2;
+                                                            .D[3]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 3;
+                                                            .D[4]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 4;
+                                                            .D[5]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 5;
+                                                            .D[6]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 6;
+                                                            .D[7]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 7;
+                                                            .D[8]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 8;
+                                                            .D[9]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 9;
+                                                            .D[10]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 10;
+                                                            .D[11]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 11;
+                                                            .D[12]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 12;
+                                                            .D[13]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 13;
+                                                            .D[14]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 14;
+                                                            .D[15]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 15;
+                                                            .D[16]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 16;
+                                                            .D[17]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 17;
+                                                            .D[18]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 18;
+                                                            .D[19]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 19;
+                                                            .D[20]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 20;
+                                                            .D[21]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM RxPDO-Map Outputs Channel 1^Data Out 21;
+    '}
+    stComOut_MRCO_ROUGH_PTM_01        AT %Q*  :       EL6outData22B;
+    
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>
