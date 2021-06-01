@@ -27,7 +27,7 @@ END_VAR
 ELSE
 	F_Turbo_NC_NO_Valve_Logic := (i_stISG.xPRESS_OK AND i_stISG.rPRESS < i_stTurbo.rInletPressureSP) AND 
 						   (i_stBSG.xPRESS_OK AND i_stBSG.rPRESS < i_stTurbo.rBackingPressureSP) AND 
-							(iq_stValve_NC.i_xOpnLS OR(iq_stValve_NO.i_xOpnLS AND iq_stValve_NC_second.i_xOpnLS));
+							(iq_stValve_NC.i_xOpnLS OR iq_stValve_NO.i_xOpnLS OR iq_stValve_NC_second.i_xOpnLS);
 END_IF]]></ST>
     </Implementation>
   </POU>

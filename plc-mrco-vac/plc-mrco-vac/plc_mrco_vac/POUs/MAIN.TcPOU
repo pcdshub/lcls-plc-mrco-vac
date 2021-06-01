@@ -14,10 +14,39 @@ TurboPumpDelayTime : TIME := T#30s;
 fbGetCurTaskIndex : GETCURTASKINDEX;
 
 
+	F_Turbo_TESTY: BOOL;
 END_VAR
 ]]></Declaration>
     <Implementation>
-      <ST><![CDATA[
+      <ST><![CDATA[///
+(*
+MRCO_ROUGH_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic(
+						i_stTurbo:= MRCO_ROUGH_PTM_01.iq_stPtm, 
+						i_stISG:= MRCO_MAIN_GPI_01.PG, 
+						i_stBSG:= MRCO_ROUGH_GPI_02.PG, 
+						iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, 
+						iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve, 
+						iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
+						EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
+						iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,
+						iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
+						x_onBeamline:= xOnBeamline), 
+					iq_stPtm=> );
+					
+					*)
+IF (xOnBeamline) THEN
+	F_Turbo_TESTY := (MRCO_MAIN_GPI_01.PG.xPRESS_OK AND MRCO_MAIN_GPI_01.PG.rPRESS < MRCO_ROUGH_PTM_01.iq_stPtm.rInletPressureSP) AND 
+						   		 (MRCO_ROUGH_GPI_02.PG.xPRESS_OK AND MRCO_ROUGH_GPI_02.PG.rPRESS < MRCO_ROUGH_PTM_01.iq_stPtm.rBackingPressureSP) AND 
+								 ((MRCO_ROUGH_VRC_01.iq_stValve.i_xOpnLS AND xTMO_ROUGH2_VRC_01_OPEN_LS) OR
+								 (MRCO_ROUGH_VRC_02.iq_stValve.i_xOpnLS AND (MRCO_ROUGH_VRC_03.iq_stValve.i_xOpnLS AND 
+								 xTMO_ROUGH1_VRC_01_OPEN_LS)))AND (NOT xEcatBridge_COM_ERROR);
+ELSE
+	F_Turbo_TESTY := (MRCO_MAIN_GPI_01.PG.xPRESS_OK AND MRCO_MAIN_GPI_01.PG.rPRESS < MRCO_ROUGH_PTM_01.iq_stPtm.rInletPressureSP) AND 
+						   		 (MRCO_ROUGH_GPI_02.PG.xPRESS_OK AND MRCO_ROUGH_GPI_02.PG.rPRESS < MRCO_ROUGH_PTM_01.iq_stPtm.rBackingPressureSP) AND
+								 (MRCO_ROUGH_VRC_01.iq_stValve.i_xOpnLS OR MRCO_ROUGH_VRC_02.iq_stValve.i_xOpnLS OR MRCO_ROUGH_VRC_03.iq_stValve.i_xOpnLS);
+END_IF
+
+///
 fbLogHandler();
 // Run the Diagnostics PRG
 DIAGNOSTICS();

@@ -47,7 +47,7 @@ VAR_GLOBAL
     (*Onboard Turbo Pumps*)
 	
 	{attribute 'TcLinkTo' := 	'.q_xReset 			:=	TIIB[MRCO_PNL1_EP02_EP2624-0002]^Channel 2^Output;
-								 .q_RunDO  			:=	TIIB[MRCO_PNL1_EP01_EP2624-0002]^Channel 1^Output;
+								 .q_RunDO  			:=	TIIB[MRCO_PNL1_EP02_EP2624-0002]^Channel 1^Output;
 								 .i_xAtSpd			:=	TIIB[MRCO_PNL1_EP01_EP2338-0002]^Channel 1^Input;	
 								 .i_xFaultNC		:=	TIIB[MRCO_PNL1_EP01_EP2338-0002]^Channel 2^Input;		 
 	'} 
