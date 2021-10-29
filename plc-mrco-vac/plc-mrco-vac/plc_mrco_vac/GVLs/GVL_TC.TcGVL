@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
+  <GVL Name="GVL_TC" Id="{1a726a61-4087-4207-b27a-3feb1b68cf04}">
+    <Declaration><![CDATA[//{attribute 'qualified_only'}
+VAR_GLOBAL
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:01
+		io: io
+	'}
+	TC_01 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:02
+		io: io
+	'}
+	TC_02 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:03
+		io: io
+	'}
+	TC_03 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:04
+		io: io
+	'}
+	TC_04 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:05
+		io: io
+	'}
+	TC_05 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:06
+		io: io
+	'}
+	TC_06 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:07
+		io: io
+	'}
+	TC_07 : FB_TempSensor;
+	{attribute 'TcLinkTo' := 	'.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Value;
+								 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Error;
+								 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Underrange;	
+								 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Overrange;
+	'}
+	{attribute 'pytmc' := '
+		pv: MRCO:STC:08
+		io: io
+	'}
+	TC_08 : FB_TempSensor;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

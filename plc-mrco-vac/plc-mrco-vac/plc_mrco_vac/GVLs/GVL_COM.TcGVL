@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_COM" Id="{40d720fb-d229-4759-8016-b62736517e09}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -241,7 +241,7 @@ VAR_GLOBAL
                                                             .D[6]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 6;
                                                             .D[7]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 7;
                                                             .D[8]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 8;
-                                                            .D[9]:=TIIB[MMRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
+                                                            .D[9]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 9;
                                                             .D[10]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 10;
                                                             .D[11]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 11;
                                                             .D[12]:=TIIB[MRCO_PNL1_EP03_EP6002-0002]^COM TxPDO-Map Inputs Channel 1^Data In 12;
