@@ -5011,6 +5011,302 @@ record(bi, "PLC:MRCO:ON:BEAMLINE_RBV") {
   info(archive, "VAL")
 }
 
+record(ai, "MRCO:STC:01:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_01.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_01.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:01:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_01.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_01.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:01:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_01.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_01.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:02:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_02.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_02.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:02:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_02.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_02.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:02:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_02.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_02.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:03:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_03.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_03.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:03:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_03.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_03.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:03:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_03.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_03.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:04:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_04.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_04.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:04:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_04.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_04.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:04:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_04.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_04.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:05:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_05.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_05.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:05:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_05.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_05.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:05:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_05.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_05.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:06:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_06.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_06.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:06:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_06.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_06.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:06:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_06.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_06.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:07:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_07.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_07.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:07:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_07.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_07.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:07:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_07.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_07.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
+record(ai, "MRCO:STC:08:TEMP_RBV") {
+  field(DESC, "GVL_TC.TC_08.fTemp")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynFloat64")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_08.fTemp?")
+  field(PREC, "2")
+  field(EGU, "C")
+  info(autosaveFields_pass0, "PREC")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:08:CONN_RBV") {
+  field(DESC, "GVL_TC.TC_08.bConnected")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_08.bConnected?")
+  field(ZNAM, "Disconnected")
+  field(ONAM, "Connected")
+  info(archive, "VAL")
+}
+
+record(bi, "MRCO:STC:08:ERR_RBV") {
+  field(DESC, "GVL_TC.TC_08.bError")
+  field(SCAN, "I/O Intr")
+  field(PINI, "1")
+  field(TSE, "-2")
+  field(DTYP, "asynInt32")
+  field(INP, "@asyn($(PORT),0,1)ADSPORT=851/POLL_RATE=1/GVL_TC.TC_08.bError?")
+  field(ZNAM, "False")
+  field(ONAM, "True")
+  info(archive, "VAL")
+}
+
 record(longin, "$(PREFIX)SuccessfulPreemptions_RBV") {
   field(DESC, "PMPS_GVL.SuccessfulPreemption")
   field(SCAN, "I/O Intr")
