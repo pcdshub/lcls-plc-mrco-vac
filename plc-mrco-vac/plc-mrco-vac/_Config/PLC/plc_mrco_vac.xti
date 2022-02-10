@@ -743,6 +743,7 @@
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_03^D[8]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 8" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_03^D[9]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 9" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_03^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
@@ -765,6 +766,7 @@
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[7]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_03^Ctrl" VarB="COM RxPDO-Map Outputs Channel 2^Ctrl" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_03^D[0]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 0" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_03^D[10]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 10" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_03^D[11]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 11" AutoLink="true"/>
@@ -835,7 +837,7 @@
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_04^D[8]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 8" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_04^D[9]" VarB="COM TxPDO-Map Inputs Channel 2^Data In 9" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_MAIN_PTM_04^Status" VarB="COM TxPDO-Map Inputs Channel 2^Status" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[12]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 12" AutoLink="true"/>
@@ -857,6 +859,7 @@
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[7]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 7" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_02^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^Ctrl" VarB="COM RxPDO-Map Outputs Channel 2^Ctrl" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[0]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 0" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[10]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 10" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[11]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 11" AutoLink="true"/>
@@ -912,6 +915,7 @@
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^D[8]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 8" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^D[9]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 9" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^Status" VarB="COM TxPDO-Map Inputs Channel 1^Status" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^Ctrl" VarB="COM RxPDO-Map Outputs Channel 1^Ctrl" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[0]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 0" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[10]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 10" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[11]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 11" AutoLink="true"/>
