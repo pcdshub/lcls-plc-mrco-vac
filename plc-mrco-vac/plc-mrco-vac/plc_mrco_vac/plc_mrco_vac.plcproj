@@ -17,6 +17,9 @@
     <LibraryReferences>{083801e5-18c8-483c-acae-c7274cadd8e2}</LibraryReferences>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ComTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="GVLs\GVL_COM.TcGVL">
       <SubType>Code</SubType>
       <LinkAlways>true</LinkAlways>
