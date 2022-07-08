@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.6">
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4022.18">
   <GVL Name="GVL_Devices" Id="{b5393e15-89a3-428e-a5f3-f52f4df95fb9}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
@@ -113,23 +113,23 @@ VAR_GLOBAL
 (*Normally Closed Valve with Readback*)//ALL VALVES CURRENTLY NO
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 2^Input;
-								 .q_xCLS_DO	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 11^Output
+								 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 11^Output
 	'}
 	{attribute 'pytmc' := '
 		pv: MRCO:ROUGH:VRC:01
 		io: io
 	'}
-	MRCO_ROUGH_VRC_01 : FB_VRC_NO;
+	MRCO_ROUGH_VRC_01 : FB_VRC;
 
 	{attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 1^Input;
 								 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 2^Input;
-								 .q_xCLS_DO	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 11^Output
+								 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 11^Output
 	'}
 	{attribute 'pytmc' := '
 		pv: MRCO:ROUGH:VRC:03
 		io: io
 	'}
-	MRCO_ROUGH_VRC_03 : FB_VRC_NO;
+	MRCO_ROUGH_VRC_03 : FB_VRC;
     
     (*Normally Open Valve with Readback*)
     
