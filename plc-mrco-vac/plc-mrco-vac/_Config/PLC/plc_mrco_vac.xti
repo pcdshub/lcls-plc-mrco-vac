@@ -2,7 +2,7 @@
 <TcSmItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmItem" TcSmVersion="1.0" TcVersion="3.1.4022.30" ClassName="CNestedPlcProjDef">
 	<DataTypes>
 		<DataType>
-			<Name GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
+			<Name GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6inData22B</Name>
 			<Comment>
 				<![CDATA[ This data type is corresponding to the
    EL-6xxx data structure used in the
@@ -29,7 +29,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
+			<Name GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom" AutoDeleteType="true">EL6outData22B</Name>
 			<Comment>
 				<![CDATA[ This data type is corresponding to the
    EL-6xxx data structure used in the
@@ -74,8 +74,8 @@
 			</Format>
 		</DataType>
 	</DataTypes>
-	<Project GUID="{855EB6B7-97B7-47BC-9BB4-BD8216FFDF33}" Name="plc_mrco_vac" PrjFilePath="..\..\plc_mrco_vac\plc_mrco_vac.plcproj" TmcFilePath="..\..\plc_mrco_vac\plc_mrco_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
-		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="1" TmcPath="plc_mrco_vac\plc_mrco_vac.tmc">
+	<Project GUID="{7220AB42-A7D1-4658-827F-BC82073731E7}" Name="plc_mrco_vac" PrjFilePath="..\..\plc_mrco_vac\plc_mrco_vac.plcproj" TmcFilePath="..\..\plc_mrco_vac\plc_mrco_vac.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+		<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="plc_mrco_vac\plc_mrco_vac.tmc">
 			<Name>plc_mrco_vac Instance</Name>
 			<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
 			<Vars VarGrpType="1">
@@ -85,64 +85,50 @@
 					<Comment>
 						<![CDATA[SERIAL IO]]>
 					</Comment>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_MRCO_MAIN_PTM_03</Name>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_MRCO_MAIN_PTM_02</Name>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_MRCO_MAIN_PTM_04</Name>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComIn_MRCO_ROUGH_PTM_01</Name>
-					<Type GUID="{0146173C-D895-D219-E209-CC005AC77636}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
+					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>ComTask Outputs</Name>
 				<Var>
 					<Name>GVL_COM.stComOut_MRCO_MAIN_PTM_01</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_MRCO_MAIN_PTM_03</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_MRCO_MAIN_PTM_02</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_MRCO_MAIN_PTM_04</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
 					<Name>GVL_COM.stComOut_MRCO_ROUGH_PTM_01</Name>
-					<Type GUID="{D6B0A42D-897A-4B90-95E8-3C741C3CE3EE}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
+					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
-				<Var>
-					<Name>LCLS_General.DefaultGlobals.stSys.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
-				<Var>
-					<Name>LCLS_Vacuum.Global_Variables.g_stSystem.I_EcatMaster1</Name>
-					<Comment>
-						<![CDATA[ AMS Net ID used for FB_EcatDiag, among others ]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
 				<Var>
 					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
 					<Comment>
@@ -612,17 +598,12 @@
 					<Type>UDINT</Type>
 					<InOut>7</InOut>
 				</Var>
+				<Var>
+					<Name>PMPS_GVL.BP_jsonDoc</Name>
+					<Type>SJsonValue</Type>
+					<InOut>7</InOut>
+				</Var>
 			</Vars>
-			<UnrestoredVarLinks ImportTime="2022-01-18T12:11:24">
-				<OwnerA Name="OutputSrc" Prefix="TIPC^plc_mrco_vac^plc_mrco_vac Instance" Type="2">
-					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP07_EP2338-0002">
-						<Link VarA="GVL_Devices.MRCO_ROUGH_VRC_01.q_xCLS_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
-					</OwnerB>
-					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP08_EP2338-0002">
-						<Link VarA="GVL_Devices.MRCO_ROUGH_VRC_03.q_xCLS_DO" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="Channel 11^Output" AutoLink="true" Size="1" RestoreInfo="ANotFound"/>
-					</OwnerB>
-				</OwnerA>
-			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="15" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502002"/>
@@ -632,21 +613,9 @@
 	<Mappings>
 		<OwnerA Name="plc_mrco_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E04_EL6692">
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.sHUTCH_PLC_NAME" VarB="IO Inputs^HUTCH_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState" VarB="WcState^WcState" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.rIP1_MAIN_rPRESS" VarB="IO Outputs^IP1_MAIN_rPRESS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.sENDSTATION_PLC_NAME" VarB="IO Outputs^ENDSTATION_PLC_NAME" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE" VarB="IO Outputs^IP1_HV_SAFETY_ENABLE" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC" VarB="IO Outputs^IP1_MAIN_xAT_VAC" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK" VarB="IO Outputs^IP1_MAIN_xPRESS_OK" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd" VarB="IO Outputs^IP1_TURBOS_ALL_AtSpd" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E06_EL1004">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true"/>
@@ -890,15 +859,15 @@
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[8]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 8" AutoLink="true"/>
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[9]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP01_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP01_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_PTM_01.i_xFaultNC" VarB="Channel 2^Input" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP02_EP2624-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP02_EP2624-0002">
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_PTM_01.q_xReset" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP03_EP6002-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP03_EP6002-0002">
 				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^D[0]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 0" AutoLink="true"/>
 				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^D[10]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 10" AutoLink="true"/>
 				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_ROUGH_PTM_01^D[11]" VarB="COM TxPDO-Map Inputs Channel 1^Data In 11" AutoLink="true"/>
@@ -946,20 +915,20 @@
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[8]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 8" AutoLink="true"/>
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP04_EP3174-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP04_EP3174-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_02.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_03.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_04.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP05_EP3174-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP05_EP3174-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP06_EP2624-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP06_EP2624-0002">
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_MAIN_GHC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP07_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP07_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_02.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
@@ -967,7 +936,7 @@
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_01.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_02.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP00_EP9128-0021^MRCO_PNL1_EP08_EP2338-0002">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP08_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
