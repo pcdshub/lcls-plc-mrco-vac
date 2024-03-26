@@ -3,19 +3,19 @@
   <GVL Name="GVL_Variables" Id="{c0dcdba4-82fd-4dd1-b5f6-f768182c198e}">
     <Declaration><![CDATA[//{attribute 'qualified_only'}
 VAR_GLOBAL
-	{attribute 'pytmc' := '
-		pv: PLC:MRCO:VAC:OVRDON
-		io: io
-	'}
-	xSystemOverrideMode_MRCO	: BOOL := FALSE;
-	
-	{attribute 'pytmc' := '
-		pv: PLC:MRCO:ON:BEAMLINE
-		io:i
-	'}
-	xOnBeamline :	BOOL := FALSE;
-	
-	rHighVoltageMinPressure : REAL := 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
+    {attribute 'pytmc' := '
+        pv: PLC:MRCO:VAC:OVRDON
+        io: io
+    '}
+    xSystemOverrideMode_MRCO	: BOOL := FALSE;
+
+    {attribute 'pytmc' := '
+        pv: PLC:MRCO:ON:BEAMLINE
+        io:i
+    '}
+    xOnBeamline :	BOOL := FALSE;
+
+    rHighVoltageMinPressure : REAL := 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
 
 END_VAR]]></Declaration>
   </GVL>
