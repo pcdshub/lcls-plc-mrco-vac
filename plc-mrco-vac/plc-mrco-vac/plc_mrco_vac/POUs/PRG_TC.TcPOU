@@ -7,83 +7,63 @@ END_VAR
 ]]></Declaration>
     <Implementation>
       <ST><![CDATA[TC_01(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_02(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_03(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_04(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_05(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_06(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_07(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 TC_08(
-	fResolution:= , 
-	fTemp=> , 
-	bConnected=> , 
-	bError=> , 
-	bUnderrange=> , 
-	bOverrange=> );
+    fResolution:= ,
+    fTemp=> ,
+    bConnected=> ,
+    bError=> ,
+    bUnderrange=> ,
+    bOverrange=> );
 
-	]]></ST>
+    ]]></ST>
     </Implementation>
-    <LineIds Name="PRG_TC">
-      <LineId Id="6" Count="5" />
-      <LineId Id="5" Count="0" />
-      <LineId Id="14" Count="5" />
-      <LineId Id="13" Count="0" />
-      <LineId Id="21" Count="5" />
-      <LineId Id="20" Count="0" />
-      <LineId Id="28" Count="5" />
-      <LineId Id="27" Count="0" />
-      <LineId Id="35" Count="5" />
-      <LineId Id="34" Count="0" />
-      <LineId Id="42" Count="5" />
-      <LineId Id="41" Count="0" />
-      <LineId Id="49" Count="5" />
-      <LineId Id="48" Count="0" />
-      <LineId Id="56" Count="5" />
-      <LineId Id="55" Count="0" />
-      <LineId Id="62" Count="0" />
-      <LineId Id="12" Count="0" />
-    </LineIds>
   </POU>
 </TcPlcObject>
