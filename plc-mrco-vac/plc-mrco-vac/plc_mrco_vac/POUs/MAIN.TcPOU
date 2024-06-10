@@ -72,6 +72,9 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
     MRCO_MAIN_GHC_01.M_SetBits(32767);
     MRCO_MAIN_GHC_01(PG:=MRCO_MAIN_GPI_01.PG,IG=>);
 
+(*Variable Leak Valve*)
+    MRCO_VCN_01(bExtIlkOK:= TRUE, IG := MRCO_MAIN_GHC_01.IG);
+
 (*TURBO Pumps
 *In general, if turbo pump setpoints are above the pirani guage readings or there is no downstream open path to a roughing pump, the turbo pump will close.
 *
