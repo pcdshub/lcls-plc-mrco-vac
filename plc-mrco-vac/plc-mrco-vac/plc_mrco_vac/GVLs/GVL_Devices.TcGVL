@@ -110,6 +110,26 @@ VAR_GLOBAL
     '}
     MRCO_MAIN_GHC_01 : FB_MKS909;
 
+(*Variable Leak Valve*)
+    {attribute 'TcLinkTo' := 	'.i_nRawPosition	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Position;
+                                 .i_nRawPressure	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Pressure;
+                                 .i_eControlMode	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Control mode;
+                                 .i_eFatalError		:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Fatal error;
+                                 .i_stGenStatus 	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^General status;
+                                 .i_stGenWarnings 	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^General warnings;
+                                 .i_stExtnWarnings 	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Extended warnings;
+                                 .o_nRawPositionSP 	:=	TIIB[VCN_1_VAT590]^DO RxPDO-Map^Position setpoint;
+                                 .o_nRawPressureSP 	:=	TIIB[VCN_1_VAT590]^DO RxPDO-Map^Pressure setpoint;
+                                 .o_nRawPressure 	:=	TIIB[VCN_1_VAT590]^DO RxPDO-Map^External digital pressure sensor 1;
+                                 .o_eCtrlModeSP 	:=	TIIB[VCN_1_VAT590]^DO RxPDO-Map^Control mode setpoint;
+                                 .o_stGenCtrlSP 	:=	TIIB[VCN_1_VAT590]^DO RxPDO-Map^General control setpoint;
+                                 .i_stVat590PlcDriveRef.aNetId     := TIIB[VCN_1_VAT590]^InfoData^AdsAddr^netId;
+                                 .i_stVat590PlcDriveRef.nSlaveAddr := TIIB[VCN_1_VAT590]^InfoData^AdsAddr^port;
+                                 .i_bValveEthCatStatus             := TIIB[VCN_1_VAT590]^WcState^WcState
+    '}
+    {attribute 'pytmc' := 'pv: MRCO:VCN:01'}
+    MRCO_VCN_01 : FB_VCN_VAT590;
+
 (*Normally Closed Valve with Readback*)//ALL VALVES CURRENTLY NO
     {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 1^Input;
                                  .i_xClsLS	:=	TIIB[MRCO_PNL1_EP07_EP2338-0002]^Channel 2^Input;

@@ -31,5 +31,8 @@
 		<Box File="MRCO_PNL1_EP08_EP2338-0002.xti" Id="21">
 			<EtherCAT PortABoxInfo="#x01000014"/>
 		</Box>
+		<Box File="VCN_1_VAT590.xti" Id="45">
+			<EtherCAT PortABoxInfo="#x0100000d"/>
+		</Box>
 	</Box>
 </TcSmItem>
