@@ -4,8 +4,8 @@
 #         Project: plc-mrco-vac.tsproj
 #        PLC name: plc_mrco_vac (plc_mrco_vac Instance)
 # Generated using: pytmc 2.16.0
-# Project version: c51cea1
-#    Project hash: c51cea17a465088ce71cd1ec5d101f918b70174e
+# Project version: 794a194
+#    Project hash: 794a194cf010423fff0f519be577bc72a2338bba
 #     PLC IP/host: 172.21.132.115
 #      PLC Net ID: 172.21.132.115.1.1
 #  ** Production mode IOC **
@@ -89,7 +89,7 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:MRCO:VAC,IDX=
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:MRCO:VAC,IDX=2,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:MRCO:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:MRCO:VAC,PROJECT=plc-mrco-vac.tsproj,HASH=c51cea1,VERSION=c51cea1,PYTMC=2.16.0,PLC_HOST=172.21.132.115")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:MRCO:VAC,PROJECT=plc-mrco-vac.tsproj,HASH=794a194,VERSION=794a194,PYTMC=2.16.0,PLC_HOST=172.21.132.115")
 
 #   LCLS General: * -> 2.10.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=LCLS_General,VERSION=2.10.0,VENDOR=SLAC")
