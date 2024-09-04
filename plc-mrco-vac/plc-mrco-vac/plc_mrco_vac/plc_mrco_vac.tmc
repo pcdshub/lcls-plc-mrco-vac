@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{8B3D6E1A-B4B1-6159-4D15-1761775EA156}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{B63261A9-9747-A2F9-0F60-D9F07768114E}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComBuffer</Name>
@@ -8542,11 +8542,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>FindTestSuiteInstancePath</Name>
@@ -8805,11 +8800,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_BYTE</Name>
@@ -8911,11 +8901,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9075,11 +9060,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_LTIME</Name>
@@ -9202,11 +9182,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9348,11 +9323,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10114,11 +10084,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>SetHasStartedRunning</Name>
@@ -10279,11 +10244,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>GetHasStartedRunning</Name>
@@ -10386,11 +10346,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10545,11 +10500,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_DINT</Name>
@@ -10672,11 +10622,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10852,11 +10797,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -11139,11 +11079,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -11940,11 +11875,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_UDINT</Name>
@@ -12036,11 +11966,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -34509,7 +34434,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>ComTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_01</Name>
             <Comment>SERIAL IO</Comment>
@@ -34726,7 +34651,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>ComTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_01</Name>
             <BitSize>192</BitSize>
@@ -34942,7 +34867,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>ComTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_01</Name>
             <Comment> Define COM Ports/Buffers incl. library Tc2_SerialCom</Comment>
@@ -35178,7 +35103,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">16</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>DIAGNOSTICS.i_sAMSNetID</Name>
             <Comment>Link the sAMSNetID to the Etherat Master netID</Comment>
@@ -36250,7 +36175,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">17</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
             <BitSize>8</BitSize>
@@ -36697,7 +36622,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -47008,7 +46933,7 @@ ALL VALVES CURRENTLY NO</Comment>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">20</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81199104</ByteSize>
+          <ByteSize>81330176</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -47088,7 +47013,7 @@ ALL VALVES CURRENTLY NO</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-09-03T12:33:21</Value>
+          <Value>2024-09-04T11:20:50</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>

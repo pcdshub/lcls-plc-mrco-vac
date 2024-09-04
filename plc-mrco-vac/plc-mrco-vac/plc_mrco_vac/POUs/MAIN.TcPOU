@@ -191,7 +191,7 @@ MRCO_MAIN_PTM_04.M_Serial_IO(i_st_TD20_RBK:= st_TD20_RBK_MRCO_MAIN_PTM_04);
     ELSE
         //MRCO:ROUGH:VRC:01 can open when the pressure across the valve is below 10 torr //add the beamline
         MRCO_ROUGH_VRC_01(
-        i_xExtILK_OK:= (ABS(MRCO_ROUGH_GPI_01.PG.rPRESS - MRCO_ROUGH_GPI_02.PG.rPRESS)<100.0), // change back after setuplab testing
+        i_xExtILK_OK:= (ABS(MRCO_ROUGH_GPI_01.PG.rPRESS - MRCO_ROUGH_GPI_02.PG.rPRESS)<150.0), // change back after setuplab testing
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
     END_IF
