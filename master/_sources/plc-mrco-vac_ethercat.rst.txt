@@ -486,7 +486,9 @@ EtherCAT Terminals
                           </tr>
                           <tr>
                             <td>
-                                      </td>
+                                          <b>
+                                  Disabled
+                                </b>        </td>
                             <td colspan="2">
                               590 - All-metal variable leak valve
                             </td>
