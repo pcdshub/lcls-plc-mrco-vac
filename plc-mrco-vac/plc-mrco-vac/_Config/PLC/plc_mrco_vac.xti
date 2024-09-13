@@ -795,6 +795,10 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
@@ -1039,10 +1043,6 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
 					<Comment>
 						<![CDATA[I/O Inputs from TMO Beamline]]>
@@ -1181,6 +1181,18 @@ Link this to your VAT590 WcState variable under WcState]]>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_Devices.MRCO_MAIN_PTM_01.q_RunDO</Name>
 					<Comment>
 						<![CDATA[ Start/Stop]]>
@@ -1285,18 +1297,6 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -1313,18 +1313,18 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
-					<Comment>
-						<![CDATA[I/O Outputs to TMO Beamline]]>
-					</Comment>
-					<Type>STRING(8)</Type>
-				</Var>
-				<Var>
 					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
 					<Comment>
 						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
 					</Comment>
 					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
+					<Comment>
+						<![CDATA[I/O Outputs to TMO Beamline]]>
+					</Comment>
+					<Type>STRING(8)</Type>
 				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
@@ -1667,17 +1667,11 @@ Link this to your VAT590 WcState variable under WcState]]>
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_ROUGH_PTM_01^D[9]" VarB="COM RxPDO-Map Outputs Channel 1^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP04_EP3174-0002">
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_02.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_03.i_iPRESS_R" VarB="AI Standard Channel 3^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_04.i_iPRESS_R" VarB="AI Standard Channel 4^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP05_EP3174-0002">
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_GPI_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP06_EP2624-0002">
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_MAIN_GHC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP07_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
@@ -1691,23 +1685,6 @@ Link this to your VAT590 WcState variable under WcState]]>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
-			</OwnerB>
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^VCN_1_VAT590">
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_bValveEthCatStatus" VarB="WcState^WcState" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_eControlMode" VarB="DI TxPDO-Map^Control mode" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_eFatalError" VarB="DI TxPDO-Map^Fatal error" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_nRawPosition" VarB="DI TxPDO-Map^Position" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_nRawPressure" VarB="DI TxPDO-Map^Pressure" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_stExtnWarnings" VarB="DI TxPDO-Map^Extended warnings" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_stGenStatus" VarB="DI TxPDO-Map^General status" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_stGenWarnings" VarB="DI TxPDO-Map^General warnings" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_stVat590PlcDriveRef^aNetId" VarB="InfoData^AdsAddr^netId" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_stVat590PlcDriveRef^nSlaveAddr" VarB="InfoData^AdsAddr^port" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_VCN_01.o_eCtrlModeSP" VarB="DO RxPDO-Map^Control mode setpoint" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_VCN_01.o_nRawPositionSP" VarB="DO RxPDO-Map^Position setpoint" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_VCN_01.o_nRawPressure" VarB="DO RxPDO-Map^External digital pressure sensor 1" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_VCN_01.o_nRawPressureSP" VarB="DO RxPDO-Map^Pressure setpoint" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_VCN_01.o_stGenCtrlSP" VarB="DO RxPDO-Map^General control setpoint" AutoLink="true"/>
 			</OwnerB>
 		</OwnerA>
 	</Mappings>
