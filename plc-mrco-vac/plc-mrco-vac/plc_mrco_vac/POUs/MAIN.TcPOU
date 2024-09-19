@@ -17,8 +17,8 @@ VAR
   //  Final_Press : FB_Gauges_Max;
    dummy_FFFO : FB_HardwareFFOutput;
    dummy_fbArbiter1    :   FB_Arbiter(1);
-	
-	
+
+
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -153,23 +153,23 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
                         x_onBeamline:= xOnBeamline),
                     iq_stPtm=> );
-					
+
           MRCO_SS_PTM_01(i_xExtILKOk:=xSystemOverrideMode_MRCO );
-(*	
+(*
     MRCO_SS_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic(
                         i_stTurbo:= MRCO_SS_PTM_01.iq_stPtm,
-                        i_stISG:= MRCO_ROUGH_GPI_05.PG 
+                        i_stISG:= MRCO_ROUGH_GPI_05.PG
                         i_stBSG:= MRCO_ROUGH_GPI_04.PG,
                         (iq_stValve_NO:= MRCO_ROUGH_VRC_05.iq_stValve,
-                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve, 
+                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                          iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,)
                       OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
-						  iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
-						  iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
+                          iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
+                          iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
                       OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
-					      iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
-						   iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
-						EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
+                          iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+                           iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
+                        EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
                         iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,
                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
                         x_onBeamline:= xOnBeamline),
@@ -259,7 +259,7 @@ fb_TD400Com_MRCO_SS_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_SS_PTM_01,
     END_IF
 *)
     MRCO_ROUGH_VRC_05(
-    i_xExtILK_OK:= MRCO_ROUGH_VRC_04.iq_stValve.i_xOpnLS AND 
+    i_xExtILK_OK:= MRCO_ROUGH_VRC_04.iq_stValve.i_xOpnLS AND
                    MRCO_ROUGH_GPI_02.PG.xPRESS_OK AND MRCO_ROUGH_GPI_02.PG.rPRESS < 5E-3 AND
                    MRCO_ROUGH_GPI_05.PG.rPRESS < 5E-3 AND MRCO_ROUGH_GPI_05.PG.xPRESS_OK,
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
@@ -279,7 +279,7 @@ fb_TD400Com_MRCO_SS_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_SS_PTM_01,
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
     END_IF
-//VRC-04, need to double check the logic	
+//VRC-04, need to double check the logic
 //VRC-Normally Closed
     //If OnBeamline then stay open.
 (*
@@ -304,7 +304,7 @@ fb_TD400Com_MRCO_SS_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_SS_PTM_01,
                 i_xPMPS_OK := TRUE ,
                 i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS,
                 i_xOverrideMode := xSystemOverrideMode_MRCO,
-				i_xReset := False,
+                i_xReset := False,
                 io_fbFFHWO :=dummy_FFFO,
                 fbArbiter := dummy_fbArbiter1);
 
@@ -320,11 +320,11 @@ fb_TD400Com_MRCO_SS_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_SS_PTM_01,
                 i_xPMPS_OK := TRUE ,
                 i_xExt_OK := MRCO_SS_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING,
                 i_xOverrideMode := xSystemOverrideMode_MRCO,
-				i_xReset := False,
+                i_xReset := False,
                 io_fbFFHWO :=dummy_FFFO,
                 fbArbiter := dummy_fbArbiter1);
-                
-                
+
+
 
 
 (*Update EtherCAT Bridge Outputs*)
@@ -340,22 +340,22 @@ rIP1_MAIN_rPRESS 			:= 	MRCO_MAIN_GHC_01.IG.rPRESS;
 (*
 IF MRCO_MAIN_GHC_01.IG.xPRESS_OK = FALSE
 THEN
-	rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS;
+    rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS;
 END_IF
 IF MRCO_SS_GHC_01.IG.xPRESS_OK = FALSE
 THEN
-	rIP1_MAIN_rPRESS := MRCO_MAIN_GHC_01.IG.rPRESS;
+    rIP1_MAIN_rPRESS := MRCO_MAIN_GHC_01.IG.rPRESS;
 END_IF
 IF  (MRCO_MAIN_GHC_01.IG.xPRESS_OK = TRUE AND MRCO_SS_GHC_01.IG.xPRESS_OK)
-THEN   
-    IF (MRCO_MAIN_GHC_01.IG.i_iPRESS_R < MRCO_SS_GHC_01.IG.i_iPRESS_R) 
-	THEN
-	    rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS; 
-	ELSE 
-		 rIP1_MAIN_rPRESS  := MRCO_SS_GHC_01.IG.rPRESS;   	
-	END_IF
+THEN
+    IF (MRCO_MAIN_GHC_01.IG.i_iPRESS_R < MRCO_SS_GHC_01.IG.i_iPRESS_R)
+    THEN
+        rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS;
+    ELSE
+         rIP1_MAIN_rPRESS  := MRCO_SS_GHC_01.IG.rPRESS;
+    END_IF
 END_IF
-  
+
 
 
 

@@ -14,7 +14,7 @@ VAR_GLOBAL
     SerialTXBuffer_MRCO_MAIN_PTM_04 : ComBuffer;
     SerialRXBuffer_MRCO_ROUGH_PTM_01 : ComBuffer;
     SerialTXBuffer_MRCO_ROUGH_PTM_01 : ComBuffer;
-	SerialRXBuffer_MRCO_SS_PTM_01 : ComBuffer;
+    SerialRXBuffer_MRCO_SS_PTM_01 : ComBuffer;
     SerialTXBuffer_MRCO_SS_PTM_01 : ComBuffer;
 
     // Serial Terminal
@@ -23,7 +23,7 @@ VAR_GLOBAL
     fbSerialLineControl_MRCO_MAIN_PTM_03 : SerialLineControl;
     fbSerialLineControl_MRCO_MAIN_PTM_04 : SerialLineControl;
     fbSerialLineControl_MRCO_ROUGH_PTM_01 : SerialLineControl;
-	fbSerialLineControl_MRCO_SS_PTM_01 : SerialLineControl;
+    fbSerialLineControl_MRCO_SS_PTM_01 : SerialLineControl;
 
     //SERIAL IO
     {attribute      'TcLinkTo'      :=      '.Status:=TIIB[MRCO_PLC_E11_EL6002]^COM TxPDO-Map Inputs Channel 1^Status;
@@ -338,8 +338,8 @@ VAR_GLOBAL
     '}
     stComOut_MRCO_SS_PTM_01        AT %Q*  :       EL6outData22B;
 
-	
-	
+
+
 END_VAR]]></Declaration>
   </GVL>
 </TcPlcObject>
