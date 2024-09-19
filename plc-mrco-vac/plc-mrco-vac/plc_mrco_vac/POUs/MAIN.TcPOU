@@ -14,6 +14,11 @@ VAR
     fbGetCurTaskIndex : GETCURTASKINDEX;
 
     F_Turbo_TESTY: BOOL;
+  //  Final_Press : FB_Gauges_Max;
+   dummy_FFFO : FB_HardwareFFOutput;
+   dummy_fbArbiter1    :   FB_Arbiter(1);
+	
+	
 END_VAR
 ]]></Declaration>
     <Implementation>
@@ -46,7 +51,8 @@ b_TurboPumpRunningFlag :=
     (MRCO_MAIN_PTM_02.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
     (MRCO_MAIN_PTM_03.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
     (MRCO_MAIN_PTM_04.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
-    (MRCO_ROUGH_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING);
+    (MRCO_ROUGH_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING) AND
+    (MRCO_SS_PTM_01.iq_stPtm.estate = E_PumpState.pumpRUNNING);
 TurboPumpTOF(IN:= b_TurboPumpRunningFlag, PT := TurboPumpDelayTime);
 xIP1_TURBOS_ALL_AtSpd:= TurboPumpTOF.Q;
 (*High Voltage Saftey Loop*)// rHighVoltageMinPressure = 1e-05; (*Hard coded High voltage Minimum Enable Pressure*)
@@ -65,12 +71,16 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
     MRCO_ROUGH_GPI_03(PG=>);
     MRCO_ROUGH_GPI_04.M_SetBits(32767);
     MRCO_ROUGH_GPI_04(PG=>);
+    MRCO_ROUGH_GPI_05.M_SetBits(32767);
+    MRCO_ROUGH_GPI_05(PG=>);
 
 (*Cold Cathode Gauges*)
 
 (*Hot Cathode Gauges*)
     MRCO_MAIN_GHC_01.M_SetBits(32767);
     MRCO_MAIN_GHC_01(PG:=MRCO_MAIN_GPI_01.PG,IG=>);
+    MRCO_SS_GHC_01.M_SetBits(30518);
+    MRCO_SS_GHC_01(PG:=MRCO_ROUGH_GPI_05.PG,IG=>);
 
 (*Variable Leak Valve*)
     MRCO_VCN_01(bExtIlkOK:= TRUE, IG := MRCO_MAIN_GHC_01.IG);
@@ -143,7 +153,29 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
                         x_onBeamline:= xOnBeamline),
                     iq_stPtm=> );
+					
+          MRCO_SS_PTM_01(i_xExtILKOk:=xSystemOverrideMode_MRCO );
+(*	
+    MRCO_SS_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic(
+                        i_stTurbo:= MRCO_SS_PTM_01.iq_stPtm,
+                        i_stISG:= MRCO_ROUGH_GPI_05.PG 
+                        i_stBSG:= MRCO_ROUGH_GPI_04.PG,
+                        (iq_stValve_NO:= MRCO_ROUGH_VRC_05.iq_stValve,
+                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve, 
+                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,)
+                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
+						  iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
+						  iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
+                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
+					      iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+						   iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
+						EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
+                        iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,
+                        iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
+                        x_onBeamline:= xOnBeamline),
+                    iq_stPtm=> );
 
+*)
 (*Serial Communication*)
 (*Assign adresses to the pfeiffer controllers connected to this serial terminal*)
 st_Pfeiffer_CTRL_MRCO_ROUGH_PTM_01[1].iSerialAddress :=1;
@@ -177,10 +209,20 @@ fb_TD20Com_MRCO_MAIN_PTM_04(SerialRXBuffer:= SerialRXBuffer_MRCO_MAIN_PTM_04,
                                                     astTD20Status=> st_TD20_RBK_MRCO_MAIN_PTM_04);
 MRCO_MAIN_PTM_04.M_Serial_IO(i_st_TD20_RBK:= st_TD20_RBK_MRCO_MAIN_PTM_04);
 
+
+fb_TD400SerialIO_MRCO_SS_PTM_01(iq_stPTM := MRCO_SS_PTM_01.iq_stPtm,
+                                    iq_stTD400Control := st_TD400_CTRL_MRCO_SS_PTM_01,
+                                    iq_stTD400Status := st_TD400_RBK_MRCO_SS_PTM_01);
+fb_TD400Com_MRCO_SS_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_SS_PTM_01,
+                               SerialTXBuffer := SerialTXBuffer_MRCO_SS_PTM_01,
+                               stTD400Control := st_TD400_CTRL_MRCO_SS_PTM_01,
+                               stTD400Status => st_TD400_RBK_MRCO_SS_PTM_01);
+
+
 (*Vacuum Gate Valve*)
     fbGetCurTaskIndex();//getting index for first cycle of PLC operation
 
-    //VRC-Normally Closed
+    //VRC-Normally Closed: VRC-01
     //If OnBeamline then stay open.
     IF(xOnBeamline) THEN
         MRCO_ROUGH_VRC_01.M_Set_OPN_SW(TRUE);
@@ -197,7 +239,7 @@ MRCO_MAIN_PTM_04.M_Serial_IO(i_st_TD20_RBK:= st_TD20_RBK_MRCO_MAIN_PTM_04);
     END_IF
 
 
-    //Normally Open Bypass Valve
+    //Normally Open Bypass Valve: VRC-02
     IF(xOnBeamline) THEN
         MRCO_ROUGH_VRC_02.M_Set_CLS_SW(FALSE);
     ELSIF (NOT xOnBeamline AND _TaskInfo[fbGetCurTaskIndex.index].FirstCycle OR (ABS(MRCO_ROUGH_GPI_02.PG.rPRESS - MRCO_ROUGH_GPI_04.PG.rPRESS)>1000.0) ) THEN
@@ -209,8 +251,21 @@ MRCO_MAIN_PTM_04.M_Serial_IO(i_st_TD20_RBK:= st_TD20_RBK_MRCO_MAIN_PTM_04);
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
     iq_stValve=> );
 
+    //Normally Open Bypass Valve : VRC_05
+(*    IF(xOnBeamline) THEN
+        MRCO_ROUGH_VRC_05.M_Set_CLS_SW(FALSE);
+    ELSIF (NOT xOnBeamline AND _TaskInfo[fbGetCurTaskIndex.index].FirstCycle OR (ABS(MRCO_ROUGH_GPI_02.PG.rPRESS - MRCO_ROUGH_GPI_05.PG.rPRESS)>1000.0) ) THEN
+        MRCO_ROUGH_VRC_05.M_Set_CLS_SW(TRUE);
+    END_IF
+*)
+    MRCO_ROUGH_VRC_05(
+    i_xExtILK_OK:= MRCO_ROUGH_VRC_04.iq_stValve.i_xOpnLS AND 
+                   MRCO_ROUGH_GPI_02.PG.xPRESS_OK AND MRCO_ROUGH_GPI_02.PG.rPRESS < 5E-3 AND
+                   MRCO_ROUGH_GPI_05.PG.rPRESS < 5E-3 AND MRCO_ROUGH_GPI_05.PG.xPRESS_OK,
+    i_xOverrideMode:= xSystemOverrideMode_MRCO,
+    iq_stValve=> );
 
-    //VRC-Normally Closed
+    //VRC-Normally Closed:VRC_03
     //If OnBeamline then stay open.
     IF(xOnBeamline) THEN
         MRCO_ROUGH_VRC_03.M_Set_OPN_SW(TRUE);
@@ -219,11 +274,58 @@ MRCO_MAIN_PTM_04.M_Serial_IO(i_st_TD20_RBK:= st_TD20_RBK_MRCO_MAIN_PTM_04);
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
     ELSE
-        MRCO_ROUGH_VRC_03(//CVMI:ROUGH:VRC:03 can open when the pressure across the valve is below 10 torr //add the beamline
+        MRCO_ROUGH_VRC_03(//MRCO:ROUGH:VRC:03 can open when the pressure across the valve is below 10 torr //add the beamline
         i_xExtILK_OK:= (ABS(MRCO_ROUGH_GPI_03.PG.rPRESS - MRCO_ROUGH_GPI_04.PG.rPRESS)<1000.0), // Change back after setup lab testing
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
     END_IF
+//VRC-04, need to double check the logic	
+//VRC-Normally Closed
+    //If OnBeamline then stay open.
+(*
+    IF(xOnBeamline) THEN
+        MRCO_ROUGH_VRC_04.M_Set_OPN_SW(TRUE);
+        MRCO_ROUGH_VRC_04(
+        i_xExtILK_OK:= TRUE,
+        i_xOverrideMode:= xSystemOverrideMode_MRCO,
+        iq_stValve=> );
+    ELSE
+        MRCO_ROUGH_VRC_04(//MRCO:ROUGH:VRC:04 can open when the pressure across the valve is below 10 torr AND VRC-05 close//add the beamline
+        i_xExtILK_OK:= (ABS(MRCO_ROUGH_GPI_04.PG.rPRESS - MRCO_ROUGH_GPI_05.PG.rPRESS)<1000.0) AND  MRCO_ROUGH_VRC_05.M_Set_CLS_SW(TRUE) // Change back after setup lab testing
+        i_xOverrideMode:= xSystemOverrideMode_MRCO,
+        iq_stValve=> );
+    END_IF
+*)
+ MRCO_ROUGH_VRC_04(
+                i_stUSG := MRCO_ROUGH_GPI_04.PG,
+                i_stDSG:= MRCO_ROUGH_GPI_05.PG,
+                i_xDis_DPIlk := FALSE,
+                i_xEPS_OK := TRUE,
+                i_xPMPS_OK := TRUE ,
+                i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS,
+                i_xOverrideMode := xSystemOverrideMode_MRCO,
+				i_xReset := False,
+                io_fbFFHWO :=dummy_FFFO,
+                fbArbiter := dummy_fbArbiter1);
+
+//VRC-Normally Closed
+    //If OnBeamline then stay open.
+
+//    IF(xOnBeamline) THEN ?? if not on beamline, shoule we open this valve?
+        MRCO_SS_VRC_01(
+                i_stUSG := MRCO_MAIN_GHC_01.IG,
+                i_stDSG:= MRCO_SS_GHC_01.IG,
+                i_xDis_DPIlk := FALSE,
+                i_xEPS_OK := TRUE,
+                i_xPMPS_OK := TRUE ,
+                i_xExt_OK := MRCO_SS_PTM_01.iq_stPtm.eState = E_PumpState.pumpRUNNING,
+                i_xOverrideMode := xSystemOverrideMode_MRCO,
+				i_xReset := False,
+                io_fbFFHWO :=dummy_FFFO,
+                fbArbiter := dummy_fbArbiter1);
+                
+                
+
 
 (*Update EtherCAT Bridge Outputs*)
 
@@ -234,6 +336,32 @@ xIP1_ROUGH_VRC_03_OPEN_LS 	:= 	MRCO_ROUGH_VRC_03.M_IsOpen();
 xIP1_MAIN_xAT_VAC 			:= 	MRCO_MAIN_GHC_01.IG.xAT_VAC;
 xIP1_MAIN_xPRESS_OK 		:= 	MRCO_MAIN_GHC_01.IG.xPRESS_OK;
 rIP1_MAIN_rPRESS 			:= 	MRCO_MAIN_GHC_01.IG.rPRESS;
+//how to pass to IP1_MAIN_rPRESS
+(*
+IF MRCO_MAIN_GHC_01.IG.xPRESS_OK = FALSE
+THEN
+	rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS;
+END_IF
+IF MRCO_SS_GHC_01.IG.xPRESS_OK = FALSE
+THEN
+	rIP1_MAIN_rPRESS := MRCO_MAIN_GHC_01.IG.rPRESS;
+END_IF
+IF  (MRCO_MAIN_GHC_01.IG.xPRESS_OK = TRUE AND MRCO_SS_GHC_01.IG.xPRESS_OK)
+THEN   
+    IF (MRCO_MAIN_GHC_01.IG.i_iPRESS_R < MRCO_SS_GHC_01.IG.i_iPRESS_R) 
+	THEN
+	    rIP1_MAIN_rPRESS := MRCO_SS_GHC_01.IG.rPRESS; 
+	ELSE 
+		 rIP1_MAIN_rPRESS  := MRCO_SS_GHC_01.IG.rPRESS;   	
+	END_IF
+END_IF
+  
+
+
+
+*)
+
+
 xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 
 (*Update Thermocouple Readings*)
