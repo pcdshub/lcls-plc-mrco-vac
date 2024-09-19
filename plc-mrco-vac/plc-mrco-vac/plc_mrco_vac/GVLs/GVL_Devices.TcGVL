@@ -111,7 +111,7 @@ VAR_GLOBAL
     MRCO_ROUGH_GPI_04 : FB_9XX;
 
     // adding new GPI 05 for ss chamber
-    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[[MRCO_DRL_03_EL10_EL3174-0002]^AI Standard Channel 2^Value
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_DRL_03_E10_EL3174-0002]^AI Standard Channel 2^Value
     '}
     {attribute 'pytmc' := '
         pv: MRCO:ROUGH:GPI:05

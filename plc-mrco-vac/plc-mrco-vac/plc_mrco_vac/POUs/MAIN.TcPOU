@@ -71,7 +71,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
     MRCO_ROUGH_GPI_03(PG=>);
     MRCO_ROUGH_GPI_04.M_SetBits(32767);
     MRCO_ROUGH_GPI_04(PG=>);
-    MRCO_ROUGH_GPI_05.M_SetBits(32767);
+    MRCO_ROUGH_GPI_05.M_SetBits(30518);
     MRCO_ROUGH_GPI_05(PG=>);
 
 (*Cold Cathode Gauges*)
@@ -158,20 +158,19 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
 (*
     MRCO_SS_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic(
                         i_stTurbo:= MRCO_SS_PTM_01.iq_stPtm,
-                        i_stISG:= MRCO_ROUGH_GPI_05.PG
-                        i_stBSG:= MRCO_ROUGH_GPI_04.PG,
-                        (iq_stValve_NO:= MRCO_ROUGH_VRC_05.iq_stValve,
-                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
-                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,)
-                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
-                          iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
-                          iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
-                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve,
-                          iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
-                           iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,)
+                        i_stISG:= MRCO_ROUGH_GPI_05.PG,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
                         iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS,
                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS,
+                        AND((iq_stValve_NO:= MRCO_ROUGH_VRC_05.iq_stValve AND
+                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve AND
+                         iq_stRoughRoughValve_NC_second_xOpenLS:=xTMO_ROUGH1_VRC_01_OPEN_LS)
+                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve AND
+                          iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve AND
+                          iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS)
+                      OR (iq_stValve_NC:= MRCO_ROUGH_VRC_04.iq_stValve AND
+                          iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve AND
+                           iq_stRoughRoughValve_NC_xOpnLS:= xTMO_ROUGH2_VRC_01_OPEN_LS)),
                         x_onBeamline:= xOnBeamline),
                     iq_stPtm=> );
 

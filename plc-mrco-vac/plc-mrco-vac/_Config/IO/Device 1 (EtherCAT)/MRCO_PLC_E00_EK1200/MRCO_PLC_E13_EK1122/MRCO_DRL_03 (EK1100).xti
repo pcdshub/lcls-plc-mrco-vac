@@ -34,7 +34,7 @@
 		<Box File="MRCO_DRL_03_E09_EL9070.xti" Id="25">
 			<EtherCAT PortABoxInfo="#x01000034"/>
 		</Box>
-		<Box File="MRCO_DRL_03_EL10_EL3174-0002.xti" Id="53">
+		<Box File="MRCO_DRL_03_E10_EL3174-0002.xti" Id="53">
 			<EtherCAT PortABoxInfo="#x01000034"/>
 		</Box>
 		<Box File="Term 54 (EL9011).xti" Id="54">

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{41E52EBF-1789-7230-BB44-D2114BF74D83}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{ED978173-B7E7-A6A4-3559-EDA1757F31BF}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComBuffer</Name>
@@ -26789,6 +26789,655 @@ And saves them in the array q_aEcConfSlaveInfo.
       </Properties>
     </DataType>
     <DataType>
+      <Name Namespace="Tc2_System">ADSRDWRT</Name>
+      <Comment> ADS read/write command. </Comment>
+      <BitSize>1408</BitSize>
+      <SubItem>
+        <Name>NETID</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <Comment> Ams net id </Comment>
+        <BitSize>192</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>PORT</Name>
+        <Type Namespace="Tc2_System">T_AmsPort</Type>
+        <Comment> Ads communication port </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXGRP</Name>
+        <Type>UDINT</Type>
+        <Comment> Index group </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXOFFS</Name>
+        <Type>UDINT</Type>
+        <Comment> Index offset </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>WRITELEN</Name>
+        <Type>UDINT</Type>
+        <Comment> Max. number of data bytes to write (WRITELEN &lt;= max. size of source buffer) </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>READLEN</Name>
+        <Type>UDINT</Type>
+        <Comment> Max. number of data bytes to read (READLEN &lt;= max. size of destination buffer) </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SRCADDR</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        <Comment> Pointer to source buffer </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>384</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>TcIgnorePersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>DESTADDR</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        <Comment> Pointer to destination buffer </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>416</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>TcIgnorePersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>WRTRD</Name>
+        <Type>BOOL</Type>
+        <Comment> Rising edge starts command execution </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>448</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TMOUT</Name>
+        <Type>TIME</Type>
+        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>480</BitOffs>
+        <Default>
+          <Value>5000</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>BUSY</Name>
+        <Type>BOOL</Type>
+        <Comment> Busy flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>512</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERR</Name>
+        <Type>BOOL</Type>
+        <Comment> Error flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>520</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERRID</Name>
+        <Type>UDINT</Type>
+        <Comment> ADS error code </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>544</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>hide_all_locals</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Name>
+      <BitSize>5536</BitSize>
+      <SubItem>
+        <Name>bEnable</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sNetId</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nPort</Name>
+        <Type Namespace="Tc2_System">T_AmsPort</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>240</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nIdxGrp</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nIdxOffs</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sVarName</Name>
+        <Type>STRING(255)</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>tWatchdogTime</Name>
+        <Type>TIME</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2368</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bSendNow</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2400</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bBusy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2408</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLastCnt</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2432</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2464</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nErrorId</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2496</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbAdsWrite</Name>
+        <Type Namespace="Tc2_System">ADSWRITE</Type>
+        <BitSize>1216</BitSize>
+        <BitOffs>2528</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbAdsReadWrite</Name>
+        <Type Namespace="Tc2_System">ADSRDWRT</Type>
+        <BitSize>1408</BitSize>
+        <BitOffs>3744</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>timerWatchdog</Name>
+        <Type Namespace="Tc2_Standard">TP</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>5152</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RisingEdgeSendNow</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>5344</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>nStep</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>5408</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nSymbolHandle</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>5440</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bFirstCycle</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>5472</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nCnt</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>5504</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</Name>
+      <Comment>This function block is to be used whenever deivce data going to be read over ADS
+The remote plc has to instantiate this function block in order to write a watchdog variable
+that the ADS read function expects to keep checking</Comment>
+      <BitSize>7008</BitSize>
+      <SubItem>
+        <Name>sNetId</Name>
+        <Type>STRING(80)</Type>
+        <Comment>NetID of the Destination PLC controller</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nPort</Name>
+        <Type>UINT</Type>
+        <Comment> port number</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>688</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sVarName</Name>
+        <Type>STRING(80)</Type>
+        <Comment> the variable name of the watchdog on the remote plc.</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>704</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fb_WriteWatchdog</Name>
+        <Type Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Type>
+        <BitSize>5536</BitSize>
+        <BitOffs>1376</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftReset_Watchdog</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>6912</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xFirstPass</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>6976</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General">FB_TempSensor</Name>
+      <BitSize>256</BitSize>
+      <SubItem>
+        <Name>fResolution</Name>
+        <Type>LREAL</Type>
+        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>64</BitOffs>
+        <Default>
+          <Value>0.1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fTemp</Name>
+        <Type>LREAL</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: TEMP
+        io: input
+        field: EGU C
+        field: PREC 2
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bConnected</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>192</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: CONN
+        io: input
+        field: ONAM Connected
+        field: ZNAM Disconnected
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>200</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bUnderrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>208</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bOverrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>216</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iRaw</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
       <Name Namespace="LCLS_Vacuum_Serial">ST_TD400Control</Name>
       <BitSize>16</BitSize>
       <SubItem>
@@ -39133,655 +39782,6 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
       </Properties>
     </DataType>
     <DataType>
-      <Name Namespace="Tc2_System">ADSRDWRT</Name>
-      <Comment> ADS read/write command. </Comment>
-      <BitSize>1408</BitSize>
-      <SubItem>
-        <Name>NETID</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <Comment> Ams net id </Comment>
-        <BitSize>192</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>PORT</Name>
-        <Type Namespace="Tc2_System">T_AmsPort</Type>
-        <Comment> Ads communication port </Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXGRP</Name>
-        <Type>UDINT</Type>
-        <Comment> Index group </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXOFFS</Name>
-        <Type>UDINT</Type>
-        <Comment> Index offset </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>WRITELEN</Name>
-        <Type>UDINT</Type>
-        <Comment> Max. number of data bytes to write (WRITELEN &lt;= max. size of source buffer) </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>READLEN</Name>
-        <Type>UDINT</Type>
-        <Comment> Max. number of data bytes to read (READLEN &lt;= max. size of destination buffer) </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>352</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>SRCADDR</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
-        <Comment> Pointer to source buffer </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>384</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-          <Property>
-            <Name>TcIgnorePersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>DESTADDR</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
-        <Comment> Pointer to destination buffer </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>416</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-          <Property>
-            <Name>TcIgnorePersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>WRTRD</Name>
-        <Type>BOOL</Type>
-        <Comment> Rising edge starts command execution </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>448</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>TMOUT</Name>
-        <Type>TIME</Type>
-        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>480</BitOffs>
-        <Default>
-          <Value>5000</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>BUSY</Name>
-        <Type>BOOL</Type>
-        <Comment> Busy flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>512</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERR</Name>
-        <Type>BOOL</Type>
-        <Comment> Error flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>520</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERRID</Name>
-        <Type>UDINT</Type>
-        <Comment> ADS error code </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>544</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>hide_all_locals</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Name>
-      <BitSize>5536</BitSize>
-      <SubItem>
-        <Name>bEnable</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>32</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sNetId</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <BitSize>192</BitSize>
-        <BitOffs>40</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nPort</Name>
-        <Type Namespace="Tc2_System">T_AmsPort</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>240</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nIdxGrp</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nIdxOffs</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sVarName</Name>
-        <Type>STRING(255)</Type>
-        <BitSize>2048</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>tWatchdogTime</Name>
-        <Type>TIME</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2368</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bSendNow</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2400</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bBusy</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2408</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nLastCnt</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2432</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2464</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nErrorId</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2496</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fbAdsWrite</Name>
-        <Type Namespace="Tc2_System">ADSWRITE</Type>
-        <BitSize>1216</BitSize>
-        <BitOffs>2528</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbAdsReadWrite</Name>
-        <Type Namespace="Tc2_System">ADSRDWRT</Type>
-        <BitSize>1408</BitSize>
-        <BitOffs>3744</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>timerWatchdog</Name>
-        <Type Namespace="Tc2_Standard">TP</Type>
-        <BitSize>192</BitSize>
-        <BitOffs>5152</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>RisingEdgeSendNow</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>5344</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>nStep</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>5408</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nSymbolHandle</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>5440</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>bFirstCycle</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>5472</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nCnt</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>5504</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</Name>
-      <Comment>This function block is to be used whenever deivce data going to be read over ADS
-The remote plc has to instantiate this function block in order to write a watchdog variable
-that the ADS read function expects to keep checking</Comment>
-      <BitSize>7008</BitSize>
-      <SubItem>
-        <Name>sNetId</Name>
-        <Type>STRING(80)</Type>
-        <Comment>NetID of the Destination PLC controller</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nPort</Name>
-        <Type>UINT</Type>
-        <Comment> port number</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>688</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sVarName</Name>
-        <Type>STRING(80)</Type>
-        <Comment> the variable name of the watchdog on the remote plc.</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>704</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>1352</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fb_WriteWatchdog</Name>
-        <Type Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Type>
-        <BitSize>5536</BitSize>
-        <BitOffs>1376</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>ftReset_Watchdog</Name>
-        <Type Namespace="Tc2_Standard">F_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>6912</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>xFirstPass</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>6976</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_General">FB_TempSensor</Name>
-      <BitSize>256</BitSize>
-      <SubItem>
-        <Name>fResolution</Name>
-        <Type>LREAL</Type>
-        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
-        <BitSize>64</BitSize>
-        <BitOffs>64</BitOffs>
-        <Default>
-          <Value>0.1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fTemp</Name>
-        <Type>LREAL</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>128</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: TEMP
-        io: input
-        field: EGU C
-        field: PREC 2
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bConnected</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>192</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: CONN
-        io: input
-        field: ONAM Connected
-        field: ZNAM Disconnected
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>200</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: ERR
-        io: input
-        field: ONAM True
-        field: ZNAM False
-    </Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bUnderrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>208</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bOverrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>216</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>iRaw</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
       <Name>VERSION</Name>
       <BitSize>64</BitSize>
       <SubItem>
@@ -41270,7 +41270,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642720416</BitOffs>
+            <BitOffs>645629920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_03</Name>
@@ -41312,7 +41312,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642720800</BitOffs>
+            <BitOffs>645630304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_02</Name>
@@ -41354,7 +41354,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721184</BitOffs>
+            <BitOffs>645630688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_04</Name>
@@ -41396,7 +41396,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721568</BitOffs>
+            <BitOffs>645631072</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_ROUGH_PTM_01</Name>
@@ -41438,7 +41438,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721952</BitOffs>
+            <BitOffs>645631456</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_SS_PTM_01</Name>
@@ -41480,7 +41480,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722336</BitOffs>
+            <BitOffs>645631840</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41528,7 +41528,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642720608</BitOffs>
+            <BitOffs>645630112</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_03</Name>
@@ -41570,7 +41570,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642720992</BitOffs>
+            <BitOffs>645630496</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_02</Name>
@@ -41612,7 +41612,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721376</BitOffs>
+            <BitOffs>645630880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_04</Name>
@@ -41654,7 +41654,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642721760</BitOffs>
+            <BitOffs>645631264</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_ROUGH_PTM_01</Name>
@@ -41696,7 +41696,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722144</BitOffs>
+            <BitOffs>645631648</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_SS_PTM_01</Name>
@@ -41738,7 +41738,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722528</BitOffs>
+            <BitOffs>645632032</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -41756,7 +41756,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642627680</BitOffs>
+            <BitOffs>645537184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_MAIN_PTM_01</Name>
@@ -41767,7 +41767,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642630192</BitOffs>
+            <BitOffs>645539696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_02</Name>
@@ -41778,7 +41778,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642632704</BitOffs>
+            <BitOffs>645542208</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_MAIN_PTM_02</Name>
@@ -41789,7 +41789,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642635216</BitOffs>
+            <BitOffs>645544720</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_03</Name>
@@ -41800,7 +41800,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642637728</BitOffs>
+            <BitOffs>645547232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_MAIN_PTM_03</Name>
@@ -41811,7 +41811,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642640240</BitOffs>
+            <BitOffs>645549744</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_04</Name>
@@ -41822,7 +41822,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642642752</BitOffs>
+            <BitOffs>645552256</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_MAIN_PTM_04</Name>
@@ -41833,7 +41833,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642645264</BitOffs>
+            <BitOffs>645554768</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_ROUGH_PTM_01</Name>
@@ -41844,7 +41844,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642647776</BitOffs>
+            <BitOffs>645557280</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_ROUGH_PTM_01</Name>
@@ -41855,7 +41855,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642650288</BitOffs>
+            <BitOffs>645559792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_SS_PTM_01</Name>
@@ -41866,7 +41866,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642652800</BitOffs>
+            <BitOffs>645562304</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.SerialTXBuffer_MRCO_SS_PTM_01</Name>
@@ -41877,7 +41877,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642655312</BitOffs>
+            <BitOffs>645564816</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_MAIN_PTM_01</Name>
@@ -41889,7 +41889,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642657824</BitOffs>
+            <BitOffs>645567328</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_MAIN_PTM_02</Name>
@@ -41900,7 +41900,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642668256</BitOffs>
+            <BitOffs>645577760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_MAIN_PTM_03</Name>
@@ -41911,7 +41911,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642678688</BitOffs>
+            <BitOffs>645588192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_MAIN_PTM_04</Name>
@@ -41922,7 +41922,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642689120</BitOffs>
+            <BitOffs>645598624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_ROUGH_PTM_01</Name>
@@ -41933,7 +41933,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642699552</BitOffs>
+            <BitOffs>645609056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_COM.fbSerialLineControl_MRCO_SS_PTM_01</Name>
@@ -41944,7 +41944,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642709984</BitOffs>
+            <BitOffs>645619488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TwinCAT_SystemInfoVarList._AppInfo</Name>
@@ -42107,7 +42107,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722720</BitOffs>
+            <BitOffs>642626992</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
@@ -42127,598 +42127,7 @@ that the ADS read function expects to keep checking</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722728</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>642722736</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642806176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xFaultNC</Name>
-            <Comment> Error Active when no Error is present</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642806184</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_02.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642889632</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_02.i_xFaultNC</Name>
-            <Comment> Error Active when no Error is present</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642889640</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_03.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642973088</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_03.i_xFaultNC</Name>
-            <Comment> Error Active when no Error is present</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642973096</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_04.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643056544</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_04.i_xFaultNC</Name>
-            <Comment> Error Active when no Error is present</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643056552</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140160</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xFaultNC</Name>
-            <Comment> Error</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xWarn</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140184</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_PTM_01.i_xAtSpd</Name>
-            <Comment> Normaml operation when true</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643223648</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_PTM_01.i_xFaultNC</Name>
-            <Comment> Error Active when no Error is present</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643223656</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_GPI_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643310144</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_GPI_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643397424</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_GPI_02.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643484528</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_GPI_03.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643571632</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_GPI_04.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643658736</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_GPI_05.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643745840</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_GHC_01.i_iPRESS_R</Name>
-            <Comment> input Pressure // Link to analog Input</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643833712</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_GHC_01.i_iPRESS_R</Name>
-            <Comment> Controls and I/Os</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>INT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643921744</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_GHC_01.i_xHV_ON</Name>
-            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1084) ^Input</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643921768</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_stVat590PlcDriveRef</Name>
-            <Comment>CoE Interface
-Link this to your VAT590 reference variables under InfoData.
-Connect i_stVat590PlcDriveRef.aNetId to the VAT590 Valve InfoData^AdsAddr^netId
-Connect i_stVat590PlcDriveRef.nSlaveAddr to the VAT590 Valve InfoData^AdsAddr^port</Comment>
-            <BitSize>80</BitSize>
-            <BaseType Namespace="LCLS_General.Tc2_EtherCAT">ST_PlcDriveRef</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644008240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_nRawPosition</Name>
-            <Comment> Position readback from the valve</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_nRawPressure</Name>
-            <Comment> Pressure readback from the valve</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014208</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_eControlMode</Name>
-            <Comment> Valve control mode readback</Comment>
-            <BitSize>8</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">E_ControlMode</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_eFatalError</Name>
-            <Comment> Valve Fatal Errors readback</Comment>
-            <BitSize>16</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">E_FatalErrors</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014256</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_stGenStatus</Name>
-            <Comment> Valve General Status readback</Comment>
-            <BitSize>16</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_GeneralStatus</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014272</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_stGenWarnings</Name>
-            <Comment> Valve General Warnings readback</Comment>
-            <BitSize>16</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_GeneralWarnings</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014288</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_stExtnWarnings</Name>
-            <Comment> Valve Extended Warnings readback</Comment>
-            <BitSize>16</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_ExtendedWarnings</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014304</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.i_bValveEthCatStatus</Name>
-            <Comment>Ethercat Interface Status Check
-Link this to your VAT590 WcState variable under WcState</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014456</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644099488</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644099496</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644184416</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644184424</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644269344</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644269352</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_VRC_01.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644446688</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_VRC_01.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644446696</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644624160</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644624168</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xOpnLS</Name>
-            <Comment>IO</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644709216</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xClsLS</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Input</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644709224</BitOffs>
+            <BitOffs>642627000</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
@@ -42739,7 +42148,27 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645629888</BitOffs>
+            <BitOffs>642634688</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642634760</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_01.bError</Name>
@@ -42763,7 +42192,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630280</BitOffs>
+            <BitOffs>642635144</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_01.bUnderrange</Name>
@@ -42775,7 +42204,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630288</BitOffs>
+            <BitOffs>642635152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_01.bOverrange</Name>
@@ -42787,7 +42216,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630296</BitOffs>
+            <BitOffs>642635160</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_01.iRaw</Name>
@@ -42799,7 +42228,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630304</BitOffs>
+            <BitOffs>642635168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_02.bError</Name>
@@ -42823,7 +42252,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630536</BitOffs>
+            <BitOffs>642635400</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_02.bUnderrange</Name>
@@ -42835,7 +42264,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630544</BitOffs>
+            <BitOffs>642635408</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_02.bOverrange</Name>
@@ -42847,7 +42276,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630552</BitOffs>
+            <BitOffs>642635416</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_02.iRaw</Name>
@@ -42859,7 +42288,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630560</BitOffs>
+            <BitOffs>642635424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_03.bError</Name>
@@ -42883,7 +42312,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630792</BitOffs>
+            <BitOffs>642635656</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_03.bUnderrange</Name>
@@ -42895,7 +42324,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630800</BitOffs>
+            <BitOffs>642635664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_03.bOverrange</Name>
@@ -42907,7 +42336,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630808</BitOffs>
+            <BitOffs>642635672</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_03.iRaw</Name>
@@ -42919,7 +42348,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645630816</BitOffs>
+            <BitOffs>642635680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_04.bError</Name>
@@ -42943,7 +42372,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631048</BitOffs>
+            <BitOffs>642635912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_04.bUnderrange</Name>
@@ -42955,7 +42384,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631056</BitOffs>
+            <BitOffs>642635920</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_04.bOverrange</Name>
@@ -42967,7 +42396,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631064</BitOffs>
+            <BitOffs>642635928</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_04.iRaw</Name>
@@ -42979,7 +42408,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631072</BitOffs>
+            <BitOffs>642635936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_05.bError</Name>
@@ -43003,7 +42432,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631304</BitOffs>
+            <BitOffs>642636168</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_05.bUnderrange</Name>
@@ -43015,7 +42444,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631312</BitOffs>
+            <BitOffs>642636176</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_05.bOverrange</Name>
@@ -43027,7 +42456,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631320</BitOffs>
+            <BitOffs>642636184</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_05.iRaw</Name>
@@ -43039,7 +42468,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631328</BitOffs>
+            <BitOffs>642636192</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_06.bError</Name>
@@ -43063,7 +42492,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631560</BitOffs>
+            <BitOffs>642636424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_06.bUnderrange</Name>
@@ -43075,7 +42504,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631568</BitOffs>
+            <BitOffs>642636432</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_06.bOverrange</Name>
@@ -43087,7 +42516,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631576</BitOffs>
+            <BitOffs>642636440</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_06.iRaw</Name>
@@ -43099,7 +42528,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631584</BitOffs>
+            <BitOffs>642636448</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_07.bError</Name>
@@ -43123,7 +42552,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631816</BitOffs>
+            <BitOffs>642636680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_07.bUnderrange</Name>
@@ -43135,7 +42564,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631824</BitOffs>
+            <BitOffs>642636688</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_07.bOverrange</Name>
@@ -43147,7 +42576,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631832</BitOffs>
+            <BitOffs>642636696</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_07.iRaw</Name>
@@ -43159,7 +42588,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645631840</BitOffs>
+            <BitOffs>642636704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_08.bError</Name>
@@ -43183,7 +42612,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645632072</BitOffs>
+            <BitOffs>642636936</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_08.bUnderrange</Name>
@@ -43195,7 +42624,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645632080</BitOffs>
+            <BitOffs>642636944</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_08.bOverrange</Name>
@@ -43207,7 +42636,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645632088</BitOffs>
+            <BitOffs>642636952</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_TC.TC_08.iRaw</Name>
@@ -43219,7 +42648,578 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Value>Input</Value>
               </Property>
             </Properties>
-            <BitOffs>645632096</BitOffs>
+            <BitOffs>642636960</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642720480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xFaultNC</Name>
+            <Comment> Error Active when no Error is present</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642720488</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_02.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642803936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_02.i_xFaultNC</Name>
+            <Comment> Error Active when no Error is present</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642803944</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_03.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642887392</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_03.i_xFaultNC</Name>
+            <Comment> Error Active when no Error is present</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642887400</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_04.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642970848</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_04.i_xFaultNC</Name>
+            <Comment> Error Active when no Error is present</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642970856</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054464</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xFaultNC</Name>
+            <Comment> Error</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054472</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xWarn</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.i_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054488</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_PTM_01.i_xAtSpd</Name>
+            <Comment> Normaml operation when true</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643137952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_PTM_01.i_xFaultNC</Name>
+            <Comment> Error Active when no Error is present</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643137960</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_GPI_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643224448</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_GPI_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643311728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_GPI_02.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643398832</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_GPI_03.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643485936</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_GPI_04.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643573040</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_GPI_05.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643660144</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_GHC_01.i_iPRESS_R</Name>
+            <Comment> input Pressure // Link to analog Input</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643748016</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_GHC_01.i_iPRESS_R</Name>
+            <Comment> Controls and I/Os</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>INT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643836048</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_GHC_01.i_xHV_ON</Name>
+            <Comment>  True when High Voltage is on  // 'TcLinkTo' (EL1084) ^Input</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643836072</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_stVat590PlcDriveRef</Name>
+            <Comment>CoE Interface
+Link this to your VAT590 reference variables under InfoData.
+Connect i_stVat590PlcDriveRef.aNetId to the VAT590 Valve InfoData^AdsAddr^netId
+Connect i_stVat590PlcDriveRef.nSlaveAddr to the VAT590 Valve InfoData^AdsAddr^port</Comment>
+            <BitSize>80</BitSize>
+            <BaseType Namespace="LCLS_General.Tc2_EtherCAT">ST_PlcDriveRef</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643922544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_nRawPosition</Name>
+            <Comment> Position readback from the valve</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_nRawPressure</Name>
+            <Comment> Pressure readback from the valve</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928512</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_eControlMode</Name>
+            <Comment> Valve control mode readback</Comment>
+            <BitSize>8</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">E_ControlMode</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928544</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_eFatalError</Name>
+            <Comment> Valve Fatal Errors readback</Comment>
+            <BitSize>16</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">E_FatalErrors</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928560</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_stGenStatus</Name>
+            <Comment> Valve General Status readback</Comment>
+            <BitSize>16</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_GeneralStatus</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928576</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_stGenWarnings</Name>
+            <Comment> Valve General Warnings readback</Comment>
+            <BitSize>16</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_GeneralWarnings</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928592</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_stExtnWarnings</Name>
+            <Comment> Valve Extended Warnings readback</Comment>
+            <BitSize>16</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_ExtendedWarnings</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928608</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.i_bValveEthCatStatus</Name>
+            <Comment>Ethercat Interface Status Check
+Link this to your VAT590 WcState variable under WcState</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928760</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644013792</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644013800</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644098720</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644098728</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644183648</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644183656</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_VRC_01.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644360992</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_VRC_01.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644361000</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644538464</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644538472</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xOpnLS</Name>
+            <Comment>IO</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644623520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xClsLS</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Input</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644623528</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -43248,6 +43248,30 @@ Link this to your VAT590 WcState variable under WcState</Comment>
             <BitOffs>640454728</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
+            <Comment>I/O Outputs to TMO Beamline</Comment>
+            <BitSize>72</BitSize>
+            <BaseType>STRING(8)</BaseType>
+            <Default>
+              <String>MRCO</String>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^ENDSTATION_PLC_NAME
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642634768</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
             <BitSize>8</BitSize>
             <BaseType>BOOL</BaseType>
@@ -43265,288 +43289,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722744</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642806192</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_02.q_RunDO</Name>
-            <Comment> Start/Stop</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642889648</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_03.q_RunDO</Name>
-            <Comment> Start/Stop</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>642973104</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_PTM_04.q_RunDO</Name>
-            <Comment> Start/Stop</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643056560</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140192</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_PumpingStation</Name>
-            <Comment> Start/Stop interlock</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140200</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_xRemote</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140208</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_xReset</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643140216</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_PTM_01.q_RunDO</Name>
-            <Comment> Start/Stop</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643223664</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_MAIN_GHC_01.q_xHV_DIS</Name>
-            <Comment> Active Low </Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643833728</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_GHC_01.q_xHV_DIS</Name>
-            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>643921760</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPositionSP</Name>
-            <Comment> Position setpoint</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014336</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPressureSP</Name>
-            <Comment> Pressure setpoint</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014368</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPressure</Name>
-            <Comment> Raw pressure output, eliminate need for external connection of AI, ranges 0 to 1000000 (or 0.0 to 10V) (1E-12 Torr to 1E-2 Torr)</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>DINT</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014400</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.o_eCtrlModeSP</Name>
-            <Comment> Valve control mode setpoint</Comment>
-            <BitSize>8</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">E_ControlModeSP</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014432</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_VCN_01.o_stGenCtrlSP</Name>
-            <Comment> General Control setpoint</Comment>
-            <BitSize>16</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">ST_GeneralControlSP</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644014440</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644099504</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644184432</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.q_xCLS_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644269360</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_SS_VRC_01.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644446704</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.q_xOPN_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644624176</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-            </Properties>
-            <BitOffs>644709232</BitOffs>
+            <BitOffs>642634840</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
@@ -43566,7 +43309,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645533360</BitOffs>
+            <BitOffs>642634848</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
@@ -43586,7 +43329,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645533368</BitOffs>
+            <BitOffs>642634856</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
@@ -43613,7 +43356,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645551248</BitOffs>
+            <BitOffs>642634864</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
@@ -43633,7 +43376,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645551256</BitOffs>
+            <BitOffs>642634872</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
@@ -43653,7 +43396,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645569136</BitOffs>
+            <BitOffs>642634880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
@@ -43673,7 +43416,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645569144</BitOffs>
+            <BitOffs>642634888</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
@@ -43704,31 +43447,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645587024</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
-            <Comment>I/O Outputs to TMO Beamline</Comment>
-            <BitSize>72</BitSize>
-            <BaseType>STRING(8)</BaseType>
-            <Default>
-              <String>MRCO</String>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^ENDSTATION_PLC_NAME
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcAddressType</Name>
-                <Value>Output</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645629960</BitOffs>
+            <BitOffs>642634896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
@@ -43748,7 +43467,288 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645630048</BitOffs>
+            <BitOffs>642634912</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642720496</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_02.q_RunDO</Name>
+            <Comment> Start/Stop</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642803952</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_03.q_RunDO</Name>
+            <Comment> Start/Stop</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642887408</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_PTM_04.q_RunDO</Name>
+            <Comment> Start/Stop</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>642970864</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop for TC110 link this output to the Pumping station bit</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054496</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_PumpingStation</Name>
+            <Comment> Start/Stop interlock</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054504</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_xRemote</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054512</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_PTM_01.q_xReset</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643054520</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_PTM_01.q_RunDO</Name>
+            <Comment> Start/Stop</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643137968</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_MAIN_GHC_01.q_xHV_DIS</Name>
+            <Comment> Active Low </Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643748032</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_GHC_01.q_xHV_DIS</Name>
+            <Comment> Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output</Comment>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643836064</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPositionSP</Name>
+            <Comment> Position setpoint</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928640</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPressureSP</Name>
+            <Comment> Pressure setpoint</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928672</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.o_nRawPressure</Name>
+            <Comment> Raw pressure output, eliminate need for external connection of AI, ranges 0 to 1000000 (or 0.0 to 10V) (1E-12 Torr to 1E-2 Torr)</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>DINT</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928704</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.o_eCtrlModeSP</Name>
+            <Comment> Valve control mode setpoint</Comment>
+            <BitSize>8</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">E_ControlModeSP</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_VCN_01.o_stGenCtrlSP</Name>
+            <Comment> General Control setpoint</Comment>
+            <BitSize>16</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">ST_GeneralControlSP</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>643928744</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_01.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644013808</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644098736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_02.q_xCLS_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644183664</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_SS_VRC_01.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644361008</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_04.q_xOPN_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644538480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcAddressType</Name>
+                <Value>Output</Value>
+              </Property>
+            </Properties>
+            <BitOffs>644623536</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
@@ -52593,6 +52593,268 @@ Link this to your VAT590 WcState variable under WcState</Comment>
             <BitOffs>642119088</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>GVL_PLC_Interfaces.fb_ADS_WATCHDOG_VAC_MRCO_TMO</Name>
+            <Comment>Outputs</Comment>
+            <BitSize>7008</BitSize>
+            <BaseType Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642627680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.xSystemOverrideMode_MRCO</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: PLC:MRCO:VAC:OVRDON
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642634904</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_01</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:01
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642634944</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_02</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:02
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642635200</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_03</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:03
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642635456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_04</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:04
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642635712</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_05</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:05
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642635968</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_06</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:06
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642636224</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_07</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:07
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642636480</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_TC.TC_08</Name>
+            <BitSize>256</BitSize>
+            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcLinkTo</Name>
+                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Value;
+                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Error;
+                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Underrange;
+                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Overrange
+    </Value>
+              </Property>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: MRCO:STC:08
+        io: io
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642636736</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.xOnBeamline</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>0</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>pytmc</Name>
+                <Value>
+        pv: PLC:MRCO:ON:BEAMLINE
+        io:i
+    </Value>
+              </Property>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642636992</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_Devices.st_TD400_CTRL_MRCO_SS_PTM_01</Name>
             <BitSize>16</BitSize>
             <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD400Control</BaseType>
@@ -52601,7 +52863,22 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642626992</BitOffs>
+            <BitOffs>642637008</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Variables.rHighVoltageMinPressure</Name>
+            <Comment>Hard coded High voltage Minimum Enable Pressure</Comment>
+            <BitSize>32</BitSize>
+            <BaseType>REAL</BaseType>
+            <Default>
+              <Value>1E-05</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>642637024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_PTM_01</Name>
@@ -52627,7 +52904,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642722752</BitOffs>
+            <BitOffs>642637056</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_PTM_02</Name>
@@ -52652,7 +52929,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642806208</BitOffs>
+            <BitOffs>642720512</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_PTM_03</Name>
@@ -52677,7 +52954,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642889664</BitOffs>
+            <BitOffs>642803968</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_PTM_04</Name>
@@ -52702,7 +52979,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>642973120</BitOffs>
+            <BitOffs>642887424</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_PTM_01</Name>
@@ -52729,7 +53006,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643056576</BitOffs>
+            <BitOffs>642970880</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_SS_PTM_01</Name>
@@ -52755,7 +53032,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643140224</BitOffs>
+            <BitOffs>643054528</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_GPI_01</Name>
@@ -52779,7 +53056,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643223680</BitOffs>
+            <BitOffs>643137984</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_GPI_01</Name>
@@ -52803,7 +53080,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643310400</BitOffs>
+            <BitOffs>643224704</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_GPI_02</Name>
@@ -52826,7 +53103,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643397504</BitOffs>
+            <BitOffs>643311808</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_GPI_03</Name>
@@ -52849,7 +53126,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643484608</BitOffs>
+            <BitOffs>643398912</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_GPI_04</Name>
@@ -52872,7 +53149,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643571712</BitOffs>
+            <BitOffs>643486016</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_GPI_05</Name>
@@ -52882,7 +53159,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
             <Properties>
               <Property>
                 <Name>TcLinkTo</Name>
-                <Value>.i_iPRESS_R	:=	TIIB[[MRCO_DRL_03_EL10_EL3174-0002]^AI Standard Channel 2^Value
+                <Value>.i_iPRESS_R	:=	TIIB[MRCO_DRL_03_E10_EL3174-0002]^AI Standard Channel 2^Value
     </Value>
               </Property>
               <Property>
@@ -52896,7 +53173,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643658816</BitOffs>
+            <BitOffs>643573120</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_MAIN_GHC_01</Name>
@@ -52921,7 +53198,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643745920</BitOffs>
+            <BitOffs>643660224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_SS_GHC_01</Name>
@@ -52944,7 +53221,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643833792</BitOffs>
+            <BitOffs>643748096</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_VCN_01</Name>
@@ -52979,7 +53256,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>643922048</BitOffs>
+            <BitOffs>643836352</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_VRC_01</Name>
@@ -53006,7 +53283,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644014592</BitOffs>
+            <BitOffs>643928896</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_VRC_03</Name>
@@ -53031,7 +53308,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644099520</BitOffs>
+            <BitOffs>644013824</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_VRC_02</Name>
@@ -53057,7 +53334,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644184448</BitOffs>
+            <BitOffs>644098752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_SS_VRC_01</Name>
@@ -53083,7 +53360,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644269376</BitOffs>
+            <BitOffs>644183680</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_VRC_04</Name>
@@ -53109,7 +53386,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644446848</BitOffs>
+            <BitOffs>644361152</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.MRCO_ROUGH_VRC_05</Name>
@@ -53135,7 +53412,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644624320</BitOffs>
+            <BitOffs>644538624</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_CTRL_MRCO_ROUGH_PTM_01</Name>
@@ -53152,7 +53429,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644709248</BitOffs>
+            <BitOffs>644623552</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_Pfeiffer_RBK_MRCO_ROUGH_PTM_01</Name>
@@ -53167,7 +53444,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644712448</BitOffs>
+            <BitOffs>644626752</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.fb_PfeifferCom_MRCO_ROUGH_PTM_01</Name>
@@ -53178,7 +53455,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>644735488</BitOffs>
+            <BitOffs>644649792</BitOffs>
           </Symbol>
           <Symbol>
             <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_01</Name>
@@ -53190,395 +53467,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645533184</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_01</Name>
-            <BitSize>17696</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645533376</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_02</Name>
-            <BitSize>176</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645551072</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_02</Name>
-            <BitSize>17696</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645551264</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_03</Name>
-            <BitSize>176</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645568960</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_03</Name>
-            <BitSize>17696</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645569152</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_04</Name>
-            <BitSize>176</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645586848</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.xSystemOverrideMode_MRCO</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>0</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: PLC:MRCO:VAC:OVRDON
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645587032</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_04</Name>
-            <BitSize>17696</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645587040</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.st_TD400_RBK_MRCO_SS_PTM_01</Name>
-            <Comment>need to update the library </Comment>
-            <BitSize>192</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD400Status</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645604736</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD400Com_MRCO_SS_PTM_01</Name>
-            <BitSize>17792</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_COM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645604928</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD400SerialIO_MRCO_SS_PTM_01</Name>
-            <BitSize>160</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_TO_PTM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645622720</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_PLC_Interfaces.fb_ADS_WATCHDOG_VAC_MRCO_TMO</Name>
-            <Comment>Outputs</Comment>
-            <BitSize>7008</BitSize>
-            <BaseType Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645622880</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.xOnBeamline</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>0</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: PLC:MRCO:ON:BEAMLINE
-        io:i
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645630032</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_01</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 1^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:01
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645630080</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_02</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 2^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:02
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645630336</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_03</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 3^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:03
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645630592</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_04</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 4^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:04
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645630848</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_05</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 5^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:05
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645631104</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_06</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 6^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:06
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645631360</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_07</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 7^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:07
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645631616</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_TC.TC_08</Name>
-            <BitSize>256</BitSize>
-            <BaseType Namespace="LCLS_General">FB_TempSensor</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcLinkTo</Name>
-                <Value>.iRaw 			:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Value;
-                                 .bError  		:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Error;
-                                 .bUnderrange 	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Underrange;
-                                 .bOverrange  	:=	TIIB[MRCO_PLC_E10_EL3318]^TC Channel 8^Status^Overrange
-    </Value>
-              </Property>
-              <Property>
-                <Name>pytmc</Name>
-                <Value>
-        pv: MRCO:STC:08
-        io: io
-    </Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645631872</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Variables.rHighVoltageMinPressure</Name>
-            <Comment>Hard coded High voltage Minimum Enable Pressure</Comment>
-            <BitSize>32</BitSize>
-            <BaseType>REAL</BaseType>
-            <Default>
-              <Value>1E-05</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645632128</BitOffs>
+            <BitOffs>645447488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bLittleEndian</Name>
@@ -53593,7 +53482,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645632160</BitOffs>
+            <BitOffs>645447664</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.bSimulationMode</Name>
@@ -53608,7 +53497,162 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645632168</BitOffs>
+            <BitOffs>645447672</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_01</Name>
+            <BitSize>17696</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645447680</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_02</Name>
+            <BitSize>176</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645465376</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nRegisterSize</Name>
+            <Comment> Does the target support an FPU</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>WORD</BaseType>
+            <Default>
+              <Value>32</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645465552</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_02</Name>
+            <BitSize>17696</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645465568</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_03</Name>
+            <BitSize>176</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645483264</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.nPackMode</Name>
+            <Comment> Does the target support an FPU</Comment>
+            <BitSize>16</BitSize>
+            <BaseType>UINT</BaseType>
+            <Default>
+              <Value>8</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645483440</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_03</Name>
+            <BitSize>17696</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645483456</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.st_TD20_RBK_MRCO_MAIN_PTM_04</Name>
+            <BitSize>176</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD20Status</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645501152</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>Constants.bFPUSupport</Name>
+            <BitSize>8</BitSize>
+            <BaseType>BOOL</BaseType>
+            <Default>
+              <Value>1</Value>
+            </Default>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645501328</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD20Com_MRCO_MAIN_PTM_04</Name>
+            <BitSize>17696</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD20_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645501344</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.st_TD400_RBK_MRCO_SS_PTM_01</Name>
+            <Comment>need to update the library</Comment>
+            <BitSize>192</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">ST_TD400Status</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645519040</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD400Com_MRCO_SS_PTM_01</Name>
+            <BitSize>17792</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645519232</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD400SerialIO_MRCO_SS_PTM_01</Name>
+            <BitSize>160</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_TO_PTM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645537024</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersion</Name>
@@ -53638,7 +53682,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645632176</BitOffs>
+            <BitOffs>645632224</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.CompilerVersion</Name>
@@ -53668,51 +53712,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645632240</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nRegisterSize</Name>
-            <Comment> Does the target support an FPU</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>WORD</BaseType>
-            <Default>
-              <Value>32</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645632304</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.nPackMode</Name>
-            <Comment> Does the target support an FPU</Comment>
-            <BitSize>16</BitSize>
-            <BaseType>UINT</BaseType>
-            <Default>
-              <Value>8</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645632320</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>Constants.bFPUSupport</Name>
-            <BitSize>8</BitSize>
-            <BaseType>BOOL</BaseType>
-            <Default>
-              <Value>1</Value>
-            </Default>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645632336</BitOffs>
+            <BitOffs>645632288</BitOffs>
           </Symbol>
           <Symbol>
             <Name>Constants.RuntimeVersionNumeric</Name>
@@ -54400,15 +54400,15 @@ ALL VALVES CURRENTLY NO</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-09-19T13:14:30</Value>
+          <Value>2024-09-19T14:42:02</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>663552</Value>
+          <Value>606208</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80277504</Value>
+          <Value>80216064</Value>
         </Property>
       </Properties>
     </Module>
