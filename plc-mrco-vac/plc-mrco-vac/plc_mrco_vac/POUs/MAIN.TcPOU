@@ -165,7 +165,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         x_onBeamline:= xOnBeamline),
                     iq_stPtm=> );
 
-  //        MRCO_SS_PTM_01(i_xExtILKOk:=xSystemOverrideMode_MRCO );
+         MRCO_MSC_PTM_01(i_xExtILKOk:=b_SS_PTM_01_ILKOK );
 
 IF (xOnBeamline) THEN
     b_SS_PTM_01_ILKOK := (MRCO_ROUGH_GPI_05.PG.xPRESS_OK AND MRCO_ROUGH_GPI_05.PG.rPRESS < i_stTurbo.rBackingPressureSP) AND
