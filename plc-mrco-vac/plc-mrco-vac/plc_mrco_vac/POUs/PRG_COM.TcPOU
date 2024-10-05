@@ -57,13 +57,13 @@ fbSerialLineControl_MRCO_ROUGH_PTM_01(
     Error=> ,
     ErrorID=> );
 
-fbSerialLineControl_MRCO_SS_PTM_01(
+fbSerialLineControl_MRCO_MSC_PTM_01(
     Mode:= SERIALLINEMODE_EL6_22B,
-    pComIn:= ADR(stComIn_MRCO_SS_PTM_01),
-    pComOut:=ADR(stComOut_MRCO_SS_PTM_01),
-    SizeComIn:= UINT_TO_INT(SIZEOF(stComIn_MRCO_SS_PTM_01)),
-    TxBuffer:= SerialTXBuffer_MRCO_SS_PTM_01,
-    RxBuffer:= SerialRXBuffer_MRCO_SS_PTM_01,
+    pComIn:= ADR(stComIn_MRCO_MSC_PTM_01),
+    pComOut:=ADR(stComOut_MRCO_MSC_PTM_01),
+    SizeComIn:= UINT_TO_INT(SIZEOF(stComIn_MRCO_MSC_PTM_01)),
+    TxBuffer:= SerialTXBuffer_MRCO_MSC_PTM_01,
+    RxBuffer:= SerialRXBuffer_MRCO_MSC_PTM_01,
     Error=> ,
     ErrorID=> );
 ]]></ST>

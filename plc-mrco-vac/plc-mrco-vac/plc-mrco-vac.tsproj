@@ -24,6 +24,7 @@
 		</Plc>
 		<Io>
 			<Device File="Device 1 (EtherCAT).xti" Id="1"/>
+			<Device File="Device 5 (RT-Ethernet Protocol).xti" Id="5"/>
 		</Io>
 	</Project>
 	<Mappings>

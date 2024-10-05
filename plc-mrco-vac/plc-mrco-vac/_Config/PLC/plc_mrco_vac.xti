@@ -729,7 +729,10 @@
 					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 				<Var>
-					<Name>GVL_COM.stComIn_MRCO_SS_PTM_01</Name>
+					<Name>GVL_COM.stComIn_MRCO_MSC_PTM_01</Name>
+					<Comment>
+						<![CDATA[   stComIn_MRCO_SS_PTM_01        AT %I*  :       EL6inData22B;]]>
+					</Comment>
 					<Type GUID="{C584B493-D717-49D1-854D-0B7F417FBA9B}" Namespace="Tc2_SerialCom">EL6inData22B</Type>
 				</Var>
 			</Vars>
@@ -756,19 +759,15 @@
 					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 				<Var>
-					<Name>GVL_COM.stComOut_MRCO_SS_PTM_01</Name>
+					<Name>GVL_COM.stComOut_MRCO_MSC_PTM_01</Name>
+					<Comment>
+						<![CDATA[   stComOut_MRCO_SS_PTM_01        AT %Q*  :       EL6outData22B;]]>
+					</Comment>
 					<Type GUID="{6E2A37AA-3A06-493E-A41D-37E129E75FF2}" Namespace="Tc2_SerialCom">EL6outData22B</Type>
 				</Var>
 			</Vars>
 			<Vars VarGrpType="1">
 				<Name>PlcTask Inputs</Name>
-				<Var>
-					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
-					<Comment>
-						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
-					</Comment>
-					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
-				</Var>
 				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
 					<Comment>
@@ -778,9 +777,9 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Name>DIAGNOSTICS.i_sAMSNetID</Name>
 					<Comment>
-						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+						<![CDATA[Link the sAMSNetID to the Etherat Master netID]]>
 					</Comment>
 					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
 				</Var>
@@ -792,154 +791,18 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>DIAGNOSTICS.fbEcatDiag.I_AMSNetId</Name>
+					<Comment>
+						<![CDATA[Link to the AMSNETID name in the ethercat master info.]]>
+					</Comment>
+					<Type GUID="{18071995-0000-0000-0000-000000000041}">AMSNETID</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xEcatBridge_WcState</Name>
 					<Comment>
 						<![CDATA[0 = Data valid, 1 = Data invalid]]>
 					</Comment>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
-					<Comment>
-						<![CDATA[I/O Inputs from TMO Beamline]]>
-					</Comment>
-					<Type>STRING(8)</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_01.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_01.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_01.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_01.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_02.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_02.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_02.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_02.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_03.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_03.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_03.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_03.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_04.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_04.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_04.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_04.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_05.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_05.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_05.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_05.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_06.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_06.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_06.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_06.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_07.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_07.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_07.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_07.iRaw</Name>
-					<Type>INT</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_08.bError</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_08.bUnderrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_08.bOverrange</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_TC.TC_08.iRaw</Name>
-					<Type>INT</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd</Name>
@@ -1020,14 +883,14 @@
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_PTM_01.i_xAtSpd</Name>
+					<Name>GVL_Devices.MRCO_MSC_PTM_01.i_xAtSpd</Name>
 					<Comment>
 						<![CDATA[ Normaml operation when true]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_PTM_01.i_xFaultNC</Name>
+					<Name>GVL_Devices.MRCO_MSC_PTM_01.i_xFaultNC</Name>
 					<Comment>
 						<![CDATA[ Error Active when no Error is present]]>
 					</Comment>
@@ -1083,14 +946,14 @@
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_GHC_01.i_iPRESS_R</Name>
+					<Name>GVL_Devices.MRCO_MSC_GHC_01.i_iPRESS_R</Name>
 					<Comment>
 						<![CDATA[ Controls and I/Os]]>
 					</Comment>
 					<Type>INT</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_GHC_01.i_xHV_ON</Name>
+					<Name>GVL_Devices.MRCO_MSC_GHC_01.i_xHV_ON</Name>
 					<Comment>
 						<![CDATA[  True when High Voltage is on  // 'TcLinkTo' (EL1084) ^Input]]>
 					</Comment>
@@ -1221,14 +1084,14 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_VRC_01.i_xOpnLS</Name>
+					<Name>GVL_Devices.MRCO_MSC_VRC_01.i_xOpnLS</Name>
 					<Comment>
 						<![CDATA[IO]]>
 					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_VRC_01.i_xClsLS</Name>
+					<Name>GVL_Devices.MRCO_MSC_VRC_01.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1253,58 +1116,155 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.sHUTCH_PLC_NAME</Name>
+					<Comment>
+						<![CDATA[I/O Inputs from TMO Beamline]]>
+					</Comment>
+					<Type>STRING(8)</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_01.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_01.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_01.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_01.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_02.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_02.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_02.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_02.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_03.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_03.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_03.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_03.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_04.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_04.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_04.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_04.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_05.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_05.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_05.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_05.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_06.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_06.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_06.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_06.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_07.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_07.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_07.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_07.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_08.bError</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_08.bUnderrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_08.bOverrange</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_TC.TC_08.iRaw</Name>
+					<Type>INT</Type>
+				</Var>
 			</Vars>
 			<Vars VarGrpType="2">
 				<Name>PlcTask Outputs</Name>
 				<Var>
 					<Name>MAIN.dummy_FFFO.q_xFastFaultOut</Name>
 					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
-					<Comment>
-						<![CDATA[I/O Outputs to TMO Beamline]]>
-					</Comment>
-					<Type>STRING(8)</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
-					<Comment>
-						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
-					</Comment>
-					<Type>BOOL</Type>
-				</Var>
-				<Var>
-					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
-					<Type>REAL</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_MAIN_PTM_01.q_RunDO</Name>
@@ -1357,7 +1317,7 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_PTM_01.q_RunDO</Name>
+					<Name>GVL_Devices.MRCO_MSC_PTM_01.q_RunDO</Name>
 					<Comment>
 						<![CDATA[ Start/Stop]]>
 					</Comment>
@@ -1371,7 +1331,7 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_GHC_01.q_xHV_DIS</Name>
+					<Name>GVL_Devices.MRCO_MSC_GHC_01.q_xHV_DIS</Name>
 					<Comment>
 						<![CDATA[ Enable High Voltage when True // 'TcLinkTo' (EP2624) ^Output]]>
 					</Comment>
@@ -1425,7 +1385,7 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
-					<Name>GVL_Devices.MRCO_SS_VRC_01.q_xOPN_DO</Name>
+					<Name>GVL_Devices.MRCO_MSC_VRC_01.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1434,6 +1394,52 @@ Link this to your VAT590 WcState variable under WcState]]>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.sENDSTATION_PLC_NAME</Name>
+					<Comment>
+						<![CDATA[I/O Outputs to TMO Beamline]]>
+					</Comment>
+					<Type>STRING(8)</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.rIP1_MAIN_rPRESS</Name>
+					<Type>REAL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_PLC_Interfaces.xHighVoltageSafteyLoopEnable</Name>
+					<Comment>
+						<![CDATA[When Enables the High voltage Saftey loop is closed and HV can start.]]>
+					</Comment>
 					<Type>BOOL</Type>
 				</Var>
 			</Vars>
@@ -1461,6 +1467,87 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<InOut>7</InOut>
 				</Var>
 			</Vars>
+			<UnrestoredVarLinks ImportTime="2024-10-04T16:56:17">
+				<OwnerA Name="OutputSrc" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E02_EL2004">
+						<Link VarA="GVL_Devices.MRCO_SS_VRC_01.q_xOPN_DO" GrpA="PlcTask Outputs" VarB="Channel 1^Output"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E06_EL2794">
+						<Link VarA="GVL_Devices.MRCO_SS_GHC_01.q_xHV_DIS" GrpA="PlcTask Outputs" VarB="Channel 2^Output"/>
+						<Link VarA="GVL_Devices.MRCO_SS_PTM_01.q_RunDO" GrpA="PlcTask Outputs" VarB="Channel 1^Output"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="InputDst" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E01_EL1004">
+						<Link VarA="GVL_Devices.MRCO_SS_VRC_01.i_xClsLS" GrpA="PlcTask Inputs" VarB="Channel 2^Input"/>
+						<Link VarA="GVL_Devices.MRCO_SS_VRC_01.i_xOpnLS" GrpA="PlcTask Inputs" VarB="Channel 1^Input"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E04_EL1004">
+						<Link VarA="GVL_Devices.MRCO_SS_PTM_01.i_xAtSpd" GrpA="PlcTask Inputs" VarB="Channel 2^Input"/>
+						<Link VarA="GVL_Devices.MRCO_SS_PTM_01.i_xFaultNC" GrpA="PlcTask Inputs" VarB="Channel 1^Input"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E07_EL1084">
+						<Link VarA="GVL_Devices.MRCO_SS_GHC_01.i_xHV_ON" GrpA="PlcTask Inputs" VarB="Channel 1^Input"/>
+					</OwnerB>
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E10_EL3174-0002">
+						<Link VarA="GVL_Devices.MRCO_SS_GHC_01.i_iPRESS_R" GrpA="PlcTask Inputs" VarB="AI Standard Channel 1^Value"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="OutputSrc" Type="2">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E05_EL6001">
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^Ctrl" GrpA="ComTask Outputs" VarB="COM Outputs^Ctrl"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[0]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 0"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[10]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 10"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[11]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 11"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[12]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 12"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[13]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 13"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[14]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 14"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[15]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 15"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[16]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 16"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[17]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 17"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[18]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 18"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[19]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 19"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[1]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 1"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[20]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 20"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[21]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 21"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[2]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 2"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[3]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 3"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[4]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 4"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[5]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 5"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[6]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 6"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[7]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 7"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[8]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 8"/>
+						<Link VarA="GVL_COM.stComOut_MRCO_SS_PTM_01^D[9]" GrpA="ComTask Outputs" VarB="COM Outputs^Data Out 9"/>
+					</OwnerB>
+				</OwnerA>
+				<OwnerA Name="InputDst" Type="1">
+					<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E05_EL6001">
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[0]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 0"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[10]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 10"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[11]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 11"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[12]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 12"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[13]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 13"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[14]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 14"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[15]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 15"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[16]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 16"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[17]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 17"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[18]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 18"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[19]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 19"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[1]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 1"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[20]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 20"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[21]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 21"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[2]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 2"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[3]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 3"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[4]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 4"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[5]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 5"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[6]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 6"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[7]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 7"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[8]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 8"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^D[9]" GrpA="ComTask Inputs" VarB="COM Inputs^Data In 9"/>
+						<Link VarA="GVL_COM.stComIn_MRCO_SS_PTM_01^Status" GrpA="ComTask Inputs" VarB="COM Inputs^Status"/>
+					</OwnerB>
+				</OwnerA>
+			</UnrestoredVarLinks>
 			<TaskPouOids>
 				<TaskPouOid Prio="15" OTCID="#x08502001"/>
 				<TaskPouOid Prio="20" OTCID="#x08502002"/>
@@ -1470,9 +1557,21 @@ Link this to your VAT590 WcState variable under WcState]]>
 	<Mappings>
 		<OwnerA Name="plc_mrco_vac Instance">
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E04_EL6692">
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.sHUTCH_PLC_NAME" VarB="IO Inputs^HUTCH_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_WcState" VarB="WcState^WcState" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xTMO_ROUGH2_VRC_01_OPEN_LS" VarB="IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.rIP1_MAIN_rPRESS" VarB="IO Outputs^IP1_MAIN_rPRESS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.sENDSTATION_PLC_NAME" VarB="IO Outputs^ENDSTATION_PLC_NAME" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_HV_SAFETY_ENABLE" VarB="IO Outputs^IP1_HV_SAFETY_ENABLE" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xAT_VAC" VarB="IO Outputs^IP1_MAIN_xAT_VAC" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_MAIN_xPRESS_OK" VarB="IO Outputs^IP1_MAIN_xPRESS_OK" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_01_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_02_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_ROUGH_VRC_03_OPEN_LS" VarB="IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_PLC_Interfaces.xIP1_TURBOS_ALL_AtSpd" VarB="IO Outputs^IP1_TURBOS_ALL_AtSpd" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E06_EL1004">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MAIN_PTM_01.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true"/>
@@ -1717,82 +1816,82 @@ Link this to your VAT590 WcState variable under WcState]]>
 				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MAIN_PTM_04^D[9]" VarB="COM RxPDO-Map Outputs Channel 2^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E01_EL1004">
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_04.i_xClsLS" VarB="Channel 4^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_04.i_xOpnLS" VarB="Channel 3^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_VRC_01.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_VRC_01.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E02_EL2004">
+				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_MSC_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_04.q_xOPN_DO" VarB="Channel 2^Output" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO" VarB="Channel 3^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_SS_VRC_01.q_xOPN_DO" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E03_EL1004">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_05.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_05.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E04_EL1004">
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_PTM_01.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_PTM_01.i_xFaultNC" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_PTM_01.i_xAtSpd" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_PTM_01.i_xFaultNC" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E05_EL6001">
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[0]" VarB="COM Inputs^Data In 0" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[10]" VarB="COM Inputs^Data In 10" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[11]" VarB="COM Inputs^Data In 11" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[12]" VarB="COM Inputs^Data In 12" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[13]" VarB="COM Inputs^Data In 13" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[14]" VarB="COM Inputs^Data In 14" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[15]" VarB="COM Inputs^Data In 15" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[16]" VarB="COM Inputs^Data In 16" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[17]" VarB="COM Inputs^Data In 17" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[18]" VarB="COM Inputs^Data In 18" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[19]" VarB="COM Inputs^Data In 19" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[1]" VarB="COM Inputs^Data In 1" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[20]" VarB="COM Inputs^Data In 20" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[21]" VarB="COM Inputs^Data In 21" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[2]" VarB="COM Inputs^Data In 2" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[3]" VarB="COM Inputs^Data In 3" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[4]" VarB="COM Inputs^Data In 4" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[5]" VarB="COM Inputs^Data In 5" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[6]" VarB="COM Inputs^Data In 6" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[7]" VarB="COM Inputs^Data In 7" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[8]" VarB="COM Inputs^Data In 8" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^D[9]" VarB="COM Inputs^Data In 9" AutoLink="true"/>
-				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_SS_PTM_01^Status" VarB="COM Inputs^Status" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^Ctrl" VarB="COM Outputs^Ctrl" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[0]" VarB="COM Outputs^Data Out 0" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[10]" VarB="COM Outputs^Data Out 10" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[11]" VarB="COM Outputs^Data Out 11" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[12]" VarB="COM Outputs^Data Out 12" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[13]" VarB="COM Outputs^Data Out 13" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[14]" VarB="COM Outputs^Data Out 14" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[15]" VarB="COM Outputs^Data Out 15" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[16]" VarB="COM Outputs^Data Out 16" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[17]" VarB="COM Outputs^Data Out 17" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[18]" VarB="COM Outputs^Data Out 18" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[19]" VarB="COM Outputs^Data Out 19" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[1]" VarB="COM Outputs^Data Out 1" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[20]" VarB="COM Outputs^Data Out 20" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[21]" VarB="COM Outputs^Data Out 21" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[2]" VarB="COM Outputs^Data Out 2" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[3]" VarB="COM Outputs^Data Out 3" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[4]" VarB="COM Outputs^Data Out 4" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[5]" VarB="COM Outputs^Data Out 5" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[6]" VarB="COM Outputs^Data Out 6" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[7]" VarB="COM Outputs^Data Out 7" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[8]" VarB="COM Outputs^Data Out 8" AutoLink="true"/>
-				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_SS_PTM_01^D[9]" VarB="COM Outputs^Data Out 9" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[0]" VarB="COM Inputs^Data In 0" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[10]" VarB="COM Inputs^Data In 10" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[11]" VarB="COM Inputs^Data In 11" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[12]" VarB="COM Inputs^Data In 12" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[13]" VarB="COM Inputs^Data In 13" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[14]" VarB="COM Inputs^Data In 14" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[15]" VarB="COM Inputs^Data In 15" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[16]" VarB="COM Inputs^Data In 16" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[17]" VarB="COM Inputs^Data In 17" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[18]" VarB="COM Inputs^Data In 18" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[19]" VarB="COM Inputs^Data In 19" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[1]" VarB="COM Inputs^Data In 1" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[20]" VarB="COM Inputs^Data In 20" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[21]" VarB="COM Inputs^Data In 21" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[2]" VarB="COM Inputs^Data In 2" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[3]" VarB="COM Inputs^Data In 3" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[4]" VarB="COM Inputs^Data In 4" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[5]" VarB="COM Inputs^Data In 5" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[6]" VarB="COM Inputs^Data In 6" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[7]" VarB="COM Inputs^Data In 7" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[8]" VarB="COM Inputs^Data In 8" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^D[9]" VarB="COM Inputs^Data In 9" AutoLink="true"/>
+				<Link VarA="ComTask Inputs^GVL_COM.stComIn_MRCO_MSC_PTM_01^Status" VarB="COM Inputs^Status" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^Ctrl" VarB="COM Outputs^Ctrl" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[0]" VarB="COM Outputs^Data Out 0" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[10]" VarB="COM Outputs^Data Out 10" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[11]" VarB="COM Outputs^Data Out 11" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[12]" VarB="COM Outputs^Data Out 12" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[13]" VarB="COM Outputs^Data Out 13" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[14]" VarB="COM Outputs^Data Out 14" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[15]" VarB="COM Outputs^Data Out 15" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[16]" VarB="COM Outputs^Data Out 16" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[17]" VarB="COM Outputs^Data Out 17" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[18]" VarB="COM Outputs^Data Out 18" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[19]" VarB="COM Outputs^Data Out 19" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[1]" VarB="COM Outputs^Data Out 1" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[20]" VarB="COM Outputs^Data Out 20" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[21]" VarB="COM Outputs^Data Out 21" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[2]" VarB="COM Outputs^Data Out 2" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[3]" VarB="COM Outputs^Data Out 3" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[4]" VarB="COM Outputs^Data Out 4" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[5]" VarB="COM Outputs^Data Out 5" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[6]" VarB="COM Outputs^Data Out 6" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[7]" VarB="COM Outputs^Data Out 7" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[8]" VarB="COM Outputs^Data Out 8" AutoLink="true"/>
+				<Link VarA="ComTask Outputs^GVL_COM.stComOut_MRCO_MSC_PTM_01^D[9]" VarB="COM Outputs^Data Out 9" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E06_EL2794">
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_SS_GHC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
-				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_SS_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_MSC_GHC_01.q_xHV_DIS" VarB="Channel 2^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_MSC_PTM_01.q_RunDO" VarB="Channel 1^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E07_EL1084">
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_GHC_01.i_xHV_ON" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_GHC_01.i_xHV_ON" VarB="Channel 1^Input" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_DRL_03 (EK1100)^MRCO_DRL_03_E10_EL3174-0002">
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_MSC_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_GPI_05.i_iPRESS_R" VarB="AI Standard Channel 2^Value" AutoLink="true"/>
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_SS_GHC_01.i_iPRESS_R" VarB="AI Standard Channel 1^Value" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP01_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_PTM_01.i_xAtSpd" VarB="Channel 1^Input" AutoLink="true"/>
