@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{2B456E28-1444-A82D-3A6D-24266A9BF5B3}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{0596153C-F3B5-9686-189D-31E735E80126}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComBuffer</Name>
@@ -4907,7 +4907,7 @@
       </Method>
     </DataType>
     <DataType>
-      <Name>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
+      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
       <BitSize>16</BitSize>
       <BaseType>UINT</BaseType>
       <Properties>
@@ -4918,6 +4918,21 @@
         <Property>
           <Name>UpperBorder</Name>
           <Value>100</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Name>
+      <BitSize>16</BitSize>
+      <BaseType>UINT</BaseType>
+      <Properties>
+        <Property>
+          <Name>LowerBorder</Name>
+          <Value>1</Value>
+        </Property>
+        <Property>
+          <Name>UpperBorder</Name>
+          <Value>1000</Value>
         </Property>
       </Properties>
     </DataType>
@@ -4938,7 +4953,7 @@
       </SubItem>
       <SubItem>
         <Name>PrintingTestSuiteResultNumber</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>96</BitOffs>
       </SubItem>
@@ -4976,12 +4991,12 @@
         </Local>
         <Local>
           <Name>TestsInTestSuiteCounter</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
           <Name>MaxNumberOfTestsToPrint</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -5812,7 +5827,7 @@
       </SubItem>
       <SubItem>
         <Name>WritingTestSuiteResultNumber</Name>
-        <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+        <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
         <BitSize>16</BitSize>
         <BitOffs>530208</BitOffs>
       </SubItem>
@@ -6192,21 +6207,6 @@
         <Property>
           <Name>PouType</Name>
           <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestsForEachTestSuite)</Name>
-      <BitSize>16</BitSize>
-      <BaseType>UINT</BaseType>
-      <Properties>
-        <Property>
-          <Name>LowerBorder</Name>
-          <Value>1</Value>
-        </Property>
-        <Property>
-          <Name>UpperBorder</Name>
-          <Value>100</Value>
         </Property>
       </Properties>
     </DataType>
@@ -8542,11 +8542,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>FindTestSuiteInstancePath</Name>
@@ -8662,7 +8657,7 @@
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
         <Local>
@@ -8805,11 +8800,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_BYTE</Name>
@@ -8911,11 +8901,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9075,11 +9060,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_LTIME</Name>
@@ -9202,11 +9182,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9348,11 +9323,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10114,11 +10084,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>SetHasStartedRunning</Name>
@@ -10167,7 +10132,7 @@
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -10279,11 +10244,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>GetHasStartedRunning</Name>
@@ -10386,11 +10346,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10545,11 +10500,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_DINT</Name>
@@ -10675,11 +10625,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_STRING</Name>
@@ -10748,7 +10693,7 @@
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -10852,11 +10797,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -11142,11 +11082,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>CalculateAndSetNumberOfAssertsForTest</Name>
@@ -11197,7 +11132,7 @@
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -11556,7 +11491,7 @@
         </Local>
         <Local>
           <Name>NumberOfTestsToAnalyse</Name>
-          <Type>UINT (UINT#1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
+          <Type>UINT (1..GVL_Param_TcUnit.MaxNumberOfTestSuites)</Type>
           <BitSize>16</BitSize>
         </Local>
       </Method>
@@ -11940,11 +11875,6 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
-        <Local>
-          <Name>__Index__0</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_UDINT</Name>
@@ -12036,11 +11966,6 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
-          <Type>DINT</Type>
-          <BitSize>32</BitSize>
-        </Local>
-        <Local>
-          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -41228,7 +41153,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>ComTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_01</Name>
             <Comment>SERIAL IO</Comment>
@@ -41488,7 +41413,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>ComTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_01</Name>
             <BitSize>192</BitSize>
@@ -41747,7 +41672,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>ComTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_01</Name>
             <Comment> Define COM Ports/Buffers incl. library Tc2_SerialCom</Comment>
@@ -42016,7 +41941,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">16</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
             <Comment>ETHERCAT BRIDGE COM STATUS
@@ -43228,7 +43153,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">17</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>MAIN.dummy_FFFO.q_xFastFaultOut</Name>
             <BitSize>8</BitSize>
@@ -43757,7 +43682,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -54361,7 +54286,7 @@ ALL VALVES CURRENTLY NO</Comment>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">20</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81461248</ByteSize>
+          <ByteSize>81526784</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -54441,15 +54366,15 @@ ALL VALVES CURRENTLY NO</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2024-10-10T11:28:25</Value>
+          <Value>2024-10-14T11:46:17</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>663552</Value>
+          <Value>606208</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80277504</Value>
+          <Value>80232448</Value>
         </Property>
       </Properties>
     </Module>

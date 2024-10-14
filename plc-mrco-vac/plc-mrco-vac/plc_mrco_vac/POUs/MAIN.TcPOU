@@ -100,11 +100,12 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
 *In general, if turbo pump setpoints are above the pirani guage readings or there is no downstream open path to a roughing pump, the turbo pump will close.
 *
 *)
+// all pumps remove contigency of VRC02 as James request on 10-14-24
     MRCO_MAIN_PTM_01(i_xExtILKOk:= F_Turbo_NC_NO_Valve_Logic(
                         i_stTurbo:= MRCO_MAIN_PTM_01.iq_stPtm,
                         i_stISG:= MRCO_MAIN_GPI_01.PG,
                         i_stBSG:= MRCO_ROUGH_GPI_02.PG,
-                        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+               (*        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, *)
                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                         iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
@@ -117,7 +118,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         i_stTurbo:= MRCO_MAIN_PTM_02.iq_stPtm,
                         i_stISG:= MRCO_MAIN_GPI_01.PG,
                         i_stBSG:= MRCO_ROUGH_GPI_02.PG,
-                        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+                      (*  iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, *)
                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                         iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
@@ -130,7 +131,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         i_stTurbo:= MRCO_MAIN_PTM_03.iq_stPtm,
                         i_stISG:= MRCO_MAIN_GPI_01.PG,
                         i_stBSG:= MRCO_ROUGH_GPI_02.PG,
-                        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+                     (*   iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, *)
                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                         iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
@@ -143,7 +144,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         i_stTurbo:= MRCO_MAIN_PTM_04.iq_stPtm,
                         i_stISG:= MRCO_MAIN_GPI_01.PG,
                         i_stBSG:= MRCO_ROUGH_GPI_02.PG,
-                        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+                      (*  iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, *)
                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                         iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
@@ -156,7 +157,7 @@ xHighVoltageSafteyLoopEnable:= (MRCO_MAIN_GHC_01.IG.rPRESS <= rHighVoltageMinPre
                         i_stTurbo:= MRCO_ROUGH_PTM_01.iq_stPtm,
                         i_stISG:= MRCO_MAIN_GPI_01.PG,
                         i_stBSG:= MRCO_ROUGH_GPI_02.PG,
-                        iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve,
+                    (*   iq_stValve_NO:= MRCO_ROUGH_VRC_02.iq_stValve, *)
                         iq_stValve_NC:= MRCO_ROUGH_VRC_01.iq_stValve,
                         iq_stValve_NC_second:= MRCO_ROUGH_VRC_03.iq_stValve,
                         EcatBridge_Error_Present:= xEcatBridge_COM_ERROR,
