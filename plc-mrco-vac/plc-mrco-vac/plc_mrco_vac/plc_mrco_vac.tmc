@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{207EDDA9-4E3A-00C5-EB0F-7893C0E02486}" GeneratedBy="TwinCAT XAE Plc">
+<TcModuleClass xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2009/05/TcModuleClass" Hash="{7969107E-C320-FF61-9ABC-B7F516E1C235}" GeneratedBy="TwinCAT XAE Plc">
   <DataTypes>
     <DataType>
       <Name Namespace="Tc2_SerialCom">ComBuffer</Name>
@@ -8542,6 +8542,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>FindTestSuiteInstancePath</Name>
@@ -8800,6 +8805,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_BYTE</Name>
@@ -8901,6 +8911,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9060,6 +9075,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_LTIME</Name>
@@ -9182,6 +9202,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -9323,6 +9348,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10084,6 +10114,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>SetHasStartedRunning</Name>
@@ -10244,6 +10279,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>GetHasStartedRunning</Name>
@@ -10346,6 +10386,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10500,6 +10545,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>AssertEquals_DINT</Name>
@@ -10622,6 +10672,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -10797,6 +10852,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -11079,6 +11139,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -11875,6 +11940,11 @@
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
+        <Local>
+          <Name>__Index__0</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
       </Method>
       <Method>
         <Name>AssertArrayEquals_UDINT</Name>
@@ -11966,6 +12036,11 @@
         </Local>
         <Local>
           <Name>ActualsIndex</Name>
+          <Type>DINT</Type>
+          <BitSize>32</BitSize>
+        </Local>
+        <Local>
+          <Name>__Index__0</Name>
           <Type>DINT</Type>
           <BitSize>32</BitSize>
         </Local>
@@ -38245,1549 +38320,6 @@ This function block also implements PMPS and EPS interlocks, as well as Fast MPS
       </SubItem>
     </DataType>
     <DataType>
-      <Name Namespace="Tc2_System">ADSRDWRT</Name>
-      <Comment> ADS read/write command. </Comment>
-      <BitSize>1408</BitSize>
-      <SubItem>
-        <Name>NETID</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <Comment> Ams net id </Comment>
-        <BitSize>192</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>PORT</Name>
-        <Type Namespace="Tc2_System">T_AmsPort</Type>
-        <Comment> Ads communication port </Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXGRP</Name>
-        <Type>UDINT</Type>
-        <Comment> Index group </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>IDXOFFS</Name>
-        <Type>UDINT</Type>
-        <Comment> Index offset </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>WRITELEN</Name>
-        <Type>UDINT</Type>
-        <Comment> Max. number of data bytes to write (WRITELEN &lt;= max. size of source buffer) </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>READLEN</Name>
-        <Type>UDINT</Type>
-        <Comment> Max. number of data bytes to read (READLEN &lt;= max. size of destination buffer) </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>352</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>SRCADDR</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
-        <Comment> Pointer to source buffer </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>384</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-          <Property>
-            <Name>TcIgnorePersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>DESTADDR</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
-        <Comment> Pointer to destination buffer </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>416</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-          <Property>
-            <Name>TcIgnorePersistent</Name>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>WRTRD</Name>
-        <Type>BOOL</Type>
-        <Comment> Rising edge starts command execution </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>448</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>TMOUT</Name>
-        <Type>TIME</Type>
-        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>480</BitOffs>
-        <Default>
-          <Value>5000</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>BUSY</Name>
-        <Type>BOOL</Type>
-        <Comment> Busy flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>512</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERR</Name>
-        <Type>BOOL</Type>
-        <Comment> Error flag </Comment>
-        <BitSize>8</BitSize>
-        <BitOffs>520</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>ERRID</Name>
-        <Type>UDINT</Type>
-        <Comment> ADS error code </Comment>
-        <BitSize>32</BitSize>
-        <BitOffs>544</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-        <Property>
-          <Name>hide_all_locals</Name>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Name>
-      <BitSize>5536</BitSize>
-      <SubItem>
-        <Name>bEnable</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>32</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sNetId</Name>
-        <Type Namespace="Tc2_System">T_AmsNetID</Type>
-        <BitSize>192</BitSize>
-        <BitOffs>40</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nPort</Name>
-        <Type Namespace="Tc2_System">T_AmsPort</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>240</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nIdxGrp</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>256</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nIdxOffs</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>288</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sVarName</Name>
-        <Type>STRING(255)</Type>
-        <BitSize>2048</BitSize>
-        <BitOffs>320</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>tWatchdogTime</Name>
-        <Type>TIME</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2368</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bSendNow</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2400</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bBusy</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2408</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nLastCnt</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2432</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>2464</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nErrorId</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>2496</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fbAdsWrite</Name>
-        <Type Namespace="Tc2_System">ADSWRITE</Type>
-        <BitSize>1216</BitSize>
-        <BitOffs>2528</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>fbAdsReadWrite</Name>
-        <Type Namespace="Tc2_System">ADSRDWRT</Type>
-        <BitSize>1408</BitSize>
-        <BitOffs>3744</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>timerWatchdog</Name>
-        <Type Namespace="Tc2_Standard">TP</Type>
-        <BitSize>192</BitSize>
-        <BitOffs>5152</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>RisingEdgeSendNow</Name>
-        <Type Namespace="Tc2_Standard">R_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>5344</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>nStep</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>5408</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nSymbolHandle</Name>
-        <Type>DWORD</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>5440</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>bFirstCycle</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>5472</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <SubItem>
-        <Name>nCnt</Name>
-        <Type>UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>5504</BitOffs>
-        <Default>
-          <Value>0</Value>
-        </Default>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</Name>
-      <Comment>This function block is to be used whenever deivce data going to be read over ADS
-The remote plc has to instantiate this function block in order to write a watchdog variable
-that the ADS read function expects to keep checking</Comment>
-      <BitSize>7008</BitSize>
-      <SubItem>
-        <Name>sNetId</Name>
-        <Type>STRING(80)</Type>
-        <Comment>NetID of the Destination PLC controller</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>32</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>nPort</Name>
-        <Type>UINT</Type>
-        <Comment> port number</Comment>
-        <BitSize>16</BitSize>
-        <BitOffs>688</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>sVarName</Name>
-        <Type>STRING(80)</Type>
-        <Comment> the variable name of the watchdog on the remote plc.</Comment>
-        <BitSize>648</BitSize>
-        <BitOffs>704</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>1352</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fb_WriteWatchdog</Name>
-        <Type Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Type>
-        <BitSize>5536</BitSize>
-        <BitOffs>1376</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>ftReset_Watchdog</Name>
-        <Type Namespace="Tc2_Standard">F_TRIG</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>6912</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>xFirstPass</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>6976</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name Namespace="LCLS_General">FB_TempSensor</Name>
-      <BitSize>256</BitSize>
-      <SubItem>
-        <Name>fResolution</Name>
-        <Type>LREAL</Type>
-        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
-        <BitSize>64</BitSize>
-        <BitOffs>64</BitOffs>
-        <Default>
-          <Value>0.1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>fTemp</Name>
-        <Type>LREAL</Type>
-        <BitSize>64</BitSize>
-        <BitOffs>128</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: TEMP
-        io: input
-        field: EGU C
-        field: PREC 2
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bConnected</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>192</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: CONN
-        io: input
-        field: ONAM Connected
-        field: ZNAM Disconnected
-    </Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bError</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>200</BitOffs>
-        <Default>
-          <Value>1</Value>
-        </Default>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>pytmc</Name>
-            <Value>
-        pv: ERR
-        io: input
-        field: ONAM True
-        field: ZNAM False
-    </Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bUnderrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>208</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>bOverrange</Name>
-        <Type>BOOL</Type>
-        <BitSize>8</BitSize>
-        <BitOffs>216</BitOffs>
-        <Properties>
-          <Property>
-            <Name>ItemType</Name>
-            <Value>Output</Value>
-          </Property>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <SubItem>
-        <Name>iRaw</Name>
-        <Type>INT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>224</BitOffs>
-        <Properties>
-          <Property>
-            <Name>TcAddressType</Name>
-            <Value>Input</Value>
-          </Property>
-        </Properties>
-      </SubItem>
-      <Properties>
-        <Property>
-          <Name>PouType</Name>
-          <Value>FunctionBlock</Value>
-        </Property>
-      </Properties>
-    </DataType>
-    <DataType>
-      <Name>VERSION</Name>
-      <BitSize>64</BitSize>
-      <SubItem>
-        <Name>uiMajor</Name>
-        <Type>UINT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>0</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>uiMinor</Name>
-        <Type>UINT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>16</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>uiServicePack</Name>
-        <Type>UINT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>32</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>uiPatch</Name>
-        <Type>UINT</Type>
-        <BitSize>16</BitSize>
-        <BitOffs>48</BitOffs>
-      </SubItem>
-    </DataType>
-    <DataType>
-      <Name GUID="{5456DAC5-9FA5-4A6B-B497-840FCC690FDD}" Namespace="PLC" TcBaseType="true">PlcLicenseInfo</Name>
-      <BitSize>1024</BitSize>
-      <SubItem>
-        <Name>LicenseId</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000021}">GUID</Type>
-        <BitSize>128</BitSize>
-        <BitOffs>0</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>Instances</Name>
-        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
-        <BitSize>32</BitSize>
-        <BitOffs>128</BitOffs>
-      </SubItem>
-      <SubItem>
-        <Name>LicenseName</Name>
-        <Type GUID="{18071995-0000-0000-0000-00010000005F}">STRING(95)</Type>
-        <BitSize>768</BitSize>
-        <BitOffs>256</BitOffs>
-      </SubItem>
-    </DataType>
-    <DataType>
-      <Name GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Name>
-      <DisplayName TxtId="">Log event</DisplayName>
-      <EventId>
-        <Name Id="0">Critical</Name>
-        <DisplayName TxtId="">Critical</DisplayName>
-        <Severity>Critical</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1">Error</Name>
-        <DisplayName TxtId="">Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="2">Warning</Name>
-        <DisplayName TxtId="">Warning</DisplayName>
-        <Severity>Warning</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="3">Info</Name>
-        <DisplayName TxtId="">Info</DisplayName>
-        <Severity>Info</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4">Verbose</Name>
-        <DisplayName TxtId="">Verbose</DisplayName>
-        <Severity>Verbose</Severity>
-      </EventId>
-      <Hides>
-        <Hide GUID="{E50B8F82-4C54-4F5A-855E-90970D01354A}"/>
-        <Hide GUID="{772B0B6F-412E-46FD-9006-6E00BFFE1C3D}"/>
-        <Hide GUID="{8FAD87A4-C885-4A4F-85AF-8AB324945AE2}"/>
-        <Hide GUID="{16BEE339-E307-4BC2-8E77-D5FB1794DF5A}"/>
-        <Hide GUID="{B7E60A74-CB5C-4A02-B59C-74B86A888DE9}"/>
-        <Hide GUID="{6B58EF80-AB34-4F6C-81D0-B0589F4FC534}"/>
-        <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
-      </Hides>
-    </DataType>
-    <DataType>
-      <Name GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}" TcBaseType="true" CName="TcSystemEventClass">TcSystemEventClass</Name>
-      <DisplayName TxtId="">TcSystemEventClass</DisplayName>
-      <EventId>
-        <Name Id="1">InternalError</Name>
-        <DisplayName TxtId="">InternalError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="2">NoRTime</Name>
-        <DisplayName TxtId="">NoRTime</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="3">AllocationLockedMemoryError</Name>
-        <DisplayName TxtId="">AllocationLockedMemoryError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4">InsertMailboxError</Name>
-        <DisplayName TxtId="">InsertMailboxError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="5">WrongReceiveHMSG</Name>
-        <DisplayName TxtId="">WrongReceiveHMSG</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="6">TargetPortNotFound</Name>
-        <DisplayName TxtId="">TargetPortNotFound (possible cause: ADS server not started)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="7">TargetMachineNotFound</Name>
-        <DisplayName TxtId="">TargetMachineNotFound (possible cause: missing ADS route)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="8">UnknownCommandID</Name>
-        <DisplayName TxtId="">UnknownCommandID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="9">BadTaskID</Name>
-        <DisplayName TxtId="">BadTaskID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="10">NoIO</Name>
-        <DisplayName TxtId="">NoIO</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="11">UnknownAdsCommand</Name>
-        <DisplayName TxtId="">UnknownAdsCommand</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="12">Win32Error</Name>
-        <DisplayName TxtId="">Win32Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="13">PortNotConnected</Name>
-        <DisplayName TxtId="">PortNotConnected</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="14">InvalidAdsLength</Name>
-        <DisplayName TxtId="">InvalidAdsLength</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="15">InvalidAdsNetID</Name>
-        <DisplayName TxtId="">InvalidAdsNetID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="16">LowInstallationLevel</Name>
-        <DisplayName TxtId="">LowInstallationLevel</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="17">NoDebugAvailable</Name>
-        <DisplayName TxtId="">NoDebugAvailable</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="18">PortDisabled</Name>
-        <DisplayName TxtId="">PortDisabled</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="19">PortAlreadyConnected</Name>
-        <DisplayName TxtId="">PortAlreadyConnected</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="20">AdsSyncWin32Error</Name>
-        <DisplayName TxtId="">AdsSyncWin32Error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="21">AdsSyncTimeout</Name>
-        <DisplayName TxtId="">AdsSyncTimeout</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="22">AdsSyncAmsError</Name>
-        <DisplayName TxtId="">AdsSyncAmsError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="23">AdsSyncNoIndexMap</Name>
-        <DisplayName TxtId="">AdsSyncNoIndexMap</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="24">InvalidAdsPort</Name>
-        <DisplayName TxtId="">InvalidAdsPort</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="25">NoMemory</Name>
-        <DisplayName TxtId="">NoMemory</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="26">TCPSendError</Name>
-        <DisplayName TxtId="">TCPSendError</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="27">HostUnreachable</Name>
-        <DisplayName TxtId="">HostUnreachable</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="28">InvalidAMSFragment</Name>
-        <DisplayName TxtId="">InvalidAMSFragment</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
-      <Name GUID="{98BCB284-F932-4EA4-B58B-68A1F1C34192}" TcBaseType="true" CName="TcGeneralAdsEventClass">TcGeneralAdsEventClass</Name>
-      <DisplayName TxtId="">TcGeneralAdsEventClass</DisplayName>
-      <EventId>
-        <Name Id="1792">GeneralDeviceError</Name>
-        <DisplayName TxtId="">General device error</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1793">ServiceNotSupported</Name>
-        <DisplayName TxtId="">Service is not supported by server.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1794">InvalidIndexGroup</Name>
-        <DisplayName TxtId="">Invalid index group</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1795">InvalidIndexOffset</Name>
-        <DisplayName TxtId="">Invalid index offset</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1796">InvalidAccess</Name>
-        <DisplayName TxtId="">Reading/writing is not permitted.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1797">InvalidSize</Name>
-        <DisplayName TxtId="">Parameter size is not correct.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1798">InvalidData</Name>
-        <DisplayName TxtId="">Invalid parameter value(s)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1799">NotReady</Name>
-        <DisplayName TxtId="">Device is not in a ready state.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1800">Busy</Name>
-        <DisplayName TxtId="">Device is busy.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1801">InvalidContext</Name>
-        <DisplayName TxtId="">Invalid context</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1802">NoMemory</Name>
-        <DisplayName TxtId="">Out of memory</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1803">InvalidParam</Name>
-        <DisplayName TxtId="">Invalid parameter value(s)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1804">NotFound</Name>
-        <DisplayName TxtId="">Not found (files, ...)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1805">Syntax</Name>
-        <DisplayName TxtId="">Syntax error in comand or file</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1806">Incompatible</Name>
-        <DisplayName TxtId="">Object does not match.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1807">AlreadyExists</Name>
-        <DisplayName TxtId="">Object already exists.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1808">SymbolNotFound</Name>
-        <DisplayName TxtId="">Symbol was not found.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1809">SymbolVersionInvalid</Name>
-        <DisplayName TxtId="">Symbol version is invalid. (-&gt; Release handle and try again.)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1810">InvalidState</Name>
-        <DisplayName TxtId="">Server is in invalid state.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1811">TransModeNotSupported</Name>
-        <DisplayName TxtId="">AdsTransMode is not supported.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1812">NotificationHandleInvalid</Name>
-        <DisplayName TxtId="">Notification handle is invalid. (-&gt; Release handle and try again.)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1813">ClientUnknown</Name>
-        <DisplayName TxtId="">Notification client is not registered.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1814">NoMoreHandles</Name>
-        <DisplayName TxtId="">No more notification handles</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1815">InvalidWatchSize</Name>
-        <DisplayName TxtId="">Size for watch is too big.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1816">NotInit</Name>
-        <DisplayName TxtId="">Device is not initialized.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1817">DeviceTimeout</Name>
-        <DisplayName TxtId="">Device has a timeout.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1818">NoInterface</Name>
-        <DisplayName TxtId="">Query interface is failed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1819">InvalidInterface</Name>
-        <DisplayName TxtId="">Wrong interface is required.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1820">InvalidClassID</Name>
-        <DisplayName TxtId="">Class ID is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1821">InvalidObjectID</Name>
-        <DisplayName TxtId="">Object ID is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1822">Pending</Name>
-        <DisplayName TxtId="">Request is pending.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1823">Aborted</Name>
-        <DisplayName TxtId="">Request is aborted.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1824">SignalWarning</Name>
-        <DisplayName TxtId="">Signal warning</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1825">InvalidArrayIndex</Name>
-        <DisplayName TxtId="">Invalid array index</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1826">SymbolNotActive</Name>
-        <DisplayName TxtId="">Symbol is not active. (-&gt; Release handle and try again.)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1827">AccessDenied</Name>
-        <DisplayName TxtId="">Access is denied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1828">LicenseMissing</Name>
-        <DisplayName TxtId="">License is missing / not found.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1829">LicenseExpired</Name>
-        <DisplayName TxtId="">License is expired.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1830">LicenseExceeded</Name>
-        <DisplayName TxtId="">License is exceeded.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1831">LicenseInvalid</Name>
-        <DisplayName TxtId="">License is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1832">LicenseSystemID</Name>
-        <DisplayName TxtId="">License with invalid system ID</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1833">LicenseNoTimeLimit</Name>
-        <DisplayName TxtId="">License is not time limited.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1834">LicenseFutureIssue</Name>
-        <DisplayName TxtId="">License issue time is in the future.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1835">LicenseTimeTooLong</Name>
-        <DisplayName TxtId="">License time period is too long.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1836">Exception</Name>
-        <DisplayName TxtId="">Exception in the device code</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1837">LicenseDuplicated</Name>
-        <DisplayName TxtId="">License file is read twice.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1857">InvalidServiceParam</Name>
-        <DisplayName TxtId="">Invalid parameter at service call</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1858">ListEmpty</Name>
-        <DisplayName TxtId="">Polling list is empty.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1859">VariableConAlreadyInUse</Name>
-        <DisplayName TxtId="">Variable connection is already in use.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1860">InvokeIDAlreadyInUse</Name>
-        <DisplayName TxtId="">Invoke ID is already in use.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1861">TimeoutElapsed</Name>
-        <DisplayName TxtId="">Timeout is elapsed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1862">Win32Error</Name>
-        <DisplayName TxtId="">Error in Win32 subsystem</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1863">TimeoutInvalid</Name>
-        <DisplayName TxtId="">Timeout value is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1864">PortNotOpen</Name>
-        <DisplayName TxtId="">Port is not open (Ads dll).</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1865">NoAMSAddr</Name>
-        <DisplayName TxtId="">No AMS address (Ads dll)</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1872">SyncInternalError</Name>
-        <DisplayName TxtId="">Internal error in Ads sync</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1873">AddHash</Name>
-        <DisplayName TxtId="">Hash table overflow</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1874">RemoveHash</Name>
-        <DisplayName TxtId="">Key not found in hash table</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1875">NoMoreSymbols</Name>
-        <DisplayName TxtId="">No more symbols in cache</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1876">SyncResInvalid</Name>
-        <DisplayName TxtId="">Invalid response received</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1877">SyncPortLocked</Name>
-        <DisplayName TxtId="">Sync port is locked.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <Hides>
-        <Hide GUID="{8D937C5B-9A96-4A48-AA0B-BC30CC416A59}"/>
-      </Hides>
-    </DataType>
-    <DataType>
-      <Name GUID="{E3D84344-4CB3-44DB-8D94-12F9CE0E2F90}" TcBaseType="true" CName="TcRouterEventClass">TcRouterEventClass</Name>
-      <DisplayName TxtId="">TcRouterEventClass</DisplayName>
-      <EventId>
-        <Name Id="1280">NoLockedMemory</Name>
-        <DisplayName TxtId="">No locked memory can be allocated.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1281">ResizeMemory</Name>
-        <DisplayName TxtId="">The size of the router memory could not be changed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1282">MailboxFull</Name>
-        <DisplayName TxtId="">The mailbox has reached the maximum number of possible messages. The current sent message was rejected.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1283">DebugBoxFull</Name>
-        <DisplayName TxtId="">The debug mailbox has reached the maximum number of possible messages. The sent message will not be displayed in the debug monitor.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1284">UnknownPortType</Name>
-        <DisplayName TxtId="">The port type is unknown.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1285">NotInitialized</Name>
-        <DisplayName TxtId="">TwinCAT Router is not initialised.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1286">PortAlreadyInUse</Name>
-        <DisplayName TxtId="">The desired port number is already assigned.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1287">NotRegistered</Name>
-        <DisplayName TxtId="">The Port is not registered.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1288">NoMoreQueues</Name>
-        <DisplayName TxtId="">The maximum number of Ports is reached.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1289">InvalidPort</Name>
-        <DisplayName TxtId="">The port is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1290">NotActivated</Name>
-        <DisplayName TxtId="">TwinCAT Router is not active.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1291">FragmentBoxFull</Name>
-        <DisplayName TxtId="">Fragment Box is full.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1292">FragmentTimeout</Name>
-        <DisplayName TxtId="">Fragment Timeout</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1293">ToBeRemoved</Name>
-        <DisplayName TxtId="">ToBeRemoved</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
-      <Name GUID="{B63588AE-B30A-4DCE-A44F-F929FB114944}" TcBaseType="true" CName="TcRTimeEventClass">TcRTimeEventClass</Name>
-      <DisplayName TxtId="">TcRTimeEventClass</DisplayName>
-      <EventId>
-        <Name Id="4096">InternalError</Name>
-        <DisplayName TxtId="">An internal fatal error in the TwinCAT real-time system occurred.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4097">BadTimerPeriods</Name>
-        <DisplayName TxtId="">The timer period is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4098">InvalidTaskPtr</Name>
-        <DisplayName TxtId="">The task pointer has the invalid value ZERO.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4099">InvalidStackPtr</Name>
-        <DisplayName TxtId="">The task stack pointer has the invalid value ZERO.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4100">PrioExists</Name>
-        <DisplayName TxtId="">The demanded task priority is already assigned.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4101">NoMoreTCB</Name>
-        <DisplayName TxtId="">No more free TCB (Task Control Block) available. The maximum number of TCBs is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4102">NoMoreSemas</Name>
-        <DisplayName TxtId="">No more free semaphores available. The maximum number of semaphores is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4103">NoMoreQueues</Name>
-        <DisplayName TxtId="">No more free queues available. The maximum number of queues is 64.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4109">ExtIRQAlreadyDef</Name>
-        <DisplayName TxtId="">An external synchronisation interrupt is already applied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4110">ExtIRQNotDef</Name>
-        <DisplayName TxtId="">No external synchronsiation interrupt is applied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4111">ExtIRQInstallFailed</Name>
-        <DisplayName TxtId="">The apply of the external synchronisation interrupt failed.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4112">IRQNotLessOrEqual</Name>
-        <DisplayName TxtId="">Call of a service function in the wrong context.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4119">VMXNotSupported</Name>
-        <DisplayName TxtId="">Intel VT-x extension is not supported.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4120">VMXDisabled</Name>
-        <DisplayName TxtId="">Intel VT-x extension is not enabled in BIOS.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4121">VMXControlsMissing</Name>
-        <DisplayName TxtId="">Missing feature in Intel VT-x extension.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4122">VMXEnableFails</Name>
-        <DisplayName TxtId="">Enabling Intel VT-x fails.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-    </DataType>
-    <DataType>
-      <Name GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}" TcBaseType="true" CName="Win32EventClass">Win32EventClass</Name>
-      <DisplayName TxtId="">Win32EventClass</DisplayName>
-      <EventId>
-        <Name Id="0">ERROR_SUCCESS</Name>
-        <DisplayName TxtId="">The operation completed successfully.</DisplayName>
-        <Severity>Verbose</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="1">ERROR_INVALID_FUNCTION</Name>
-        <DisplayName TxtId="">Incorrect function.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="2">ERROR_FILE_NOT_FOUND</Name>
-        <DisplayName TxtId="">The system cannot find the file specified.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="3">ERROR_PATH_NOT_FOUND</Name>
-        <DisplayName TxtId="">The system cannot find the path specified.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="4">ERROR_TOO_MANY_OPEN_FILES</Name>
-        <DisplayName TxtId="">The system cannot open the file.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="5">ERROR_ACCESS_DENIED</Name>
-        <DisplayName TxtId="">Access is denied.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="6">ERROR_INVALID_HANDLE</Name>
-        <DisplayName TxtId="">The handle is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="8">ERROR_NOT_ENOUGH_MEMORY</Name>
-        <DisplayName TxtId="">Not enough storage is available to process this command.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="13">ERROR_INVALID_DATA</Name>
-        <DisplayName TxtId="">The data is invalid.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="21">ERROR_NOT_READY</Name>
-        <DisplayName TxtId="">The device is not ready.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="22">ERROR_BAD_COMMAND</Name>
-        <DisplayName TxtId="">The device does not recognize the command.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="23">ERROR_CRC</Name>
-        <DisplayName TxtId="">Data error (cyclic redundancy check).</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="24">ERROR_BAD_LENGTH</Name>
-        <DisplayName TxtId="">The program issued a command but the command length is incorrect.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="29">ERROR_WRITE_FAULT</Name>
-        <DisplayName TxtId="">The system cannot write to the specified device.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="30">ERROR_READ_FAULT</Name>
-        <DisplayName TxtId="">The system cannot read from the specified device.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="31">ERROR_GEN_FAILURE</Name>
-        <DisplayName TxtId="">A device attached to the system is not functioning.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="50">ERROR_NOT_SUPPORTED</Name>
-        <DisplayName TxtId="">The request is not supported.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="51">ERROR_REM_NOT_LIST</Name>
-        <DisplayName TxtId="">The remote computer is not available.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="52">ERROR_DUP_NAME</Name>
-        <DisplayName TxtId="">A duplicate name exists on the network.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="53">ERROR_BAD_NETPATH</Name>
-        <DisplayName TxtId="">The network path was not found.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="54">ERROR_NETWORK_BUSY</Name>
-        <DisplayName TxtId="">The network is busy.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="55">ERROR_DEV_NOT_EXIST</Name>
-        <DisplayName TxtId="">The specified network resource or device is no longer available.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="80">ERROR_FILE_EXISTS</Name>
-        <DisplayName TxtId="">The file exists.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="82">ERROR_CANNOT_MAKE</Name>
-        <DisplayName TxtId="">The directory or file cannot be created.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="85">ERROR_ALREADY_ASSIGNED</Name>
-        <DisplayName TxtId="">The local device name is already in use.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="86">ERROR_INVALID_PASSWORD</Name>
-        <DisplayName TxtId="">The specified network password is not correct.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="87">ERROR_INVALID_PARAMETER</Name>
-        <DisplayName TxtId="">The parameter is incorrect.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="110">ERROR_OPEN_FAILED</Name>
-        <DisplayName TxtId="">The system cannot open the device or file specified.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="183">ERROR_ALREADY_EXISTS</Name>
-        <DisplayName TxtId="">Cannot create a file when that file already exists.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="186">ERROR_INVALID_FLAG_NUMBER</Name>
-        <DisplayName TxtId="">The flag passed is not correct.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="258">WAIT_TIMEOUT</Name>
-        <DisplayName TxtId="">The wait operation timed out.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="259">ERROR_NO_MORE_ITEMS</Name>
-        <DisplayName TxtId="">No more data is available.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="487">ERROR_INVALID_ADDRESS</Name>
-        <DisplayName TxtId="">Attempt to access invalid address.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="534">ERROR_ARITHMETIC_OVERFLOW</Name>
-        <DisplayName TxtId="">Arithmetic result exceeded 32 bits.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="995">ERROR_OPERATION_ABORTED</Name>
-        <DisplayName TxtId="">The I/O operation has been aborted because of either a thread exit or an application request.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="996">ERROR_IO_INCOMPLETE</Name>
-        <DisplayName TxtId="">Overlapped I/O event is not in a signaled state.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <EventId>
-        <Name Id="997">ERROR_IO_PENDING</Name>
-        <DisplayName TxtId="">Overlapped I/O operation is in progress.</DisplayName>
-        <Severity>Error</Severity>
-      </EventId>
-      <Hides>
-        <Hide GUID="{3FEAA938-D042-4B1E-8ADD-BB2F7BE872B0}"/>
-      </Hides>
-    </DataType>
-    <DataType>
       <Name Namespace="LCLS_Vacuum_Serial">FB_TD400Transaction</Name>
       <BitSize>5216</BitSize>
       <SubItem>
@@ -40600,6 +39132,1549 @@ that the ADS read function expects to keep checking</Comment>
         </Property>
       </Properties>
     </DataType>
+    <DataType>
+      <Name Namespace="Tc2_System">ADSRDWRT</Name>
+      <Comment> ADS read/write command. </Comment>
+      <BitSize>1408</BitSize>
+      <SubItem>
+        <Name>NETID</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <Comment> Ams net id </Comment>
+        <BitSize>192</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>PORT</Name>
+        <Type Namespace="Tc2_System">T_AmsPort</Type>
+        <Comment> Ads communication port </Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXGRP</Name>
+        <Type>UDINT</Type>
+        <Comment> Index group </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>IDXOFFS</Name>
+        <Type>UDINT</Type>
+        <Comment> Index offset </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>WRITELEN</Name>
+        <Type>UDINT</Type>
+        <Comment> Max. number of data bytes to write (WRITELEN &lt;= max. size of source buffer) </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>READLEN</Name>
+        <Type>UDINT</Type>
+        <Comment> Max. number of data bytes to read (READLEN &lt;= max. size of destination buffer) </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>SRCADDR</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        <Comment> Pointer to source buffer </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>384</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>TcIgnorePersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>DESTADDR</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000018}">PVOID</Type>
+        <Comment> Pointer to destination buffer </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>416</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+          <Property>
+            <Name>TcIgnorePersistent</Name>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>WRTRD</Name>
+        <Type>BOOL</Type>
+        <Comment> Rising edge starts command execution </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>448</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>TMOUT</Name>
+        <Type>TIME</Type>
+        <Comment> Maximum time allowed for the execution of this ADS command </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>480</BitOffs>
+        <Default>
+          <Value>5000</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>BUSY</Name>
+        <Type>BOOL</Type>
+        <Comment> Busy flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>512</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERR</Name>
+        <Type>BOOL</Type>
+        <Comment> Error flag </Comment>
+        <BitSize>8</BitSize>
+        <BitOffs>520</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>ERRID</Name>
+        <Type>UDINT</Type>
+        <Comment> ADS error code </Comment>
+        <BitSize>32</BitSize>
+        <BitOffs>544</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+        <Property>
+          <Name>hide_all_locals</Name>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Name>
+      <BitSize>5536</BitSize>
+      <SubItem>
+        <Name>bEnable</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>32</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sNetId</Name>
+        <Type Namespace="Tc2_System">T_AmsNetID</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>40</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nPort</Name>
+        <Type Namespace="Tc2_System">T_AmsPort</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>240</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nIdxGrp</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>256</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nIdxOffs</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>288</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sVarName</Name>
+        <Type>STRING(255)</Type>
+        <BitSize>2048</BitSize>
+        <BitOffs>320</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>tWatchdogTime</Name>
+        <Type>TIME</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2368</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bSendNow</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2400</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bBusy</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2408</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nLastCnt</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2432</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>2464</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nErrorId</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>2496</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fbAdsWrite</Name>
+        <Type Namespace="Tc2_System">ADSWRITE</Type>
+        <BitSize>1216</BitSize>
+        <BitOffs>2528</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>fbAdsReadWrite</Name>
+        <Type Namespace="Tc2_System">ADSRDWRT</Type>
+        <BitSize>1408</BitSize>
+        <BitOffs>3744</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>timerWatchdog</Name>
+        <Type Namespace="Tc2_Standard">TP</Type>
+        <BitSize>192</BitSize>
+        <BitOffs>5152</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>RisingEdgeSendNow</Name>
+        <Type Namespace="Tc2_Standard">R_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>5344</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>nStep</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>5408</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nSymbolHandle</Name>
+        <Type>DWORD</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>5440</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>bFirstCycle</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>5472</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <SubItem>
+        <Name>nCnt</Name>
+        <Type>UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>5504</BitOffs>
+        <Default>
+          <Value>0</Value>
+        </Default>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_Vacuum">FB_ADS_WATCHDOG</Name>
+      <Comment>This function block is to be used whenever deivce data going to be read over ADS
+The remote plc has to instantiate this function block in order to write a watchdog variable
+that the ADS read function expects to keep checking</Comment>
+      <BitSize>7008</BitSize>
+      <SubItem>
+        <Name>sNetId</Name>
+        <Type>STRING(80)</Type>
+        <Comment>NetID of the Destination PLC controller</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>32</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>nPort</Name>
+        <Type>UINT</Type>
+        <Comment> port number</Comment>
+        <BitSize>16</BitSize>
+        <BitOffs>688</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>sVarName</Name>
+        <Type>STRING(80)</Type>
+        <Comment> the variable name of the watchdog on the remote plc.</Comment>
+        <BitSize>648</BitSize>
+        <BitOffs>704</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>1352</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fb_WriteWatchdog</Name>
+        <Type Namespace="LCLS_Vacuum.Tc2_DataExchange">FB_WriteWatchdog</Type>
+        <BitSize>5536</BitSize>
+        <BitOffs>1376</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>ftReset_Watchdog</Name>
+        <Type Namespace="Tc2_Standard">F_TRIG</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>6912</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>xFirstPass</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>6976</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name Namespace="LCLS_General">FB_TempSensor</Name>
+      <BitSize>256</BitSize>
+      <SubItem>
+        <Name>fResolution</Name>
+        <Type>LREAL</Type>
+        <Comment> Resolution parameter from the Beckhoff docs. Default is 0.1 for 0.1 degree resolution</Comment>
+        <BitSize>64</BitSize>
+        <BitOffs>64</BitOffs>
+        <Default>
+          <Value>0.1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>fTemp</Name>
+        <Type>LREAL</Type>
+        <BitSize>64</BitSize>
+        <BitOffs>128</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: TEMP
+        io: input
+        field: EGU C
+        field: PREC 2
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bConnected</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>192</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: CONN
+        io: input
+        field: ONAM Connected
+        field: ZNAM Disconnected
+    </Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bError</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>200</BitOffs>
+        <Default>
+          <Value>1</Value>
+        </Default>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>pytmc</Name>
+            <Value>
+        pv: ERR
+        io: input
+        field: ONAM True
+        field: ZNAM False
+    </Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bUnderrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>208</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>bOverrange</Name>
+        <Type>BOOL</Type>
+        <BitSize>8</BitSize>
+        <BitOffs>216</BitOffs>
+        <Properties>
+          <Property>
+            <Name>ItemType</Name>
+            <Value>Output</Value>
+          </Property>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <SubItem>
+        <Name>iRaw</Name>
+        <Type>INT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>224</BitOffs>
+        <Properties>
+          <Property>
+            <Name>TcAddressType</Name>
+            <Value>Input</Value>
+          </Property>
+        </Properties>
+      </SubItem>
+      <Properties>
+        <Property>
+          <Name>PouType</Name>
+          <Value>FunctionBlock</Value>
+        </Property>
+      </Properties>
+    </DataType>
+    <DataType>
+      <Name>VERSION</Name>
+      <BitSize>64</BitSize>
+      <SubItem>
+        <Name>uiMajor</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>uiMinor</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>16</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>uiServicePack</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>32</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>uiPatch</Name>
+        <Type>UINT</Type>
+        <BitSize>16</BitSize>
+        <BitOffs>48</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{5456DAC5-9FA5-4A6B-B497-840FCC690FDD}" Namespace="PLC" TcBaseType="true">PlcLicenseInfo</Name>
+      <BitSize>1024</BitSize>
+      <SubItem>
+        <Name>LicenseId</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000021}">GUID</Type>
+        <BitSize>128</BitSize>
+        <BitOffs>0</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>Instances</Name>
+        <Type GUID="{18071995-0000-0000-0000-000000000008}">UDINT</Type>
+        <BitSize>32</BitSize>
+        <BitOffs>128</BitOffs>
+      </SubItem>
+      <SubItem>
+        <Name>LicenseName</Name>
+        <Type GUID="{18071995-0000-0000-0000-00010000005F}">STRING(95)</Type>
+        <BitSize>768</BitSize>
+        <BitOffs>256</BitOffs>
+      </SubItem>
+    </DataType>
+    <DataType>
+      <Name GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}" TcBaseType="true" CName="TcSystemEventClass">TcSystemEventClass</Name>
+      <DisplayName TxtId="">TcSystemEventClass</DisplayName>
+      <EventId>
+        <Name Id="1">InternalError</Name>
+        <DisplayName TxtId="">InternalError</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="2">NoRTime</Name>
+        <DisplayName TxtId="">NoRTime</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="3">AllocationLockedMemoryError</Name>
+        <DisplayName TxtId="">AllocationLockedMemoryError</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4">InsertMailboxError</Name>
+        <DisplayName TxtId="">InsertMailboxError</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="5">WrongReceiveHMSG</Name>
+        <DisplayName TxtId="">WrongReceiveHMSG</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="6">TargetPortNotFound</Name>
+        <DisplayName TxtId="">TargetPortNotFound (possible cause: ADS server not started)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="7">TargetMachineNotFound</Name>
+        <DisplayName TxtId="">TargetMachineNotFound (possible cause: missing ADS route)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="8">UnknownCommandID</Name>
+        <DisplayName TxtId="">UnknownCommandID</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="9">BadTaskID</Name>
+        <DisplayName TxtId="">BadTaskID</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="10">NoIO</Name>
+        <DisplayName TxtId="">NoIO</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="11">UnknownAdsCommand</Name>
+        <DisplayName TxtId="">UnknownAdsCommand</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="12">Win32Error</Name>
+        <DisplayName TxtId="">Win32Error</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="13">PortNotConnected</Name>
+        <DisplayName TxtId="">PortNotConnected</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="14">InvalidAdsLength</Name>
+        <DisplayName TxtId="">InvalidAdsLength</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="15">InvalidAdsNetID</Name>
+        <DisplayName TxtId="">InvalidAdsNetID</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="16">LowInstallationLevel</Name>
+        <DisplayName TxtId="">LowInstallationLevel</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="17">NoDebugAvailable</Name>
+        <DisplayName TxtId="">NoDebugAvailable</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="18">PortDisabled</Name>
+        <DisplayName TxtId="">PortDisabled</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="19">PortAlreadyConnected</Name>
+        <DisplayName TxtId="">PortAlreadyConnected</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="20">AdsSyncWin32Error</Name>
+        <DisplayName TxtId="">AdsSyncWin32Error</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="21">AdsSyncTimeout</Name>
+        <DisplayName TxtId="">AdsSyncTimeout</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="22">AdsSyncAmsError</Name>
+        <DisplayName TxtId="">AdsSyncAmsError</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="23">AdsSyncNoIndexMap</Name>
+        <DisplayName TxtId="">AdsSyncNoIndexMap</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="24">InvalidAdsPort</Name>
+        <DisplayName TxtId="">InvalidAdsPort</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="25">NoMemory</Name>
+        <DisplayName TxtId="">NoMemory</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="26">TCPSendError</Name>
+        <DisplayName TxtId="">TCPSendError</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="27">HostUnreachable</Name>
+        <DisplayName TxtId="">HostUnreachable</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="28">InvalidAMSFragment</Name>
+        <DisplayName TxtId="">InvalidAMSFragment</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+    </DataType>
+    <DataType>
+      <Name GUID="{98BCB284-F932-4EA4-B58B-68A1F1C34192}" TcBaseType="true" CName="TcGeneralAdsEventClass">TcGeneralAdsEventClass</Name>
+      <DisplayName TxtId="">TcGeneralAdsEventClass</DisplayName>
+      <EventId>
+        <Name Id="1792">GeneralDeviceError</Name>
+        <DisplayName TxtId="">General device error</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1793">ServiceNotSupported</Name>
+        <DisplayName TxtId="">Service is not supported by server.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1794">InvalidIndexGroup</Name>
+        <DisplayName TxtId="">Invalid index group</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1795">InvalidIndexOffset</Name>
+        <DisplayName TxtId="">Invalid index offset</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1796">InvalidAccess</Name>
+        <DisplayName TxtId="">Reading/writing is not permitted.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1797">InvalidSize</Name>
+        <DisplayName TxtId="">Parameter size is not correct.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1798">InvalidData</Name>
+        <DisplayName TxtId="">Invalid parameter value(s)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1799">NotReady</Name>
+        <DisplayName TxtId="">Device is not in a ready state.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1800">Busy</Name>
+        <DisplayName TxtId="">Device is busy.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1801">InvalidContext</Name>
+        <DisplayName TxtId="">Invalid context</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1802">NoMemory</Name>
+        <DisplayName TxtId="">Out of memory</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1803">InvalidParam</Name>
+        <DisplayName TxtId="">Invalid parameter value(s)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1804">NotFound</Name>
+        <DisplayName TxtId="">Not found (files, ...)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1805">Syntax</Name>
+        <DisplayName TxtId="">Syntax error in comand or file</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1806">Incompatible</Name>
+        <DisplayName TxtId="">Object does not match.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1807">AlreadyExists</Name>
+        <DisplayName TxtId="">Object already exists.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1808">SymbolNotFound</Name>
+        <DisplayName TxtId="">Symbol was not found.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1809">SymbolVersionInvalid</Name>
+        <DisplayName TxtId="">Symbol version is invalid. (-&gt; Release handle and try again.)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1810">InvalidState</Name>
+        <DisplayName TxtId="">Server is in invalid state.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1811">TransModeNotSupported</Name>
+        <DisplayName TxtId="">AdsTransMode is not supported.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1812">NotificationHandleInvalid</Name>
+        <DisplayName TxtId="">Notification handle is invalid. (-&gt; Release handle and try again.)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1813">ClientUnknown</Name>
+        <DisplayName TxtId="">Notification client is not registered.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1814">NoMoreHandles</Name>
+        <DisplayName TxtId="">No more notification handles</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1815">InvalidWatchSize</Name>
+        <DisplayName TxtId="">Size for watch is too big.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1816">NotInit</Name>
+        <DisplayName TxtId="">Device is not initialized.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1817">DeviceTimeout</Name>
+        <DisplayName TxtId="">Device has a timeout.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1818">NoInterface</Name>
+        <DisplayName TxtId="">Query interface is failed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1819">InvalidInterface</Name>
+        <DisplayName TxtId="">Wrong interface is required.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1820">InvalidClassID</Name>
+        <DisplayName TxtId="">Class ID is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1821">InvalidObjectID</Name>
+        <DisplayName TxtId="">Object ID is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1822">Pending</Name>
+        <DisplayName TxtId="">Request is pending.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1823">Aborted</Name>
+        <DisplayName TxtId="">Request is aborted.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1824">SignalWarning</Name>
+        <DisplayName TxtId="">Signal warning</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1825">InvalidArrayIndex</Name>
+        <DisplayName TxtId="">Invalid array index</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1826">SymbolNotActive</Name>
+        <DisplayName TxtId="">Symbol is not active. (-&gt; Release handle and try again.)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1827">AccessDenied</Name>
+        <DisplayName TxtId="">Access is denied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1828">LicenseMissing</Name>
+        <DisplayName TxtId="">License is missing / not found.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1829">LicenseExpired</Name>
+        <DisplayName TxtId="">License is expired.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1830">LicenseExceeded</Name>
+        <DisplayName TxtId="">License is exceeded.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1831">LicenseInvalid</Name>
+        <DisplayName TxtId="">License is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1832">LicenseSystemID</Name>
+        <DisplayName TxtId="">License with invalid system ID</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1833">LicenseNoTimeLimit</Name>
+        <DisplayName TxtId="">License is not time limited.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1834">LicenseFutureIssue</Name>
+        <DisplayName TxtId="">License issue time is in the future.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1835">LicenseTimeTooLong</Name>
+        <DisplayName TxtId="">License time period is too long.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1836">Exception</Name>
+        <DisplayName TxtId="">Exception in the device code</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1837">LicenseDuplicated</Name>
+        <DisplayName TxtId="">License file is read twice.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1857">InvalidServiceParam</Name>
+        <DisplayName TxtId="">Invalid parameter at service call</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1858">ListEmpty</Name>
+        <DisplayName TxtId="">Polling list is empty.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1859">VariableConAlreadyInUse</Name>
+        <DisplayName TxtId="">Variable connection is already in use.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1860">InvokeIDAlreadyInUse</Name>
+        <DisplayName TxtId="">Invoke ID is already in use.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1861">TimeoutElapsed</Name>
+        <DisplayName TxtId="">Timeout is elapsed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1862">Win32Error</Name>
+        <DisplayName TxtId="">Error in Win32 subsystem</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1863">TimeoutInvalid</Name>
+        <DisplayName TxtId="">Timeout value is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1864">PortNotOpen</Name>
+        <DisplayName TxtId="">Port is not open (Ads dll).</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1865">NoAMSAddr</Name>
+        <DisplayName TxtId="">No AMS address (Ads dll)</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1872">SyncInternalError</Name>
+        <DisplayName TxtId="">Internal error in Ads sync</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1873">AddHash</Name>
+        <DisplayName TxtId="">Hash table overflow</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1874">RemoveHash</Name>
+        <DisplayName TxtId="">Key not found in hash table</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1875">NoMoreSymbols</Name>
+        <DisplayName TxtId="">No more symbols in cache</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1876">SyncResInvalid</Name>
+        <DisplayName TxtId="">Invalid response received</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1877">SyncPortLocked</Name>
+        <DisplayName TxtId="">Sync port is locked.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <Hides>
+        <Hide GUID="{8D937C5B-9A96-4A48-AA0B-BC30CC416A59}"/>
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{E3D84344-4CB3-44DB-8D94-12F9CE0E2F90}" TcBaseType="true" CName="TcRouterEventClass">TcRouterEventClass</Name>
+      <DisplayName TxtId="">TcRouterEventClass</DisplayName>
+      <EventId>
+        <Name Id="1280">NoLockedMemory</Name>
+        <DisplayName TxtId="">No locked memory can be allocated.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1281">ResizeMemory</Name>
+        <DisplayName TxtId="">The size of the router memory could not be changed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1282">MailboxFull</Name>
+        <DisplayName TxtId="">The mailbox has reached the maximum number of possible messages. The current sent message was rejected.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1283">DebugBoxFull</Name>
+        <DisplayName TxtId="">The debug mailbox has reached the maximum number of possible messages. The sent message will not be displayed in the debug monitor.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1284">UnknownPortType</Name>
+        <DisplayName TxtId="">The port type is unknown.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1285">NotInitialized</Name>
+        <DisplayName TxtId="">TwinCAT Router is not initialised.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1286">PortAlreadyInUse</Name>
+        <DisplayName TxtId="">The desired port number is already assigned.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1287">NotRegistered</Name>
+        <DisplayName TxtId="">The Port is not registered.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1288">NoMoreQueues</Name>
+        <DisplayName TxtId="">The maximum number of Ports is reached.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1289">InvalidPort</Name>
+        <DisplayName TxtId="">The port is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1290">NotActivated</Name>
+        <DisplayName TxtId="">TwinCAT Router is not active.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1291">FragmentBoxFull</Name>
+        <DisplayName TxtId="">Fragment Box is full.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1292">FragmentTimeout</Name>
+        <DisplayName TxtId="">Fragment Timeout</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1293">ToBeRemoved</Name>
+        <DisplayName TxtId="">ToBeRemoved</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+    </DataType>
+    <DataType>
+      <Name GUID="{B63588AE-B30A-4DCE-A44F-F929FB114944}" TcBaseType="true" CName="TcRTimeEventClass">TcRTimeEventClass</Name>
+      <DisplayName TxtId="">TcRTimeEventClass</DisplayName>
+      <EventId>
+        <Name Id="4096">InternalError</Name>
+        <DisplayName TxtId="">An internal fatal error in the TwinCAT real-time system occurred.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4097">BadTimerPeriods</Name>
+        <DisplayName TxtId="">The timer period is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4098">InvalidTaskPtr</Name>
+        <DisplayName TxtId="">The task pointer has the invalid value ZERO.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4099">InvalidStackPtr</Name>
+        <DisplayName TxtId="">The task stack pointer has the invalid value ZERO.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4100">PrioExists</Name>
+        <DisplayName TxtId="">The demanded task priority is already assigned.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4101">NoMoreTCB</Name>
+        <DisplayName TxtId="">No more free TCB (Task Control Block) available. The maximum number of TCBs is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4102">NoMoreSemas</Name>
+        <DisplayName TxtId="">No more free semaphores available. The maximum number of semaphores is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4103">NoMoreQueues</Name>
+        <DisplayName TxtId="">No more free queues available. The maximum number of queues is 64.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4109">ExtIRQAlreadyDef</Name>
+        <DisplayName TxtId="">An external synchronisation interrupt is already applied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4110">ExtIRQNotDef</Name>
+        <DisplayName TxtId="">No external synchronsiation interrupt is applied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4111">ExtIRQInstallFailed</Name>
+        <DisplayName TxtId="">The apply of the external synchronisation interrupt failed.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4112">IRQNotLessOrEqual</Name>
+        <DisplayName TxtId="">Call of a service function in the wrong context.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4119">VMXNotSupported</Name>
+        <DisplayName TxtId="">Intel VT-x extension is not supported.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4120">VMXDisabled</Name>
+        <DisplayName TxtId="">Intel VT-x extension is not enabled in BIOS.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4121">VMXControlsMissing</Name>
+        <DisplayName TxtId="">Missing feature in Intel VT-x extension.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4122">VMXEnableFails</Name>
+        <DisplayName TxtId="">Enabling Intel VT-x fails.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+    </DataType>
+    <DataType>
+      <Name GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}" TcBaseType="true" CName="Win32EventClass">Win32EventClass</Name>
+      <DisplayName TxtId="">Win32EventClass</DisplayName>
+      <EventId>
+        <Name Id="0">ERROR_SUCCESS</Name>
+        <DisplayName TxtId="">The operation completed successfully.</DisplayName>
+        <Severity>Verbose</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1">ERROR_INVALID_FUNCTION</Name>
+        <DisplayName TxtId="">Incorrect function.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="2">ERROR_FILE_NOT_FOUND</Name>
+        <DisplayName TxtId="">The system cannot find the file specified.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="3">ERROR_PATH_NOT_FOUND</Name>
+        <DisplayName TxtId="">The system cannot find the path specified.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4">ERROR_TOO_MANY_OPEN_FILES</Name>
+        <DisplayName TxtId="">The system cannot open the file.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="5">ERROR_ACCESS_DENIED</Name>
+        <DisplayName TxtId="">Access is denied.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="6">ERROR_INVALID_HANDLE</Name>
+        <DisplayName TxtId="">The handle is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="8">ERROR_NOT_ENOUGH_MEMORY</Name>
+        <DisplayName TxtId="">Not enough storage is available to process this command.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="13">ERROR_INVALID_DATA</Name>
+        <DisplayName TxtId="">The data is invalid.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="21">ERROR_NOT_READY</Name>
+        <DisplayName TxtId="">The device is not ready.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="22">ERROR_BAD_COMMAND</Name>
+        <DisplayName TxtId="">The device does not recognize the command.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="23">ERROR_CRC</Name>
+        <DisplayName TxtId="">Data error (cyclic redundancy check).</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="24">ERROR_BAD_LENGTH</Name>
+        <DisplayName TxtId="">The program issued a command but the command length is incorrect.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="29">ERROR_WRITE_FAULT</Name>
+        <DisplayName TxtId="">The system cannot write to the specified device.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="30">ERROR_READ_FAULT</Name>
+        <DisplayName TxtId="">The system cannot read from the specified device.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="31">ERROR_GEN_FAILURE</Name>
+        <DisplayName TxtId="">A device attached to the system is not functioning.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="50">ERROR_NOT_SUPPORTED</Name>
+        <DisplayName TxtId="">The request is not supported.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="51">ERROR_REM_NOT_LIST</Name>
+        <DisplayName TxtId="">The remote computer is not available.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="52">ERROR_DUP_NAME</Name>
+        <DisplayName TxtId="">A duplicate name exists on the network.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="53">ERROR_BAD_NETPATH</Name>
+        <DisplayName TxtId="">The network path was not found.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="54">ERROR_NETWORK_BUSY</Name>
+        <DisplayName TxtId="">The network is busy.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="55">ERROR_DEV_NOT_EXIST</Name>
+        <DisplayName TxtId="">The specified network resource or device is no longer available.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="80">ERROR_FILE_EXISTS</Name>
+        <DisplayName TxtId="">The file exists.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="82">ERROR_CANNOT_MAKE</Name>
+        <DisplayName TxtId="">The directory or file cannot be created.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="85">ERROR_ALREADY_ASSIGNED</Name>
+        <DisplayName TxtId="">The local device name is already in use.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="86">ERROR_INVALID_PASSWORD</Name>
+        <DisplayName TxtId="">The specified network password is not correct.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="87">ERROR_INVALID_PARAMETER</Name>
+        <DisplayName TxtId="">The parameter is incorrect.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="110">ERROR_OPEN_FAILED</Name>
+        <DisplayName TxtId="">The system cannot open the device or file specified.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="183">ERROR_ALREADY_EXISTS</Name>
+        <DisplayName TxtId="">Cannot create a file when that file already exists.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="186">ERROR_INVALID_FLAG_NUMBER</Name>
+        <DisplayName TxtId="">The flag passed is not correct.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="258">WAIT_TIMEOUT</Name>
+        <DisplayName TxtId="">The wait operation timed out.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="259">ERROR_NO_MORE_ITEMS</Name>
+        <DisplayName TxtId="">No more data is available.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="487">ERROR_INVALID_ADDRESS</Name>
+        <DisplayName TxtId="">Attempt to access invalid address.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="534">ERROR_ARITHMETIC_OVERFLOW</Name>
+        <DisplayName TxtId="">Arithmetic result exceeded 32 bits.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="995">ERROR_OPERATION_ABORTED</Name>
+        <DisplayName TxtId="">The I/O operation has been aborted because of either a thread exit or an application request.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="996">ERROR_IO_INCOMPLETE</Name>
+        <DisplayName TxtId="">Overlapped I/O event is not in a signaled state.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="997">ERROR_IO_PENDING</Name>
+        <DisplayName TxtId="">Overlapped I/O operation is in progress.</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <Hides>
+        <Hide GUID="{3FEAA938-D042-4B1E-8ADD-BB2F7BE872B0}"/>
+      </Hides>
+    </DataType>
+    <DataType>
+      <Name GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Name>
+      <DisplayName TxtId="">Log event</DisplayName>
+      <EventId>
+        <Name Id="0">Critical</Name>
+        <DisplayName TxtId="">Critical</DisplayName>
+        <Severity>Critical</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="1">Error</Name>
+        <DisplayName TxtId="">Error</DisplayName>
+        <Severity>Error</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="2">Warning</Name>
+        <DisplayName TxtId="">Warning</DisplayName>
+        <Severity>Warning</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="3">Info</Name>
+        <DisplayName TxtId="">Info</DisplayName>
+        <Severity>Info</Severity>
+      </EventId>
+      <EventId>
+        <Name Id="4">Verbose</Name>
+        <DisplayName TxtId="">Verbose</DisplayName>
+        <Severity>Verbose</Severity>
+      </EventId>
+      <Hides>
+        <Hide GUID="{E50B8F82-4C54-4F5A-855E-90970D01354A}"/>
+        <Hide GUID="{772B0B6F-412E-46FD-9006-6E00BFFE1C3D}"/>
+        <Hide GUID="{8FAD87A4-C885-4A4F-85AF-8AB324945AE2}"/>
+        <Hide GUID="{16BEE339-E307-4BC2-8E77-D5FB1794DF5A}"/>
+        <Hide GUID="{B7E60A74-CB5C-4A02-B59C-74B86A888DE9}"/>
+        <Hide GUID="{6B58EF80-AB34-4F6C-81D0-B0589F4FC534}"/>
+        <Hide GUID="{9E76D1D7-D744-4E3D-B111-F6F94B60E6AB}"/>
+      </Hides>
+    </DataType>
   </DataTypes>
   <Modules>
     <Module GUID="{312596D6-EEE2-4533-9A44-B036B5C98A40}" TcSmClass="TComPlcObjDef">
@@ -41153,7 +41228,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">0</AreaNo>
           <Name>ComTask Inputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComIn_MRCO_MAIN_PTM_01</Name>
             <Comment>SERIAL IO</Comment>
@@ -41413,7 +41488,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">1</AreaNo>
           <Name>ComTask Outputs</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>GVL_COM.stComOut_MRCO_MAIN_PTM_01</Name>
             <BitSize>192</BitSize>
@@ -41672,7 +41747,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">3</AreaNo>
           <Name>ComTask Internal</Name>
           <ContextId>0</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>GVL_COM.SerialRXBuffer_MRCO_MAIN_PTM_01</Name>
             <Comment> Define COM Ports/Buffers incl. library Tc2_SerialCom</Comment>
@@ -41941,7 +42016,7 @@ that the ADS read function expects to keep checking</Comment>
           <AreaNo AreaType="InputDst" CreateSymbols="true">16</AreaNo>
           <Name>PlcTask Inputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>GVL_PLC_Interfaces.xEcatBridge_TxPDO_state</Name>
             <Comment>ETHERCAT BRIDGE COM STATUS
@@ -43153,7 +43228,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="OutputSrc" CreateSymbols="true">17</AreaNo>
           <Name>PlcTask Outputs</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>MAIN.dummy_FFFO.q_xFastFaultOut</Name>
             <BitSize>8</BitSize>
@@ -43682,7 +43757,7 @@ Link this to your VAT590 WcState variable under WcState</Comment>
           <AreaNo AreaType="Internal" CreateSymbols="true">19</AreaNo>
           <Name>PlcTask Internal</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>DefaultGlobals.stSys</Name>
             <Comment>Included for you</Comment>
@@ -53248,6 +53323,28 @@ ALL VALVES CURRENTLY NO</Comment>
             <BitOffs>645605120</BitOffs>
           </Symbol>
           <Symbol>
+            <Name>GVL_Devices.fb_TD400Com_MRCO_MSC_PTM_01</Name>
+            <BitSize>17824</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_COM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645605312</BitOffs>
+          </Symbol>
+          <Symbol>
+            <Name>GVL_Devices.fb_TD400SerialIO_MRCO_MSC_PTM_01</Name>
+            <BitSize>128</BitSize>
+            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_TO_PTM</BaseType>
+            <Properties>
+              <Property>
+                <Name>TcVarGlobal</Name>
+              </Property>
+            </Properties>
+            <BitOffs>645623136</BitOffs>
+          </Symbol>
+          <Symbol>
             <Name>GVL_PLC_Interfaces.fb_ADS_WATCHDOG_VAC_MRCO_TMO</Name>
             <Comment>Outputs</Comment>
             <BitSize>7008</BitSize>
@@ -53823,29 +53920,6 @@ ALL VALVES CURRENTLY NO</Comment>
             <BitOffs>645638784</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
-            <Comment> ST_LCLSGeneralEventClass</Comment>
-            <BitSize>960</BitSize>
-            <BaseType GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">ST_LCLSGeneralEventClass</BaseType>
-            <Properties>
-              <Property>
-                <Name>tc_no_symbol</Name>
-                <Value>unused</Value>
-              </Property>
-              <Property>
-                <Name>const_non_replaced</Name>
-              </Property>
-              <Property>
-                <Name>suppress_warning_0</Name>
-                <Value>C0228</Value>
-              </Property>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>645670464</BitOffs>
-          </Symbol>
-          <Symbol>
             <Name>TC_EVENT_CLASSES.TcSystemEventClass</Name>
             <Comment> 11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31</Comment>
             <BitSize>128</BitSize>
@@ -53912,7 +53986,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684096</BitOffs>
+            <BitOffs>645654976</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcGeneralAdsEventClass</Name>
@@ -53981,7 +54055,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684224</BitOffs>
+            <BitOffs>645655104</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRouterEventClass</Name>
@@ -54050,7 +54124,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684352</BitOffs>
+            <BitOffs>645655232</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.TcRTimeEventClass</Name>
@@ -54119,7 +54193,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684480</BitOffs>
+            <BitOffs>645655360</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.Win32EventClass</Name>
@@ -54188,7 +54262,7 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684608</BitOffs>
+            <BitOffs>645655488</BitOffs>
           </Symbol>
           <Symbol>
             <Name>TC_EVENT_CLASSES.LCLSGeneralEventClass</Name>
@@ -54257,36 +54331,37 @@ ALL VALVES CURRENTLY NO</Comment>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>645684736</BitOffs>
+            <BitOffs>645655616</BitOffs>
           </Symbol>
           <Symbol>
-            <Name>GVL_Devices.fb_TD400Com_MRCO_MSC_PTM_01</Name>
-            <BitSize>17824</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_COM</BaseType>
+            <Name>TC_EVENTS.LCLSGeneralEventClass</Name>
+            <Comment> ST_LCLSGeneralEventClass</Comment>
+            <BitSize>960</BitSize>
+            <BaseType GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">ST_LCLSGeneralEventClass</BaseType>
             <Properties>
+              <Property>
+                <Name>tc_no_symbol</Name>
+                <Value>unused</Value>
+              </Property>
+              <Property>
+                <Name>const_non_replaced</Name>
+              </Property>
+              <Property>
+                <Name>suppress_warning_0</Name>
+                <Value>C0228</Value>
+              </Property>
               <Property>
                 <Name>TcVarGlobal</Name>
               </Property>
             </Properties>
-            <BitOffs>648689184</BitOffs>
-          </Symbol>
-          <Symbol>
-            <Name>GVL_Devices.fb_TD400SerialIO_MRCO_MSC_PTM_01</Name>
-            <BitSize>128</BitSize>
-            <BaseType Namespace="LCLS_Vacuum_Serial">FB_OERLIKON_TD400_TO_PTM</BaseType>
-            <Properties>
-              <Property>
-                <Name>TcVarGlobal</Name>
-              </Property>
-            </Properties>
-            <BitOffs>648707008</BitOffs>
+            <BitOffs>645686080</BitOffs>
           </Symbol>
         </DataArea>
         <DataArea>
           <AreaNo AreaType="RetainSrc" CreateSymbols="true">20</AreaNo>
           <Name>PlcTask Retains</Name>
           <ContextId>1</ContextId>
-          <ByteSize>81395712</ByteSize>
+          <ByteSize>81461248</ByteSize>
           <Symbol>
             <Name>PMPS_GVL.SuccessfulPreemption</Name>
             <Comment> Any time BPTM applies a new BP request which is confirmed</Comment>
@@ -54341,9 +54416,6 @@ ALL VALVES CURRENTLY NO</Comment>
       <Deployment/>
       <EventClasses>
         <EventClass>
-          <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
-        </EventClass>
-        <EventClass>
           <Type GUID="{11F7FC20-DBF4-4DAF-96C7-1FD6B6156B31}">TcSystemEventClass</Type>
         </EventClass>
         <EventClass>
@@ -54358,6 +54430,9 @@ ALL VALVES CURRENTLY NO</Comment>
         <EventClass>
           <Type GUID="{1D0C4BAC-ECF3-4F33-8F20-A12E77AB6387}">Win32EventClass</Type>
         </EventClass>
+        <EventClass>
+          <Type GUID="{97CF8247-B59C-4E2C-B4B0-7350D0471457}">LCLSGeneralEventClass</Type>
+        </EventClass>
       </EventClasses>
       <Properties>
         <Property>
@@ -54366,15 +54441,15 @@ ALL VALVES CURRENTLY NO</Comment>
         </Property>
         <Property>
           <Name>ChangeDate</Name>
-          <Value>2025-01-15T14:34:10</Value>
+          <Value>2025-03-04T15:17:46</Value>
         </Property>
         <Property>
           <Name>GeneratedCodeSize</Name>
-          <Value>610304</Value>
+          <Value>663552</Value>
         </Property>
         <Property>
           <Name>GlobalDataSize</Name>
-          <Value>80232448</Value>
+          <Value>80277504</Value>
         </Property>
       </Properties>
     </Module>
