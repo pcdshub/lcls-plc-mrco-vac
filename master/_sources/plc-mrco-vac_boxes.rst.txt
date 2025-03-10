@@ -89,9 +89,9 @@ MRCO_PLC_E04_EL6692
         BootStrapData, 0010f400f410f400
         SyncMan, 001000012600010001000000800000040001001026010000
         SyncMan, 001400012200010002000000800000040001001422010000
-        SyncMan, 001800002400000003000000000000000000001824010000
-        SyncMan, 001e02002000010004000000000000000200001e20010000
-        Fmmu, 0000000000000000000000020000000001000000000000000000000000000000
+        SyncMan, 001816002400010003000000000000000000001824010000
+        SyncMan, 001e0e002000010004000000000000000200001e20010000
+        Fmmu, 0000000000000000001800020100000001000000000000000000000000000000
         Fmmu, 0000000000000000001e00010100000002000000000000000000000000000000
         Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
         CoeProfile, 5001
@@ -104,14 +104,14 @@ PDO SYNC Inputs (Index #x1a01, Flags #x0010, SyncMan 3)
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", , "#x10f4", "BIT2"
-        "None", "", , "", "ARRAY [0..5] OF BIT"
-        "None", "", , "", "ARRAY [0..2] OF BIT"
-        "TxPDO toggle", "Bit toggles when new data from other side received", , "#x1800", "BIT"
-        "TxPDO state", "0: Other side is in OP state >0: Error", , "#x1800", "BIT"
-        "Control value update toggle", "Bit toggles when new DC control data available", , "#x10f4", "BIT"
-        "Timestamp update toggle", "Bit toggles when new timestamp data available", , "#x10f4", "BIT"
-        "External device not connected", "0: External device connected 1: External device not connected", , "#x10f4", "BIT"
+        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", 2, "#x10f4", "BIT2"
+        "None", "", 6, "", "ARRAY [0..5] OF BIT"
+        "None", "", 3, "", "ARRAY [0..2] OF BIT"
+        "TxPDO toggle", "Bit toggles when new data from other side received", 1, "#x1800", "BIT"
+        "TxPDO state", "0: Other side is in OP state >0: Error", 1, "#x1800", "BIT"
+        "Control value update toggle", "Bit toggles when new DC control data available", 1, "#x10f4", "BIT"
+        "Timestamp update toggle", "Bit toggles when new timestamp data available", 1, "#x10f4", "BIT"
+        "External device not connected", "0: External device connected 1: External device not connected", 1, "#x10f4", "BIT"
 
 
 
@@ -121,17 +121,17 @@ PDO SYNC Inputs (Index #x1a02, Flags #x0010, SyncMan )
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", , "#x10f4", "BIT2"
-        "None", "", , "", "ARRAY [0..5] OF BIT"
-        "None", "", , "", "ARRAY [0..2] OF BIT"
-        "TxPDO toggle", "Bit toggles when new data from other side received", , "#x1800", "BIT"
-        "TxPDO state", "0: Other side is in OP state >0: Error", , "#x1800", "BIT"
-        "Control value update toggle", "Bit toggles when new DC control data available", , "#x10f4", "BIT"
-        "Timestamp update toggle", "Bit toggles when new timestamp data available", , "#x10f4", "BIT"
-        "External device not connected", "0: External device connected 1: External device not connected", , "#x10f4", "BIT"
-        "Internal time stamp", "", , "#x10f4", "ULINT"
-        "External time stamp", "", , "#x10f4", "ULINT"
-        "Control Value for DC Master Clock", "", , "#x10f4", "UDINT"
+        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", 2, "#x10f4", "BIT2"
+        "None", "", 6, "", "ARRAY [0..5] OF BIT"
+        "None", "", 3, "", "ARRAY [0..2] OF BIT"
+        "TxPDO toggle", "Bit toggles when new data from other side received", 1, "#x1800", "BIT"
+        "TxPDO state", "0: Other side is in OP state >0: Error", 1, "#x1800", "BIT"
+        "Control value update toggle", "Bit toggles when new DC control data available", 1, "#x10f4", "BIT"
+        "Timestamp update toggle", "Bit toggles when new timestamp data available", 1, "#x10f4", "BIT"
+        "External device not connected", "0: External device connected 1: External device not connected", 1, "#x10f4", "BIT"
+        "Internal time stamp", "", 64, "#x10f4", "ULINT"
+        "External time stamp", "", 64, "#x10f4", "ULINT"
+        "Control Value for DC Master Clock", "", 32, "#x10f4", "UDINT"
 
 
 
@@ -141,25 +141,50 @@ PDO SYNC Inputs (Index #x1a03, Flags #x0010, SyncMan )
     :header: Name, Comment, BitLen, Index, Type
     :align: center
 
-        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", , "#x10f4", "BIT2"
-        "None", "", , "", "ARRAY [0..5] OF BIT"
-        "None", "", , "", "ARRAY [0..2] OF BIT"
-        "TxPDO toggle", "Bit toggles when new data from other side received", , "#x1800", "BIT"
-        "TxPDO state", "0: Other side is in OP state >0: Error", , "#x1800", "BIT"
-        "Control value update toggle", "Bit toggles when new DC control data available", , "#x10f4", "BIT"
-        "Timestamp update toggle", "Bit toggles when new timestamp data available", , "#x10f4", "BIT"
-        "External device not connected", "0: External device connected 1: External device not connected", , "#x10f4", "BIT"
-        "Internal time stamp", "", , "#x10f4", "UDINT"
-        "External time stamp", "", , "#x10f4", "UDINT"
-        "Control Value for DC Master Clock", "", , "#x10f4", "UDINT"
+        "Sync Mode", "0: no Syncronisation 1: Secondary side is Sync Master 2: Primary side is Sync Master", 2, "#x10f4", "BIT2"
+        "None", "", 6, "", "ARRAY [0..5] OF BIT"
+        "None", "", 3, "", "ARRAY [0..2] OF BIT"
+        "TxPDO toggle", "Bit toggles when new data from other side received", 1, "#x1800", "BIT"
+        "TxPDO state", "0: Other side is in OP state >0: Error", 1, "#x1800", "BIT"
+        "Control value update toggle", "Bit toggles when new DC control data available", 1, "#x10f4", "BIT"
+        "Timestamp update toggle", "Bit toggles when new timestamp data available", 1, "#x10f4", "BIT"
+        "External device not connected", "0: External device connected 1: External device not connected", 1, "#x10f4", "BIT"
+        "Internal time stamp", "", 32, "#x10f4", "UDINT"
+        "External time stamp", "", 32, "#x10f4", "UDINT"
+        "Control Value for DC Master Clock", "", 32, "#x10f4", "UDINT"
 
 
 
 PDO IO Inputs (Index #x1a00, Flags #x0021, SyncMan 3)
 
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "HUTCH_PLC_NAME", "", 72, "#x6000", "STRING(8)"
+        "TMO_ROUGH1_VRC_01_OPEN_LS", "", 8, "#x6000", "BOOL"
+        "TMO_ROUGH2_VRC_01_OPEN_LS", "", 8, "#x6000", "BOOL"
+        "None", "", 8, "", "ARRAY [0..0] OF BYTE"
+
 
 
 PDO IO Outputs (Index #x1600, Flags #x0021, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "ENDSTATION_PLC_NAME", "", 72, "#x7000", "STRING(8)"
+        "IP1_ROUGH_VRC_01_OPEN_LS", "", 8, "#x7000", "BOOL"
+        "IP1_ROUGH_VRC_02_OPEN_LS", "", 8, "#x7000", "BOOL"
+        "IP1_ROUGH_VRC_03_OPEN_LS", "", 8, "#x7000", "BOOL"
+        "IP1_TURBOS_ALL_AtSpd", "", 8, "#x7000", "BOOL"
+        "IP1_MAIN_xAT_VAC", "", 8, "#x7000", "BOOL"
+        "IP1_MAIN_xPRESS_OK", "", 8, "#x7000", "BOOL"
+        "None", "", 8, "", "ARRAY [0..0] OF BYTE"
+        "IP1_MAIN_rPRESS", "", 32, "#x7000", "REAL"
+        "IP1_HV_SAFETY_ENABLE", "", 8, "#x7000", "BOOL"
+        "None", "", 8, "", "ARRAY [0..0] OF BYTE"
 
 
 .. raw:: html
@@ -3449,6 +3474,433 @@ MRCO_PLC_E03_EL9184
    </details>
 
 
+MRCO_DRL_03_E08_EL9184
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E08_EL9184
+    ID, 23
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E05_EL6001
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (10 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E05_EL6001
+    ID, 24
+        BootStrapData, 0010f400f410f400
+        SyncMan, 0018f6002600010001000000f600f600f600001826010000
+        SyncMan, f618f6002200010002000000f600f600f600f61822010000
+        SyncMan, 001018002400010003000000000000001800001024010000
+        SyncMan, 001418002000010004000000000000001800001420010000
+        Fmmu, 0000000000000000001000020100000001000000000000000000000000000000
+        Fmmu, 0000000000000000001400010100000002000000000000000000000000000000
+        CoeProfile, 39326601
+        CoeProfile, 5001
+
+
+
+PDO Inputs (Index #x1a00, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status", "", , "#x3101", "USINT"
+        "Data In 0", "", , "#x3101", "USINT"
+        "Data In 1", "", , "#x3101", "USINT"
+        "Data In 2", "", , "#x3101", "USINT"
+
+
+
+PDO Inputs (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status", "", , "#x3102", "USINT"
+        "Data In 0", "", , "#x3102", "USINT"
+        "Data In 1", "", , "#x3102", "USINT"
+        "Data In 2", "", , "#x3102", "USINT"
+        "Data In 3", "", , "#x3102", "USINT"
+        "Data In 4", "", , "#x3102", "USINT"
+
+
+
+PDO Inputs (Index #x1a02, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status", "", , "#x3103", "UINT"
+        "Data In 0", "", , "#x3103", "USINT"
+        "Data In 1", "", , "#x3103", "USINT"
+        "Data In 2", "", , "#x3103", "USINT"
+        "Data In 3", "", , "#x3103", "USINT"
+        "Data In 4", "", , "#x3103", "USINT"
+        "Data In 5", "", , "#x3103", "USINT"
+        "Data In 6", "", , "#x3103", "USINT"
+        "Data In 7", "", , "#x3103", "USINT"
+        "Data In 8", "", , "#x3103", "USINT"
+        "Data In 9", "", , "#x3103", "USINT"
+        "Data In 10", "", , "#x3103", "USINT"
+        "Data In 11", "", , "#x3103", "USINT"
+        "Data In 12", "", , "#x3103", "USINT"
+        "Data In 13", "", , "#x3103", "USINT"
+        "Data In 14", "", , "#x3103", "USINT"
+        "Data In 15", "", , "#x3103", "USINT"
+        "Data In 16", "", , "#x3103", "USINT"
+        "Data In 17", "", , "#x3103", "USINT"
+        "Data In 18", "", , "#x3103", "USINT"
+        "Data In 19", "", , "#x3103", "USINT"
+        "Data In 20", "", , "#x3103", "USINT"
+        "Data In 21", "", , "#x3103", "USINT"
+
+
+
+PDO COM Inputs (Index #x1a04, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Transmit accepted", "", , "#x6000", "BIT"
+        "Status__Receive request", "", , "#x6000", "BIT"
+        "Status__Init accepted", "", , "#x6000", "BIT"
+        "Status__Buffer full", "", , "#x6000", "BIT"
+        "Status__Parity error", "", , "#x6000", "BIT"
+        "Status__Framing error", "", , "#x6000", "BIT"
+        "Status__Overrun error", "", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Input length", "", , "#x6000", "USINT"
+        "Data In 0", "", , "#x6000", "USINT"
+        "Data In 1", "", , "#x6000", "USINT"
+        "Data In 2", "", , "#x6000", "USINT"
+        "Data In 3", "", , "#x6000", "USINT"
+        "Data In 4", "", , "#x6000", "USINT"
+        "Data In 5", "", , "#x6000", "USINT"
+        "Data In 6", "", , "#x6000", "USINT"
+        "Data In 7", "", , "#x6000", "USINT"
+        "Data In 8", "", , "#x6000", "USINT"
+        "Data In 9", "", , "#x6000", "USINT"
+        "Data In 10", "", , "#x6000", "USINT"
+        "Data In 11", "", , "#x6000", "USINT"
+        "Data In 12", "", , "#x6000", "USINT"
+        "Data In 13", "", , "#x6000", "USINT"
+        "Data In 14", "", , "#x6000", "USINT"
+        "Data In 15", "", , "#x6000", "USINT"
+        "Data In 16", "", , "#x6000", "USINT"
+        "Data In 17", "", , "#x6000", "USINT"
+        "Data In 18", "", , "#x6000", "USINT"
+        "Data In 19", "", , "#x6000", "USINT"
+        "Data In 20", "", , "#x6000", "USINT"
+        "Data In 21", "", , "#x6000", "USINT"
+
+
+
+PDO COM ext. inputs (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Transmit accepted", "", , "#x6001", "BIT"
+        "Status__Receive request", "", , "#x6001", "BIT"
+        "Status__Init accepted", "", , "#x6001", "BIT"
+        "Status__Buffer full", "", , "#x6001", "BIT"
+        "Status__Parity error", "", , "#x6001", "BIT"
+        "Status__Framing error", "", , "#x6001", "BIT"
+        "Status__Overrun error", "", , "#x6001", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__Input length", "", , "#x6001", "USINT"
+        "Data In 0", "", , "#x6001", "UINT"
+        "Data In 1", "", , "#x6001", "UINT"
+        "Data In 2", "", , "#x6001", "UINT"
+        "Data In 3", "", , "#x6001", "UINT"
+        "Data In 4", "", , "#x6001", "UINT"
+        "Data In 5", "", , "#x6001", "UINT"
+        "Data In 6", "", , "#x6001", "UINT"
+        "Data In 7", "", , "#x6001", "UINT"
+        "Data In 8", "", , "#x6001", "UINT"
+        "Data In 9", "", , "#x6001", "UINT"
+        "Data In 10", "", , "#x6001", "UINT"
+        "Data In 11", "", , "#x6001", "UINT"
+        "Data In 12", "", , "#x6001", "UINT"
+        "Data In 13", "", , "#x6001", "UINT"
+        "Data In 14", "", , "#x6001", "UINT"
+        "Data In 15", "", , "#x6001", "UINT"
+        "Data In 16", "", , "#x6001", "UINT"
+        "Data In 17", "", , "#x6001", "UINT"
+        "Data In 18", "", , "#x6001", "UINT"
+        "Data In 19", "", , "#x6001", "UINT"
+        "Data In 20", "", , "#x6001", "UINT"
+        "Data In 21", "", , "#x6001", "UINT"
+        "Data In 22", "", , "#x6001", "UINT"
+        "Data In 23", "", , "#x6001", "UINT"
+        "Data In 24", "", , "#x6001", "UINT"
+        "Data In 25", "", , "#x6001", "UINT"
+        "Data In 26", "", , "#x6001", "UINT"
+        "Data In 27", "", , "#x6001", "UINT"
+        "Data In 28", "", , "#x6001", "UINT"
+        "Data In 29", "", , "#x6001", "UINT"
+        "Data In 30", "", , "#x6001", "UINT"
+        "Data In 31", "", , "#x6001", "UINT"
+        "Data In 32", "", , "#x6001", "UINT"
+        "Data In 33", "", , "#x6001", "UINT"
+        "Data In 34", "", , "#x6001", "UINT"
+        "Data In 35", "", , "#x6001", "UINT"
+        "Data In 36", "", , "#x6001", "UINT"
+        "Data In 37", "", , "#x6001", "UINT"
+        "Data In 38", "", , "#x6001", "UINT"
+        "Data In 39", "", , "#x6001", "UINT"
+        "Data In 40", "", , "#x6001", "UINT"
+        "Data In 41", "", , "#x6001", "UINT"
+        "Data In 42", "", , "#x6001", "UINT"
+        "Data In 43", "", , "#x6001", "UINT"
+        "Data In 44", "", , "#x6001", "UINT"
+        "Data In 45", "", , "#x6001", "UINT"
+        "Data In 46", "", , "#x6001", "UINT"
+        "Data In 47", "", , "#x6001", "UINT"
+        "Data In 48", "", , "#x6001", "UINT"
+        "Data In 49", "", , "#x6001", "UINT"
+
+
+
+PDO Outputs (Index #x1600, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Ctrl", "", , "#x3001", "USINT"
+        "Data Out 0", "", , "#x3001", "USINT"
+        "Data Out 1", "", , "#x3001", "USINT"
+        "Data Out 2", "", , "#x3001", "USINT"
+
+
+
+PDO Outputs (Index #x1601, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Ctrl", "", , "#x3002", "USINT"
+        "Data Out 0", "", , "#x3002", "USINT"
+        "Data Out 1", "", , "#x3002", "USINT"
+        "Data Out 2", "", , "#x3002", "USINT"
+        "Data Out 3", "", , "#x3002", "USINT"
+        "Data Out 4", "", , "#x3002", "USINT"
+
+
+
+PDO Outputs (Index #x1602, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Ctrl", "", , "#x3003", "UINT"
+        "Data Out 0", "", , "#x3003", "USINT"
+        "Data Out 1", "", , "#x3003", "USINT"
+        "Data Out 2", "", , "#x3003", "USINT"
+        "Data Out 3", "", , "#x3003", "USINT"
+        "Data Out 4", "", , "#x3003", "USINT"
+        "Data Out 5", "", , "#x3003", "USINT"
+        "Data Out 6", "", , "#x3003", "USINT"
+        "Data Out 7", "", , "#x3003", "USINT"
+        "Data Out 8", "", , "#x3003", "USINT"
+        "Data Out 9", "", , "#x3003", "USINT"
+        "Data Out 10", "", , "#x3003", "USINT"
+        "Data Out 11", "", , "#x3003", "USINT"
+        "Data Out 12", "", , "#x3003", "USINT"
+        "Data Out 13", "", , "#x3003", "USINT"
+        "Data Out 14", "", , "#x3003", "USINT"
+        "Data Out 15", "", , "#x3003", "USINT"
+        "Data Out 16", "", , "#x3003", "USINT"
+        "Data Out 17", "", , "#x3003", "USINT"
+        "Data Out 18", "", , "#x3003", "USINT"
+        "Data Out 19", "", , "#x3003", "USINT"
+        "Data Out 20", "", , "#x3003", "USINT"
+        "Data Out 21", "", , "#x3003", "USINT"
+
+
+
+PDO COM Outputs (Index #x1604, Flags #x0010, SyncMan 2)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Ctrl__Transmit request", "", , "#x7000", "BIT"
+        "Ctrl__Receive accepted", "", , "#x7000", "BIT"
+        "Ctrl__Init request", "", , "#x7000", "BIT"
+        "Ctrl__Send continues", "", , "#x7000", "BIT"
+        "Ctrl__", "", , "", "ARRAY [0..3] OF BIT"
+        "Ctrl__Output length", "", , "#x7000", "USINT"
+        "Data Out 0", "", , "#x7000", "USINT"
+        "Data Out 1", "", , "#x7000", "USINT"
+        "Data Out 2", "", , "#x7000", "USINT"
+        "Data Out 3", "", , "#x7000", "USINT"
+        "Data Out 4", "", , "#x7000", "USINT"
+        "Data Out 5", "", , "#x7000", "USINT"
+        "Data Out 6", "", , "#x7000", "USINT"
+        "Data Out 7", "", , "#x7000", "USINT"
+        "Data Out 8", "", , "#x7000", "USINT"
+        "Data Out 9", "", , "#x7000", "USINT"
+        "Data Out 10", "", , "#x7000", "USINT"
+        "Data Out 11", "", , "#x7000", "USINT"
+        "Data Out 12", "", , "#x7000", "USINT"
+        "Data Out 13", "", , "#x7000", "USINT"
+        "Data Out 14", "", , "#x7000", "USINT"
+        "Data Out 15", "", , "#x7000", "USINT"
+        "Data Out 16", "", , "#x7000", "USINT"
+        "Data Out 17", "", , "#x7000", "USINT"
+        "Data Out 18", "", , "#x7000", "USINT"
+        "Data Out 19", "", , "#x7000", "USINT"
+        "Data Out 20", "", , "#x7000", "USINT"
+        "Data Out 21", "", , "#x7000", "USINT"
+
+
+
+PDO COM ext. outputs (Index #x1605, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Ctrl__Transmit request", "", , "#x7001", "BIT"
+        "Ctrl__Receive accepted", "", , "#x7001", "BIT"
+        "Ctrl__Init request", "", , "#x7001", "BIT"
+        "Ctrl__Send continuous", "", , "#x7001", "BIT"
+        "Ctrl__", "", , "", "ARRAY [0..3] OF BIT"
+        "Ctrl__Output length", "", , "#x7001", "USINT"
+        "Data Out 0", "", , "#x7001", "UINT"
+        "Data Out 1", "", , "#x7001", "UINT"
+        "Data Out 2", "", , "#x7001", "UINT"
+        "Data Out 3", "", , "#x7001", "UINT"
+        "Data Out 4", "", , "#x7001", "UINT"
+        "Data Out 5", "", , "#x7001", "UINT"
+        "Data Out 6", "", , "#x7001", "UINT"
+        "Data Out 7", "", , "#x7001", "UINT"
+        "Data Out 8", "", , "#x7001", "UINT"
+        "Data Out 9", "", , "#x7001", "UINT"
+        "Data Out 10", "", , "#x7001", "UINT"
+        "Data Out 11", "", , "#x7001", "UINT"
+        "Data Out 12", "", , "#x7001", "UINT"
+        "Data Out 13", "", , "#x7001", "UINT"
+        "Data Out 14", "", , "#x7001", "UINT"
+        "Data Out 15", "", , "#x7001", "UINT"
+        "Data Out 16", "", , "#x7001", "UINT"
+        "Data Out 17", "", , "#x7001", "UINT"
+        "Data Out 18", "", , "#x7001", "UINT"
+        "Data Out 19", "", , "#x7001", "UINT"
+        "Data Out 20", "", , "#x7001", "UINT"
+        "Data Out 21", "", , "#x7001", "UINT"
+        "Data Out 22", "", , "#x7001", "UINT"
+        "Data Out 23", "", , "#x7001", "UINT"
+        "Data Out 24", "", , "#x7001", "UINT"
+        "Data Out 25", "", , "#x7001", "UINT"
+        "Data Out 26", "", , "#x7001", "UINT"
+        "Data Out 27", "", , "#x7001", "UINT"
+        "Data Out 28", "", , "#x7001", "UINT"
+        "Data Out 29", "", , "#x7001", "UINT"
+        "Data Out 30", "", , "#x7001", "UINT"
+        "Data Out 31", "", , "#x7001", "UINT"
+        "Data Out 32", "", , "#x7001", "UINT"
+        "Data Out 33", "", , "#x7001", "UINT"
+        "Data Out 34", "", , "#x7001", "UINT"
+        "Data Out 35", "", , "#x7001", "UINT"
+        "Data Out 36", "", , "#x7001", "UINT"
+        "Data Out 37", "", , "#x7001", "UINT"
+        "Data Out 38", "", , "#x7001", "UINT"
+        "Data Out 39", "", , "#x7001", "UINT"
+        "Data Out 40", "", , "#x7001", "UINT"
+        "Data Out 41", "", , "#x7001", "UINT"
+        "Data Out 42", "", , "#x7001", "UINT"
+        "Data Out 43", "", , "#x7001", "UINT"
+        "Data Out 44", "", , "#x7001", "UINT"
+        "Data Out 45", "", , "#x7001", "UINT"
+        "Data Out 46", "", , "#x7001", "UINT"
+        "Data Out 47", "", , "#x7001", "UINT"
+        "Data Out 48", "", , "#x7001", "UINT"
+        "Data Out 49", "", , "#x7001", "UINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E09_EL9070
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E09_EL9070
+    ID, 25
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03 (EK1100)
+^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03 (EK1100)
+    ID, 44
+
+
+.. raw:: html
+
+   </details>
+
+
 VCN_1_VAT590
 ^^^^^^^^^^^^
 
@@ -3522,6 +3974,565 @@ PDO DO RxPDO-Map (Index #x1600, Flags #x0010, SyncMan 2)
         "Cluster valve freeze address setpoint", "", , "#x2020", "USINT"
         "Cluster valve freeze control setpoint", "", , "#x2021", "UINT"
         "Cluster valve monitoring address setpoint", "", , "#x2022", "USINT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E01_EL1004
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E01_EL1004
+    ID, 46
+        SyncMan, 001001000000010004000000000000000100001000010000
+        Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1a01, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1a02, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E02_EL2004
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E02_EL2004
+    ID, 47
+        SyncMan, 000f01004400010003000000000000000000000f44090000
+        Fmmu, 0000000000000000000f00020100000001000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E03_EL1004
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E03_EL1004
+    ID, 48
+        SyncMan, 001001000000010004000000000000000100001000010000
+        Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1a01, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1a02, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E04_EL1004
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E04_EL1004
+    ID, 49
+        SyncMan, 001001000000010004000000000000000100001000010000
+        Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1a01, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1a02, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E06_EL2794
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E06_EL2794
+    ID, 51
+        SyncMan, 000f01004400010003000000000000000000000f44090000
+        Fmmu, 0000000000000000000f00020100000001000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1600, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1601, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1602, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1603, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Output", "", , "#x7030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E07_EL1084
+^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (4 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E07_EL1084
+    ID, 52
+        SyncMan, 001001000000010004000000000000000100001000010000
+        Fmmu, 0000000000000000001000010100000002000000000000000000000000000000
+
+
+
+PDO Channel 1 (Index #x1a00, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6000", "BIT"
+
+
+
+PDO Channel 2 (Index #x1a01, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6010", "BIT"
+
+
+
+PDO Channel 3 (Index #x1a02, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6020", "BIT"
+
+
+
+PDO Channel 4 (Index #x1a03, Flags #x0011, SyncMan 0)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Input", "", , "#x6030", "BIT"
+
+
+.. raw:: html
+
+   </details>
+
+
+MRCO_DRL_03_E10_EL3174-0002
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT (8 PDOs)</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, MRCO_DRL_03_E10_EL3174-0002
+    ID, 53
+        BootStrapData, 0010f400f410f400
+        SyncMan, 001080002600010001000000800080008000001026010000
+        SyncMan, 801080002200010002000000800080008000801022010000
+        SyncMan, 001100000400000003000000000000000000001104000000
+        SyncMan, 801110002000010004000000000000001000801120010000
+        Fmmu, 0000000000000000801100010100000002000000000000000000000000000000
+        Fmmu, 00000000000000000d0800010100000003000000000000000000000000000000
+        CoeProfile, 19665801
+        CoeProfile, 19665801
+        CoeProfile, 19665801
+        CoeProfile, 19665801
+
+
+
+PDO AI Standard Channel 1 (Index #x1a00, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "Bit set when upper value limit exceeded", , "#x6000", "BIT"
+        "Status__Overrange", "Bit set when lower value limit exceeded", , "#x6000", "BIT"
+        "Status__Limit 1", "Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1", , "#x6000", "BIT2"
+        "Status__Limit 2", "Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2", , "#x6000", "BIT2"
+        "Status__Error", "Bit set when Over- or Underrange", , "#x6000", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..4] OF BIT"
+        "Status__Sync error", "", , "#x6000", "BIT"
+        "Status__TxPDO State", "", , "#x6000", "BIT"
+        "Status__TxPDO Toggle", "", , "#x6000", "BIT"
+        "Value", "", , "#x6000", "INT"
+
+
+
+PDO AI Compact Channel 1 (Index #x1a01, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Value", "", , "#x6000", "INT"
+
+
+
+PDO AI Standard Channel 2 (Index #x1a02, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "Bit set when upper value limit exceeded", , "#x6010", "BIT"
+        "Status__Overrange", "Bit set when lower value limit exceeded", , "#x6010", "BIT"
+        "Status__Limit 1", "Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1", , "#x6010", "BIT2"
+        "Status__Limit 2", "Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2", , "#x6010", "BIT2"
+        "Status__Error", "Bit set when Over- or Underrange", , "#x6010", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..4] OF BIT"
+        "Status__Sync error", "", , "#x6010", "BIT"
+        "Status__TxPDO State", "", , "#x6010", "BIT"
+        "Status__TxPDO Toggle", "", , "#x6010", "BIT"
+        "Value", "", , "#x6010", "INT"
+
+
+
+PDO AI Compact Channel 2 (Index #x1a03, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Value", "", , "#x6010", "INT"
+
+
+
+PDO AI Standard Channel 3 (Index #x1a04, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "Bit set when upper value limit exceeded", , "#x6020", "BIT"
+        "Status__Overrange", "Bit set when lower value limit exceeded", , "#x6020", "BIT"
+        "Status__Limit 1", "Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1", , "#x6020", "BIT2"
+        "Status__Limit 2", "Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2", , "#x6020", "BIT2"
+        "Status__Error", "Bit set when Over- or Underrange", , "#x6020", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..4] OF BIT"
+        "Status__Sync error", "", , "#x6020", "BIT"
+        "Status__TxPDO State", "", , "#x6020", "BIT"
+        "Status__TxPDO Toggle", "", , "#x6020", "BIT"
+        "Value", "", , "#x6020", "INT"
+
+
+
+PDO AI Compact Channel 3 (Index #x1a05, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Value", "", , "#x6020", "INT"
+
+
+
+PDO AI Standard Channel 4 (Index #x1a06, Flags #x0010, SyncMan 3)
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Status__Underrange", "Bit set when upper value limit exceeded", , "#x6030", "BIT"
+        "Status__Overrange", "Bit set when lower value limit exceeded", , "#x6030", "BIT"
+        "Status__Limit 1", "Bit0: Value greater than Limit1 Bit1: Value smaller than Limit1", , "#x6030", "BIT2"
+        "Status__Limit 2", "Bit0: Value greater than Limit2 Bit1: Value smaller than Limit2", , "#x6030", "BIT2"
+        "Status__Error", "Bit set when Over- or Underrange", , "#x6030", "BIT"
+        "Status__", "", , "", "ARRAY [0..0] OF BIT"
+        "Status__", "", , "", "ARRAY [0..4] OF BIT"
+        "Status__Sync error", "", , "#x6030", "BIT"
+        "Status__TxPDO State", "", , "#x6030", "BIT"
+        "Status__TxPDO Toggle", "", , "#x6030", "BIT"
+        "Value", "", , "#x6030", "INT"
+
+
+
+PDO AI Compact Channel 4 (Index #x1a07, Flags #x0010, SyncMan )
+
+.. csv-table::
+    :header: Name, Comment, BitLen, Index, Type
+    :align: center
+
+        "Value", "", , "#x6030", "INT"
+
+
+.. raw:: html
+
+   </details>
+
+
+Term 54 (EL9011)
+^^^^^^^^^^^^^^^^
+
+
+.. raw:: html
+
+   <details>
+        <summary>EtherCAT</summary>
+
+.. csv-table:: Basic Settings
+    :header: Name, Data
+    :align: center
+
+    Name, Term 54 (EL9011)
+    ID, 54
 
 
 .. raw:: html
