@@ -4,8 +4,8 @@
 #         Project: plc-mrco-vac.tsproj
 #        PLC name: plc_mrco_vac (plc_mrco_vac Instance)
 # Generated using: pytmc 2.16.0
-# Project version: 794a194
-#    Project hash: 794a194cf010423fff0f519be577bc72a2338bba
+# Project version: 81d31fd
+#    Project hash: 81d31fd5847b8f55b1891dd331669c2447deeef0
 #     PLC IP/host: 172.21.132.115
 #      PLC Net ID: 172.21.132.115.1.1
 #  ** Production mode IOC **
@@ -15,7 +15,7 @@
 #
 #   LCLS General: * -> 2.10.0 (SLAC)
 #   LCLS Vacuum: * -> 2.3.4 (SLAC - LCLS)
-#   LCLSVacuumSerialDriverLib: * -> 1.2.2 (SLAC - LCLS)
+#   LCLSVacuumSerialDriverLib: * -> 1.3.2 (SLAC - LCLS)
 #   PMPS: * -> 3.2.1 (SLAC - LCLS)
 #   Tc2_SerialCom: * (Beckhoff Automation GmbH)
 #   Tc2_Standard: * (Beckhoff Automation GmbH)
@@ -27,7 +27,7 @@
 
 epicsEnvSet("ADS_IOC_TOP", "$(TOP)" )
 
-epicsEnvSet("ENGINEER", "janezg" )
+epicsEnvSet("ENGINEER", "tongju" )
 epicsEnvSet("LOCATION", "PLC:MRCO:VAC" )
 epicsEnvSet("IOCSH_PS1", "$(IOC)> " )
 epicsEnvSet("ACF_FILE", "$(ADS_IOC_TOP)/iocBoot/templates/unrestricted.acf")
@@ -43,7 +43,7 @@ epicsEnvSet("ASYN_PORT",        "ASYN_PLC")
 epicsEnvSet("IPADDR",           "172.21.132.115")
 epicsEnvSet("AMSID",            "172.21.132.115.1.1")
 epicsEnvSet("AMS_PORT",         "851")
-epicsEnvSet("ADS_MAX_PARAMS",   "1554")
+epicsEnvSet("ADS_MAX_PARAMS",   "1747")
 epicsEnvSet("ADS_SAMPLE_MS",    "50")
 epicsEnvSet("ADS_MAX_DELAY_MS", "100")
 epicsEnvSet("ADS_TIMEOUT_MS",   "1000")
@@ -89,14 +89,14 @@ dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:MRCO:VAC,IDX=
 dbLoadRecords("TwinCAT_TaskInfo.db", "PORT=$(ASYN_PORT),PREFIX=PLC:MRCO:VAC,IDX=2,TASK_PORT=350")
 dbLoadRecords("TwinCAT_AppInfo.db", "PORT=$(ASYN_PORT), PREFIX=PLC:MRCO:VAC")
 
-dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:MRCO:VAC,PROJECT=plc-mrco-vac.tsproj,HASH=794a194,VERSION=794a194,PYTMC=2.16.0,PLC_HOST=172.21.132.115")
+dbLoadRecords("TwinCAT_Project.db", "PREFIX=PLC:MRCO:VAC,PROJECT=plc-mrco-vac.tsproj,HASH=81d31fd,VERSION=81d31fd,PYTMC=2.16.0,PLC_HOST=172.21.132.115")
 
 #   LCLS General: * -> 2.10.0 (SLAC)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=LCLS_General,VERSION=2.10.0,VENDOR=SLAC")
 #   LCLS Vacuum: * -> 2.3.4 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=LCLS_Vacuum,VERSION=2.3.4,VENDOR=SLAC - LCLS")
-#   LCLSVacuumSerialDriverLib: * -> 1.2.2 (SLAC - LCLS)
-dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=LCLSVacuumSerialDriverLib,VERSION=1.2.2,VENDOR=SLAC - LCLS")
+#   LCLSVacuumSerialDriverLib: * -> 1.3.2 (SLAC - LCLS)
+dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=LCLSVacuumSerialDriverLib,VERSION=1.3.2,VENDOR=SLAC - LCLS")
 #   PMPS: * -> 3.2.1 (SLAC - LCLS)
 dbLoadRecords("TwinCAT_Dependency.db", "PREFIX=PLC:MRCO:VAC,DEPENDENCY=PMPS,VERSION=3.2.1,VENDOR=SLAC - LCLS")
 #   Tc2_SerialCom: * (Beckhoff Automation GmbH)
@@ -113,8 +113,8 @@ cd "$(IOC_TOP)"
 ## PLC Project Database files ##
 dbLoadRecords("plc_mrco_vac.db", "PORT=$(ASYN_PORT),PREFIX=PLC:MRCO:VAC:,IOCNAME=$(IOC),IOC=$(IOC)")
 
-# Total records: 554
-callbackSetQueueSize(3108)
+# Total records: 747
+callbackSetQueueSize(3494)
 
 # Autosave and archive settings:
 save_restoreSet_status_prefix("PLC:MRCO:VAC:")

@@ -57,6 +57,25 @@ VAR_GLOBAL
     '}
     MRCO_ROUGH_PTM_01 : FB_PTM_Pfeiffer;
 
+    //adding Lybold Turbovac pump MRCO-SS-PTM-01
+   {attribute 'TcLinkTo' := 	'.i_xFaultNC		:=	TIIB[MRCO_DRL_03_E04_EL1004]^Channel 1^Input;
+                                 .i_xAtSpd     		:=	TIIB[MRCO_DRL_03_E04_EL1004]^Channel 2^Input;
+                                 .q_RunDO			:=	TIIB[MRCO_DRL_03_E06_EL2794]^Channel 1^Output
+    '}
+(*    {attribute 'pytmc' := '
+        pv: MRCO:SS:PTM:01
+        io: io
+    '}
+
+    MRCO_SS_PTM_01 : FB_PTM_TurboDrive;
+    *)
+
+    {attribute 'pytmc' := '
+        pv: MRCO:MSC:PTM:01
+        io: io
+    '}
+    MRCO_MSC_PTM_01 : FB_PTM_TurboDrive;
+
 
 (*Pirani MKS 275 Gauges*)
     {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP05_EP3174-0002]^AI Standard Channel 1^Value
@@ -100,6 +119,15 @@ VAR_GLOBAL
     '}
     MRCO_ROUGH_GPI_04 : FB_9XX;
 
+    // adding new GPI 05 for ss chamber
+    {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_DRL_03_E10_EL3174-0002]^AI Standard Channel 2^Value
+    '}
+    {attribute 'pytmc' := '
+        pv: MRCO:ROUGH:GPI:05
+        io: io
+    '}
+    MRCO_ROUGH_GPI_05 : FB_9XX;
+
 (*Hot Cathode MKS 909 Gauges*)
     {attribute 'TcLinkTo' := 	'.i_iPRESS_R	:=	TIIB[MRCO_PNL1_EP05_EP3174-0002]^AI Standard Channel 2^Value;
                                  .q_xHV_DIS		:= 	TIIB[MRCO_PNL1_EP06_EP2624-0002]^Channel 2^Output
@@ -108,7 +136,20 @@ VAR_GLOBAL
         pv: MRCO:MAIN:GHC:01
         io: io
     '}
-    MRCO_MAIN_GHC_01 : FB_MKS909;
+        MRCO_MAIN_GHC_01 : FB_MKS909;
+
+    //adding ss chamber GHC HORNET
+    {attribute 'TcLinkTo' := 	'    .i_iPRESS_R		:=	TIIB[MRCO_DRL_03_E10_EL3174-0002]^AI Standard Channel 1^Value;
+                                     .i_xHV_ON			:=	TIIB[MRCO_DRL_03_E07_EL1084]^Channel 1^Input;
+                                     .q_xHV_DIS			:=	TIIB[MRCO_DRL_03_E06_EL2794]^Channel 2^Output
+    '}
+ (*   {attribute 'pytmc' :=' pv: MRCO:SS:GHC:01'}
+   MRCO_SS_GHC_01 : FB_IMG401;
+   *)
+
+    {attribute 'pytmc' :=' pv: MRCO:MSC:GHC:01'}
+   MRCO_MSC_GHC_01 : FB_IMG401;
+
 
 (*Variable Leak Valve*)
     {attribute 'TcLinkTo' := 	'.i_nRawPosition	:=	TIIB[VCN_1_VAT590]^DI TxPDO-Map^Position;
@@ -163,6 +204,47 @@ VAR_GLOBAL
     '}
     MRCO_ROUGH_VRC_02 : FB_VRC_NO;
 
+        //adding a window valve between MRCO main chamber to SS chamber
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 2^Input;
+                                 .q_xOPN_DO	:=	TIIB[MRCO_DRL_03_E02_EL2004]^Channel 1^Output
+    '}
+(*    {attribute 'pytmc' := '
+        pv: MRCO:SS:VRC:01
+        io: io
+    '}
+    MRCO_SS_VRC_01 : FB_VGC_2S;
+    *)
+
+    {attribute 'pytmc' := '
+        pv: MRCO:MSC:VRC:01
+        io: io
+    '}
+    MRCO_MSC_VRC_01 : FB_VGC_2S;
+
+
+    //adding rough line valve in SS chamber
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 3^Input;
+                                 .i_xClsLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 4^Input;
+                                 .q_xOPN_DO	:=	TIIB[MRCO_DRL_03_E02_EL2004]^Channel 2^Output
+    '}
+    {attribute 'pytmc' := '
+        pv: MRCO:ROUGH:VRC:04
+        io: io
+    '}
+    MRCO_ROUGH_VRC_04 : FB_VGC_2S;
+
+    //adding NO valve VRC-05 in ss chamber
+   {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_DRL_03_E03_EL1004]^Channel 1^Input;
+                                 .i_xClsLS	:=	TIIB[MRCO_DRL_03_E03_EL1004]^Channel 2^Input;
+                                 .q_xCLS_DO	:=	TIIB[MRCO_DRL_03_E02_EL2004]^Channel 3^Output
+    '}
+    {attribute 'pytmc' := '
+        pv: MRCO:ROUGH:VRC:05
+        io: io
+    '}
+    MRCO_ROUGH_VRC_05 : FB_VRC_NO;
+
 (*Pfeiffer*)
     // They share the same serial port
     st_Pfeiffer_CTRL_MRCO_ROUGH_PTM_01   		: ARRAY[1..20] OF ST_PfeifferControl;
@@ -181,6 +263,18 @@ VAR_GLOBAL
 
     st_TD20_RBK_MRCO_MAIN_PTM_04                : ST_TD20Status;
     fb_TD20Com_MRCO_MAIN_PTM_04                 : FB_OERLIKON_TD20_COM;
+
+(*    st_TD400_RBK_MRCO_SS_PTM_01                : ST_TD400Status;
+    fb_TD400Com_MRCO_SS_PTM_01                 : FB_OERLIKON_TD400_COM;
+    st_TD400_CTRL_MRCO_SS_PTM_01               : ST_TD400Control;
+    fb_TD400SerialIO_MRCO_SS_PTM_01            : FB_OERLIKON_TD400_TO_PTM;
+    *)
+
+    st_TD400_RBK_MRCO_MSC_PTM_01                : ST_TD400Status;   //need to update the library
+    fb_TD400Com_MRCO_MSC_PTM_01                 : FB_OERLIKON_TD400_COM;
+    st_TD400_CTRL_MRCO_MSC_PTM_01               : ST_TD400Control;
+    fb_TD400SerialIO_MRCO_MSC_PTM_01            : FB_OERLIKON_TD400_TO_PTM;
+
 
 END_VAR]]></Declaration>
   </GVL>
