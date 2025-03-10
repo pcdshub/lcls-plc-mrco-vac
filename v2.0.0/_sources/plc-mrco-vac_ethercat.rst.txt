@@ -1,0 +1,766 @@
+
+EtherCAT Terminals
+------------------
+
+.. raw:: html
+
+    <ul class="tree">
+
+
+
+      <li>
+    <details open>
+      <summary>
+            <table width="100%">
+      <tr>
+        <td width="10%">
+          ID=1:
+        </td>
+        <td width="75%">MRCO_PLC_E00_EK1200
+        </td>
+        <td>        </td>
+      </tr>
+      <tr>
+        <td>
+                  </td>
+        <td colspan="2">
+          EK1200-5000 EtherCAT Power supply (2A E-Bus)
+        </td>
+      </tr>
+    </table>
+      </summary>
+      <ul>
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=2:
+                  </td>
+                  <td width="75%">MRCO_PLC_E01_EL2202
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL2202 2Ch. Dig. Output 24V, 0.5A
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=22:
+                  </td>
+                  <td width="75%">MRCO_PLC_E03_EL9184
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL9184 Potential Connection, 8 x 24V, 8 x Ground
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=3:
+                  </td>
+                  <td width="75%">MRCO_PLC_E04_EL6692
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL6692 EtherCAT Bridge terminal (Primary)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=4:
+                  </td>
+                  <td width="75%">MRCO_PLC_E05_EL9410
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL9410 E-Bus Power Supplier  (Diagnostics)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=5:
+                  </td>
+                  <td width="75%">MRCO_PLC_E06_EL1004
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=6:
+                  </td>
+                  <td width="75%">MRCO_PLC_E07_EL2794
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=7:
+                  </td>
+                  <td width="75%">MRCO_PLC_E08_EL1004
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL1004 4Ch. Dig. Input 24V, 3ms
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=8:
+                  </td>
+                  <td width="75%">MRCO_PLC_E09_EL2794
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=9:
+                  </td>
+                  <td width="75%">MRCO_PLC_E10_EL3318
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL3318 8Ch. Ana Input Thermocouple (TC)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=10:
+                  </td>
+                  <td width="75%">MRCO_PLC_EXX_EL6070
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL6070 1Ch. Licensing-Terminal
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=11:
+                  </td>
+                  <td width="75%">MRCO_PLC_E11_EL6002
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL6002 Interface 2Ch. (RS232)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+                  <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=12:
+                  </td>
+                  <td width="75%">MRCO_PLC_E12_EL6002
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EL6002 Interface 2Ch. (RS232)
+                  </td>
+                </tr>
+              </table>
+            </li>
+
+
+            <li>
+              <details open>
+                <summary>
+                      <table width="100%">
+                <tr>
+                  <td width="10%">
+                    ID=13:
+                  </td>
+                  <td width="75%">MRCO_PLC_E13_EK1122
+                  </td>
+                  <td>        </td>
+                </tr>
+                <tr>
+                  <td>
+                            </td>
+                  <td colspan="2">
+                    EK1122 2 port EtherCAT junction
+                  </td>
+                </tr>
+              </table>
+                </summary>
+                <ul>
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=14:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP01_EP2338-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP2338-0002 8 Ch. Dig. Input/Output 24V, 0,5A, M12
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=15:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP02_EP2624-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP2624-0002 4Ch. Relay Output, NO (125V AC / 30V DC)
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=16:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP03_EP6002-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP6002-0002 Interface (RS232/422/485)
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=17:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP04_EP3174-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP3174-0002 4Ch. Ana. Input +/-10V, 0-10V, 0/4-20mA configurable
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=18:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP05_EP3174-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP3174-0002 4Ch. Ana. Input +/-10V, 0-10V, 0/4-20mA configurable
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=19:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP06_EP2624-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP2624-0002 4Ch. Relay Output, NO (125V AC / 30V DC)
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=20:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP07_EP2338-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP2338-0002 8 Ch. Dig. Input/Output 24V, 0,5A, M12
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=21:
+                            </td>
+                            <td width="75%">MRCO_PNL1_EP08_EP2338-0002
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EP2338-0002 8 Ch. Dig. Input/Output 24V, 0,5A, M12
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+
+                      <li>
+                        <details open>
+                          <summary>
+                                <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=44:
+                            </td>
+                            <td width="75%">MRCO_DRL_03 (EK1100)
+                            </td>
+                            <td>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              EK1100 EtherCAT Coupler (2A E-Bus)
+                            </td>
+                          </tr>
+                        </table>
+                          </summary>
+                          <ul>
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=46:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E01_EL1004
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1004 4Ch. Dig. Input 24V, 3ms
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=47:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E02_EL2004
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL2004 4Ch. Dig. Output 24V, 0.5A
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=48:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E03_EL1004
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1004 4Ch. Dig. Input 24V, 3ms
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=49:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E04_EL1004
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1004 4Ch. Dig. Input 24V, 3ms
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=24:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E05_EL6001
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL6001 Interface (RS232)
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=51:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E06_EL2794
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL2794 4Ch. Dig. Output 24V AC/DC, 2A, short-circuit-proof
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=52:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E07_EL1084
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL1084 4Ch. Dig. Input 24V, 3ms, negative
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=23:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E08_EL9184
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL9184 Potential Connection, 8 x 24V, 8 x Ground
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=25:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E09_EL9070
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL9070 Shield terminal
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=53:
+                                      </td>
+                                      <td width="75%">MRCO_DRL_03_E10_EL3174-0002
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL3174-0002 4Ch. Ana. Input +/-10V, +/-20mA 16 Bit, Isolated Channels
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+
+                                <li>
+                                      <table width="100%">
+                                    <tr>
+                                      <td width="10%">
+                                        ID=54:
+                                      </td>
+                                      <td width="75%">Term 54 (EL9011)
+                                      </td>
+                                      <td>        </td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                                </td>
+                                      <td colspan="2">
+                                        EL9011 End Terminal
+                                      </td>
+                                    </tr>
+                                  </table>
+                                </li>
+
+                          </ul>
+                        </details>
+                      </li>
+
+
+                      <li>
+                            <table width="100%">
+                          <tr>
+                            <td width="10%">
+                              ID=45:
+                            </td>
+                            <td width="75%">VCN_1_VAT590
+                            </td>
+                            <td>            <b>
+                                  SyncUnit VCN
+                                </b>        </td>
+                          </tr>
+                          <tr>
+                            <td>
+                                      </td>
+                            <td colspan="2">
+                              590 - All-metal variable leak valve
+                            </td>
+                          </tr>
+                        </table>
+                      </li>
+
+                </ul>
+              </details>
+            </li>
+
+      </ul>
+    </details>
+  </li>
+
+
+    </ul>
