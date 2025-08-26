@@ -13,7 +13,7 @@
 		<Box File="MRCO_PLC_E03_EL9184.xti" Id="22">
 			<EtherCAT PortABoxInfo="#x01000002"/>
 		</Box>
-		<Box File="MRCO_PLC_E04_EL6692.xti" Id="3">
+		<Box File="MRCO_PLC_E04_EL6695.xti" Id="3">
 			<EtherCAT PortABoxInfo="#x01000002"/>
 		</Box>
 		<Box File="MRCO_PLC_E05_EL9410.xti" Id="4">

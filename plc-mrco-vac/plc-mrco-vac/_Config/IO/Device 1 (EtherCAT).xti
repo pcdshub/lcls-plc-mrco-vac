@@ -38,6 +38,7 @@
 		</Box>
 		<EtherCAT EnableVirtualSwitch="true" MaxSwitchPorts="2" MaxSwitchFrames="120">
 			<SyncUnit Name="VCN" NoDeleteIfUnused="true"/>
+			<SyncUnit Name="EL6695_TMO" NoDeleteIfUnused="true"/>
 		</EtherCAT>
 	</Device>
 </TcSmItem>

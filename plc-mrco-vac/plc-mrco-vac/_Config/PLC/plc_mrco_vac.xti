@@ -1556,7 +1556,7 @@ Link this to your VAT590 WcState variable under WcState]]>
 	</Project>
 	<Mappings>
 		<OwnerA Name="plc_mrco_vac Instance">
-			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E04_EL6692">
+			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E04_EL6695">
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.sHUTCH_PLC_NAME" VarB="IO Inputs^HUTCH_PLC_NAME" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_External_device_not_connected" VarB="SYNC Inputs^External device not connected" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_PLC_Interfaces.xEcatBridge_TxPDO_state" VarB="SYNC Inputs^TxPDO state" AutoLink="true"/>
