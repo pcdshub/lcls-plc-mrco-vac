@@ -572,6 +572,8 @@ GVL_Devices
         '}
         MRCO_ROUGH_VRC_02 : FB_VRC_NO;
 
+
+
             //adding a window valve between MRCO main chamber to SS chamber
         {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 1^Input;
                                      .i_xClsLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 2^Input;
@@ -612,6 +614,18 @@ GVL_Devices
             io: io
         '}
         MRCO_ROUGH_VRC_05 : FB_VRC_NO;
+
+        (*Normally Closed Valve with Readback*)
+
+        {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 5^Input;
+                                     .i_xClsLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 6^Input;
+                                     .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 15^Output
+        '}
+        {attribute 'pytmc' := '
+            pv: MRCO:ROUGH:VRC:06
+            io: io
+        '}
+        MRCO_ROUGH_VRC_06 : FB_VRC;
 
     (*Pfeiffer*)
         // They share the same serial port
@@ -663,52 +677,52 @@ GVL_PLC_Interfaces
         fb_ADS_WATCHDOG_VAC_MRCO_TMO:FB_ADS_WATCHDOG;
         (*ETHERCAT BRIDGE COM STATUS*)
         //0: Other side is in OP state, >0: Error
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^SYNC Inputs^TxPDO state
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^SYNC Inputs^TxPDO state
         '}
         xEcatBridge_TxPDO_state AT %I* : BOOL;
 
         //0: External device connected, 1: External device not connected
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^SYNC Inputs^External device not connected
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^SYNC Inputs^External device not connected
         '}
         xEcatBridge_External_device_not_connected AT %I* : BOOL;
 
         //0 = Data valid, 1 = Data invalid
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^WcState^WcState
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^WcState^WcState
         '}
         xEcatBridge_WcState AT %I* : BOOL;
 
         (*I/O Inputs from TMO Beamline*)
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^HUTCH_PLC_NAME
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^HUTCH_PLC_NAME
         '}
         sHUTCH_PLC_NAME AT %I* : STRING(8);
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS
         '}
         xTMO_ROUGH1_VRC_01_OPEN_LS AT %I* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS
         '}
         xTMO_ROUGH2_VRC_01_OPEN_LS AT %I* : BOOL;
 
 
         (*I/O Outputs to TMO Beamline*)
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^ENDSTATION_PLC_NAME
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^ENDSTATION_PLC_NAME
         '}
         sENDSTATION_PLC_NAME AT %Q* : STRING(8):= 'MRCO';
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS
         '}
         xIP1_ROUGH_VRC_01_OPEN_LS AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS
         '}
         xIP1_ROUGH_VRC_02_OPEN_LS AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS
         '}
         xIP1_ROUGH_VRC_03_OPEN_LS AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_TURBOS_ALL_AtSpd
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_TURBOS_ALL_AtSpd
         '}
         {attribute 'pytmc' := '
             pv: PLC:MRCO:VAC:IP1_TURBOS_ALL_ATSPD
@@ -716,19 +730,19 @@ GVL_PLC_Interfaces
         '}
         xIP1_TURBOS_ALL_AtSpd AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xAT_VAC
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_xAT_VAC
         '}
         xIP1_MAIN_xAT_VAC AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xPRESS_OK
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_xPRESS_OK
         '}
         xIP1_MAIN_xPRESS_OK AT %Q* : BOOL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_rPRESS
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_rPRESS
         '}
         rIP1_MAIN_rPRESS AT %Q* : REAL;
 
-        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_HV_SAFETY_ENABLE
+        {attribute 'TcLinkTo' := 	'TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_HV_SAFETY_ENABLE
         '}
         xIP1_HV_SAFETY_ENABLE AT %Q* : BOOL;
 
@@ -1196,10 +1210,14 @@ MAIN
         END_IF
 
 
-        //Normally Open Bypass Valve: VRC-02, free to open and close.
+        //Normally Open Bypass Valve: VRC-02, is interlocked with VRC-06 where only one can be open at a time
+
+        IF (xOnBeamline AND MRCO_ROUGH_VRC_06.iq_stValve.i_xOpnLS) THEN
+            MRCO_ROUGH_VRC_02.M_Set_CLS_SW(TRUE);
+        END_IF
 
         MRCO_ROUGH_VRC_02(
-        i_xExtILK_OK:= TRUE,
+        i_xExtILK_OK:= True,
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
 
@@ -1213,6 +1231,14 @@ MAIN
         i_xExtILK_OK:= TRUE,
         i_xOverrideMode:= xSystemOverrideMode_MRCO,
         iq_stValve=> );
+
+        //Normally Closed valve
+
+        MRCO_ROUGH_VRC_06(
+        i_xExtILK_OK:= MRCO_ROUGH_VRC_02.iq_stValve.i_xClsLS AND MRCO_ROUGH_VRC_04.iq_stValve.i_xClsLS,
+        i_xOverrideMode:= xSystemOverrideMode_MRCO,
+        iq_stValve=> );
+
 
         //VRC-Normally Closed:VRC_03
         //If OnBeamline then stay open.
@@ -1237,7 +1263,7 @@ MAIN
                     i_xDis_DPIlk := FALSE,
                     i_xEPS_OK := TRUE,
                     i_xPMPS_OK := TRUE ,
-                    i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS,
+                    i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS and MRCO_ROUGH_VRC_06.iq_stValve.i_xClsLS,
                     i_xOverrideMode := xSystemOverrideMode_MRCO,
                     i_xReset := False,
                     io_fbFFHWO :=dummy_FFFO,

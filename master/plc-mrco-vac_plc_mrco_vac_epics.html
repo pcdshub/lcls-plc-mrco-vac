@@ -16,7 +16,7 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
@@ -34319,6 +34319,228 @@
 <tr class="row-even"><td><p>MRCO:ROUGH:VRC:05:OVRD_ON</p></td>
 <td><p>bo</p></td>
 <td><p>GVL_Devices.MRCO_ROUGH_VRC_05.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:ERROR_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:ERROR</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.bErrorPresent</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ERROR PRESENT</div>
+<div class="line">field: ZNAM NO ERROR</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:POS_STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.eState</p></td>
+<td><div class="line-block">
+<div class="line">field: FRST OPEN_F</div>
+<div class="line">field: ONST CLOSED</div>
+<div class="line">field: THST INVALID</div>
+<div class="line">field: TWST MOVING</div>
+<div class="line">field: ZRST OPEN</div>
+<div class="line">io: input</div>
+<div class="line">type: mbbi</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:STATE_RBV</p></td>
+<td><p>mbbi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.eVGC_State</p></td>
+<td><div class="line-block">
+<div class="line">field: EIST Close Timeout</div>
+<div class="line">field: FRST Ext Fault</div>
+<div class="line">field: FVST AT Vacuum</div>
+<div class="line">field: NIST Open Timeout</div>
+<div class="line">field: ONST At Vacuum</div>
+<div class="line">field: SVST Vacuum Fault</div>
+<div class="line">field: SXST Triggered</div>
+<div class="line">field: THST Lost Vacuum</div>
+<div class="line">field: TWST Differential Pressure</div>
+<div class="line">field: ZRST Vented</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:CLS_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.i_xClsLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM CLOSE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:OPN_DI_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.i_xOpnLS</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:ALM_RST_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:ALM_RST</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xAlmRst</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:OPN_SW_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:OPN_SW</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOPN_SW</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPEN</div>
+<div class="line">field: ZNAM CLOSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:FORCE_OPN_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:FORCE_OPN</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOvrdOpn</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM FORCE OPEN</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:OPN_DO_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.q_xOPN_DO</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM TRUE</div>
+<div class="line">field: ZNAM FALSE</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:ErrMsg_RBV</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:ErrMsg</p></td>
+<td><p>waveform</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.sErrorMessage</p></td>
+<td><div class="line-block">
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:CLS_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xCLS_OK</p></td>
+<td><div class="line-block">
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:EXT_ILK_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xEXT_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OK</div>
+<div class="line">field: ZNAM NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:LOGGER_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:LOGGER</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xLog</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM ON</div>
+<div class="line">field: ZNAM OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:OPN_OK_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOPN_OK</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM OPN ILK OK</div>
+<div class="line">field: ZNAM OPN ILK NOT OK</div>
+<div class="line">io: input</div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p>MRCO:ROUGH:VRC:06:OVRD_ON_RBV</p></td>
+<td><p>bi</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOverrideMode</p></td>
+<td><div class="line-block">
+<div class="line">field: ONAM Override ON</div>
+<div class="line">field: ZNAM Override OFF</div>
+<div class="line">io: output</div>
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p>MRCO:ROUGH:VRC:06:OVRD_ON</p></td>
+<td><p>bo</p></td>
+<td><p>GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOverrideMode</p></td>
 <td><div class="line-block">
 <div class="line">field: ONAM Override ON</div>
 <div class="line">field: ZNAM Override OFF</div>

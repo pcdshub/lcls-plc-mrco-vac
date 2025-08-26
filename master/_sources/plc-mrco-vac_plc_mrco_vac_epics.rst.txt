@@ -26625,6 +26625,184 @@ Database Records
         | io: output
 
 
+    * - MRCO:ROUGH:VRC:06:ERROR_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:ERROR
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.bErrorPresent
+      - | field: ONAM ERROR PRESENT
+        | field: ZNAM NO ERROR
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:POS_STATE_RBV
+      - mbbi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.eState
+      - | field: FRST OPEN_F
+        | field: ONST CLOSED
+        | field: THST INVALID
+        | field: TWST MOVING
+        | field: ZRST OPEN
+        | io: input
+        | type: mbbi
+
+
+    * - MRCO:ROUGH:VRC:06:STATE_RBV
+      - mbbi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.eVGC_State
+      - | field: EIST Close Timeout
+        | field: FRST Ext Fault
+        | field: FVST AT Vacuum
+        | field: NIST Open Timeout
+        | field: ONST At Vacuum
+        | field: SVST Vacuum Fault
+        | field: SXST Triggered
+        | field: THST Lost Vacuum
+        | field: TWST Differential Pressure
+        | field: ZRST Vented
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:CLS_DI_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.i_xClsLS
+      - | field: ONAM CLOSE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:OPN_DI_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.i_xOpnLS
+      - | field: ONAM OPEN
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:ALM_RST_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:ALM_RST
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xAlmRst
+      - | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:OPN_SW_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:OPN_SW
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOPN_SW
+      - | field: ONAM OPEN
+        | field: ZNAM CLOSE
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:FORCE_OPN_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:FORCE_OPN
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.pv_xOvrdOpn
+      - | field: ONAM FORCE OPEN
+        | field: ZNAM FALSE
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:OPN_DO_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.q_xOPN_DO
+      - | field: ONAM TRUE
+        | field: ZNAM FALSE
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:ErrMsg_RBV
+      - waveform
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:ErrMsg
+      - waveform
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.sErrorMessage
+      - | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:CLS_OK_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xCLS_OK
+      - | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:EXT_ILK_OK_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xEXT_OK
+      - | field: ONAM OK
+        | field: ZNAM NOT OK
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:LOGGER_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:LOGGER
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xLog
+      - | field: ONAM ON
+        | field: ZNAM OFF
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:OPN_OK_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOPN_OK
+      - | field: ONAM OPN ILK OK
+        | field: ZNAM OPN ILK NOT OK
+        | io: input
+
+
+    * - MRCO:ROUGH:VRC:06:OVRD_ON_RBV
+      - bi
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
+    * - MRCO:ROUGH:VRC:06:OVRD_ON
+      - bo
+      - GVL_Devices.MRCO_ROUGH_VRC_06.iq_stValve.xOverrideMode
+      - | field: ONAM Override ON
+        | field: ZNAM Override OFF
+        | io: output
+
+
     * - MRCO:VCN:01:COE_ERROR_RBV
       - bi
       - GVL_Devices.MRCO_VCN_01.stVcnVat590.bCoeError

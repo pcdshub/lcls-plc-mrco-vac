@@ -16,7 +16,7 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=5929fcd5"></script>
-      <script src="_static/doctools.js?v=9a2dae69"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/docs-versions-menu.js?v=3d6a1aea"></script>
     <script src="_static/js/theme.js"></script>
@@ -665,6 +665,8 @@
     <span class="s1">&#39;}</span>
     <span class="n">MRCO_ROUGH_VRC_02</span> <span class="p">:</span> <span class="n">FB_VRC_NO</span><span class="p">;</span>
 
+
+
         <span class="o">//</span><span class="n">adding</span> <span class="n">a</span> <span class="n">window</span> <span class="n">valve</span> <span class="n">between</span> <span class="n">MRCO</span> <span class="n">main</span> <span class="n">chamber</span> <span class="n">to</span> <span class="n">SS</span> <span class="n">chamber</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[MRCO_DRL_03_E01_EL1004]^Channel 1^Input;</span>
                                  <span class="o">.</span><span class="n">i_xClsLS</span>  <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">MRCO_DRL_03_E01_EL1004</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">2</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
@@ -705,6 +707,18 @@
         <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
     <span class="s1">&#39;}</span>
     <span class="n">MRCO_ROUGH_VRC_05</span> <span class="p">:</span> <span class="n">FB_VRC_NO</span><span class="p">;</span>
+
+    <span class="p">(</span><span class="o">*</span><span class="n">Normally</span> <span class="n">Closed</span> <span class="n">Valve</span> <span class="k">with</span> <span class="n">Readback</span><span class="o">*</span><span class="p">)</span>
+
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;.i_xOpnLS      :=      TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 5^Input;</span>
+                                 <span class="o">.</span><span class="n">i_xClsLS</span>  <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">MRCO_PNL1_EP08_EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">6</span><span class="o">^</span><span class="n">Input</span><span class="p">;</span>
+                                 <span class="o">.</span><span class="n">q_xOPN_DO</span> <span class="o">:=</span>      <span class="n">TIIB</span><span class="p">[</span><span class="n">MRCO_PNL1_EP08_EP2338</span><span class="o">-</span><span class="mi">0002</span><span class="p">]</span><span class="o">^</span><span class="n">Channel</span> <span class="mi">15</span><span class="o">^</span><span class="n">Output</span>
+    <span class="s1">&#39;}</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
+        <span class="n">pv</span><span class="p">:</span> <span class="n">MRCO</span><span class="p">:</span><span class="n">ROUGH</span><span class="p">:</span><span class="n">VRC</span><span class="p">:</span><span class="mi">06</span>
+        <span class="n">io</span><span class="p">:</span> <span class="n">io</span>
+    <span class="s1">&#39;}</span>
+    <span class="n">MRCO_ROUGH_VRC_06</span> <span class="p">:</span> <span class="n">FB_VRC</span><span class="p">;</span>
 
 <span class="p">(</span><span class="o">*</span><span class="n">Pfeiffer</span><span class="o">*</span><span class="p">)</span>
     <span class="o">//</span> <span class="n">They</span> <span class="n">share</span> <span class="n">the</span> <span class="n">same</span> <span class="n">serial</span> <span class="n">port</span>
@@ -756,52 +770,52 @@
     <span class="n">fb_ADS_WATCHDOG_VAC_MRCO_TMO</span><span class="p">:</span><span class="n">FB_ADS_WATCHDOG</span><span class="p">;</span>
     <span class="p">(</span><span class="o">*</span><span class="n">ETHERCAT</span> <span class="n">BRIDGE</span> <span class="n">COM</span> <span class="n">STATUS</span><span class="o">*</span><span class="p">)</span>
     <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">Other</span> <span class="n">side</span> <span class="ow">is</span> <span class="ow">in</span> <span class="n">OP</span> <span class="n">state</span><span class="p">,</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span> <span class="n">Error</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^SYNC Inputs^TxPDO state</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^SYNC Inputs^TxPDO state</span>
     <span class="s1">&#39;}</span>
     <span class="n">xEcatBridge_TxPDO_state</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
     <span class="o">//</span><span class="mi">0</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="n">connected</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span> <span class="n">External</span> <span class="n">device</span> <span class="ow">not</span> <span class="n">connected</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^SYNC Inputs^External device not connected</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^SYNC Inputs^External device not connected</span>
     <span class="s1">&#39;}</span>
     <span class="n">xEcatBridge_External_device_not_connected</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
     <span class="o">//</span><span class="mi">0</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">valid</span><span class="p">,</span> <span class="mi">1</span> <span class="o">=</span> <span class="n">Data</span> <span class="n">invalid</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^WcState^WcState</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^WcState^WcState</span>
     <span class="s1">&#39;}</span>
     <span class="n">xEcatBridge_WcState</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
     <span class="p">(</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">Inputs</span> <span class="kn">from</span><span class="w"> </span><span class="nn">TMO</span> <span class="n">Beamline</span><span class="o">*</span><span class="p">)</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^HUTCH_PLC_NAME</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^HUTCH_PLC_NAME</span>
     <span class="s1">&#39;}</span>
     <span class="n">sHUTCH_PLC_NAME</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">(</span><span class="mi">8</span><span class="p">);</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^TMO_ROUGH1_VRC_01_OPEN_LS</span>
     <span class="s1">&#39;}</span>
     <span class="n">xTMO_ROUGH1_VRC_01_OPEN_LS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Inputs^TMO_ROUGH2_VRC_01_OPEN_LS</span>
     <span class="s1">&#39;}</span>
     <span class="n">xTMO_ROUGH2_VRC_01_OPEN_LS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">I</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
 
     <span class="p">(</span><span class="o">*</span><span class="n">I</span><span class="o">/</span><span class="n">O</span> <span class="n">Outputs</span> <span class="n">to</span> <span class="n">TMO</span> <span class="n">Beamline</span><span class="o">*</span><span class="p">)</span>
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^ENDSTATION_PLC_NAME</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^ENDSTATION_PLC_NAME</span>
     <span class="s1">&#39;}</span>
     <span class="n">sENDSTATION_PLC_NAME</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">STRING</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span><span class="o">:=</span> <span class="s1">&#39;MRCO&#39;</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_01_OPEN_LS</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_ROUGH_VRC_01_OPEN_LS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_02_OPEN_LS</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_ROUGH_VRC_02_OPEN_LS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_ROUGH_VRC_03_OPEN_LS</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_ROUGH_VRC_03_OPEN_LS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_TURBOS_ALL_AtSpd</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_TURBOS_ALL_AtSpd</span>
     <span class="s1">&#39;}</span>
     <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;pytmc&#39;</span> <span class="o">:=</span> <span class="s1">&#39;</span>
         <span class="n">pv</span><span class="p">:</span> <span class="n">PLC</span><span class="p">:</span><span class="n">MRCO</span><span class="p">:</span><span class="n">VAC</span><span class="p">:</span><span class="n">IP1_TURBOS_ALL_ATSPD</span>
@@ -809,19 +823,19 @@
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_TURBOS_ALL_AtSpd</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xAT_VAC</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_xAT_VAC</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_MAIN_xAT_VAC</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_xPRESS_OK</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_xPRESS_OK</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_MAIN_xPRESS_OK</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_MAIN_rPRESS</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_MAIN_rPRESS</span>
     <span class="s1">&#39;}</span>
     <span class="n">rIP1_MAIN_rPRESS</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">REAL</span><span class="p">;</span>
 
-    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6692]^IO Outputs^IP1_HV_SAFETY_ENABLE</span>
+    <span class="p">{</span><span class="n">attribute</span> <span class="s1">&#39;TcLinkTo&#39;</span> <span class="o">:=</span>        <span class="s1">&#39;TIIB[MRCO_PLC_E04_EL6695]^IO Outputs^IP1_HV_SAFETY_ENABLE</span>
     <span class="s1">&#39;}</span>
     <span class="n">xIP1_HV_SAFETY_ENABLE</span> <span class="n">AT</span> <span class="o">%</span><span class="n">Q</span><span class="o">*</span> <span class="p">:</span> <span class="n">BOOL</span><span class="p">;</span>
 
@@ -1268,10 +1282,14 @@
     <span class="n">END_IF</span>
 
 
-    <span class="o">//</span><span class="n">Normally</span> <span class="n">Open</span> <span class="n">Bypass</span> <span class="n">Valve</span><span class="p">:</span> <span class="n">VRC</span><span class="o">-</span><span class="mi">02</span><span class="p">,</span> <span class="n">free</span> <span class="n">to</span> <span class="nb">open</span> <span class="ow">and</span> <span class="n">close</span><span class="o">.</span>
+    <span class="o">//</span><span class="n">Normally</span> <span class="n">Open</span> <span class="n">Bypass</span> <span class="n">Valve</span><span class="p">:</span> <span class="n">VRC</span><span class="o">-</span><span class="mi">02</span><span class="p">,</span> <span class="ow">is</span> <span class="n">interlocked</span> <span class="k">with</span> <span class="n">VRC</span><span class="o">-</span><span class="mi">06</span> <span class="n">where</span> <span class="n">only</span> <span class="n">one</span> <span class="n">can</span> <span class="n">be</span> <span class="nb">open</span> <span class="n">at</span> <span class="n">a</span> <span class="n">time</span>
+
+    <span class="n">IF</span> <span class="p">(</span><span class="n">xOnBeamline</span> <span class="n">AND</span> <span class="n">MRCO_ROUGH_VRC_06</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xOpnLS</span><span class="p">)</span> <span class="n">THEN</span>
+        <span class="n">MRCO_ROUGH_VRC_02</span><span class="o">.</span><span class="n">M_Set_CLS_SW</span><span class="p">(</span><span class="n">TRUE</span><span class="p">);</span>
+    <span class="n">END_IF</span>
 
     <span class="n">MRCO_ROUGH_VRC_02</span><span class="p">(</span>
-    <span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
+    <span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverrideMode_MRCO</span><span class="p">,</span>
     <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
 
@@ -1285,6 +1303,14 @@
     <span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
     <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverrideMode_MRCO</span><span class="p">,</span>
     <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+
+    <span class="o">//</span><span class="n">Normally</span> <span class="n">Closed</span> <span class="n">valve</span>
+
+    <span class="n">MRCO_ROUGH_VRC_06</span><span class="p">(</span>
+    <span class="n">i_xExtILK_OK</span><span class="o">:=</span> <span class="n">MRCO_ROUGH_VRC_02</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="n">AND</span> <span class="n">MRCO_ROUGH_VRC_04</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">,</span>
+    <span class="n">i_xOverrideMode</span><span class="o">:=</span> <span class="n">xSystemOverrideMode_MRCO</span><span class="p">,</span>
+    <span class="n">iq_stValve</span><span class="o">=&gt;</span> <span class="p">);</span>
+
 
     <span class="o">//</span><span class="n">VRC</span><span class="o">-</span><span class="n">Normally</span> <span class="n">Closed</span><span class="p">:</span><span class="n">VRC_03</span>
     <span class="o">//</span><span class="n">If</span> <span class="n">OnBeamline</span> <span class="n">then</span> <span class="n">stay</span> <span class="nb">open</span><span class="o">.</span>
@@ -1309,7 +1335,7 @@
                 <span class="n">i_xDis_DPIlk</span> <span class="o">:=</span> <span class="n">FALSE</span><span class="p">,</span>
                 <span class="n">i_xEPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span><span class="p">,</span>
                 <span class="n">i_xPMPS_OK</span> <span class="o">:=</span> <span class="n">TRUE</span> <span class="p">,</span>
-                <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">MRCO_ROUGH_VRC_05</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">,</span>
+                <span class="n">i_xExt_OK</span> <span class="o">:=</span> <span class="n">MRCO_ROUGH_VRC_05</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span> <span class="ow">and</span> <span class="n">MRCO_ROUGH_VRC_06</span><span class="o">.</span><span class="n">iq_stValve</span><span class="o">.</span><span class="n">i_xClsLS</span><span class="p">,</span>
                 <span class="n">i_xOverrideMode</span> <span class="o">:=</span> <span class="n">xSystemOverrideMode_MRCO</span><span class="p">,</span>
                 <span class="n">i_xReset</span> <span class="o">:=</span> <span class="kc">False</span><span class="p">,</span>
                 <span class="n">io_fbFFHWO</span> <span class="o">:=</span><span class="n">dummy_FFFO</span><span class="p">,</span>
