@@ -266,6 +266,14 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
     i_xExtILK_OK:= TRUE,
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
     iq_stValve=> );
+	
+	//Normally Closed 'manual' valve
+
+    MRCO_ROUGH_VRC_06(
+    i_xExtILK_OK:= TRUE,
+    i_xOverrideMode:= xSystemOverrideMode_MRCO,
+    iq_stValve=> );
+
 
     //VRC-Normally Closed:VRC_03
     //If OnBeamline then stay open.
@@ -355,5 +363,13 @@ xIP1_HV_SAFETY_ENABLE		:=	xHighVoltageSafteyLoopEnable;
 PRG_TC();
     ]]></ST>
     </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="3" Count="239" />
+      <LineId Id="353" Count="0" />
+      <LineId Id="355" Count="5" />
+      <LineId Id="354" Count="0" />
+      <LineId Id="243" Count="86" />
+      <LineId Id="2" Count="0" />
+    </LineIds>
   </POU>
 </TcPlcObject>

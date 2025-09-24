@@ -203,6 +203,8 @@ VAR_GLOBAL
         io: io
     '}
     MRCO_ROUGH_VRC_02 : FB_VRC_NO;
+	
+	
 
         //adding a window valve between MRCO main chamber to SS chamber
     {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_DRL_03_E01_EL1004]^Channel 1^Input;
@@ -244,6 +246,18 @@ VAR_GLOBAL
         io: io
     '}
     MRCO_ROUGH_VRC_05 : FB_VRC_NO;
+	
+	(*Normally Closed Valve with Readback*)
+
+    {attribute 'TcLinkTo' := 	'.i_xOpnLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 5^Input;
+                                 .i_xClsLS	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 6^Input;
+                                 .q_xOPN_DO	:=	TIIB[MRCO_PNL1_EP08_EP2338-0002]^Channel 15^Output
+    '}
+    {attribute 'pytmc' := '
+        pv: MRCO:ROUGH:VRC:06
+        io: io
+    '}
+    MRCO_ROUGH_VRC_06 : FB_VRC;
 
 (*Pfeiffer*)
     // They share the same serial port
