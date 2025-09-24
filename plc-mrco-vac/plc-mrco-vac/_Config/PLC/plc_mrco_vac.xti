@@ -1117,6 +1117,17 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
 					<Name>GVL_PLC_Interfaces.xTMO_ROUGH1_VRC_01_OPEN_LS</Name>
 					<Type>BOOL</Type>
 				</Var>
@@ -1394,6 +1405,10 @@ Link this to your VAT590 WcState variable under WcState]]>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1973,7 +1988,10 @@ Link this to your VAT590 WcState variable under WcState]]>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP08_EP2338-0002">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_06.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_06.i_xOpnLS" VarB="Channel 5^Input" AutoLink="true"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_06.q_xOPN_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^VCN_1_VAT590">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_bValveEthCatStatus" VarB="WcState^WcState" AutoLink="true"/>
