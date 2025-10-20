@@ -122,7 +122,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{61FF8733-E115-4FF0-9886-E108A3D466DC}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ControlMode</Name>
+			<Name GUID="{394E07DB-F68C-42FB-9250-77C4FA996A47}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ControlMode</Name>
 			<BitSize>8</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
 			<EnumInfo>
@@ -215,9 +215,12 @@
 				</Text>
 				<Enum>14</Enum>
 			</EnumInfo>
+			<Hides>
+				<Hide GUID="{6848E6F7-1A2E-3F24-8838-19EE840C2936}"/>
+			</Hides>
 		</DataType>
 		<DataType>
-			<Name GUID="{5F332E17-6255-47CB-9B37-AB639DFBC07B}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_FatalErrors</Name>
+			<Name GUID="{03BEF86A-1609-466F-B0DE-1D76D06404F0}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_FatalErrors</Name>
 			<BitSize>16</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000005}">UINT</BaseType>
 			<EnumInfo>
@@ -256,6 +259,9 @@
 				</Text>
 				<Enum>40</Enum>
 			</EnumInfo>
+			<Hides>
+				<Hide GUID="{A738290F-F50D-622A-C8D1-F185E10BA8EB}"/>
+			</Hides>
 		</DataType>
 		<DataType>
 			<Name GUID="{7891A939-E495-4008-A546-A6165882F650}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_GeneralStatus</Name>
@@ -558,7 +564,7 @@
 			</SubItem>
 		</DataType>
 		<DataType>
-			<Name GUID="{57C66ECA-DFDC-43B0-BC69-20AF5838CBA4}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ControlModeSP</Name>
+			<Name GUID="{9B2E8290-C346-4068-9819-46C99A3A0FAB}" Namespace="LCLS_Vacuum" AutoDeleteType="true">E_ControlModeSP</Name>
 			<BitSize>8</BitSize>
 			<BaseType GUID="{18071995-0000-0000-0000-000000000002}">USINT</BaseType>
 			<EnumInfo>
@@ -597,6 +603,9 @@
 				</Text>
 				<Enum>7</Enum>
 			</EnumInfo>
+			<Hides>
+				<Hide GUID="{BD10F82E-468D-619D-6702-13BC5B95B678}"/>
+			</Hides>
 		</DataType>
 		<DataType>
 			<Name GUID="{79974E19-7862-4EB5-9714-4F4A5B9FB373}" Namespace="LCLS_Vacuum" AutoDeleteType="true">ST_GeneralControlSP</Name>
@@ -1012,14 +1021,14 @@ Connect i_stVat590PlcDriveRef.nSlaveAddr to the VAT590 Valve InfoData^AdsAddr^po
 					<Comment>
 						<![CDATA[ Valve control mode readback]]>
 					</Comment>
-					<Type GUID="{61FF8733-E115-4FF0-9886-E108A3D466DC}" Namespace="LCLS_Vacuum">E_ControlMode</Type>
+					<Type GUID="{394E07DB-F68C-42FB-9250-77C4FA996A47}" Namespace="LCLS_Vacuum">E_ControlMode</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_VCN_01.i_eFatalError</Name>
 					<Comment>
 						<![CDATA[ Valve Fatal Errors readback]]>
 					</Comment>
-					<Type GUID="{5F332E17-6255-47CB-9B37-AB639DFBC07B}" Namespace="LCLS_Vacuum">E_FatalErrors</Type>
+					<Type GUID="{03BEF86A-1609-466F-B0DE-1D76D06404F0}" Namespace="LCLS_Vacuum">E_FatalErrors</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_VCN_01.i_stGenStatus</Name>
@@ -1114,6 +1123,17 @@ Link this to your VAT590 WcState variable under WcState]]>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_ROUGH_VRC_05.i_xClsLS</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.i_xOpnLS</Name>
+					<Comment>
+						<![CDATA[IO]]>
+					</Comment>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.i_xClsLS</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1363,7 +1383,7 @@ Link this to your VAT590 WcState variable under WcState]]>
 					<Comment>
 						<![CDATA[ Valve control mode setpoint]]>
 					</Comment>
-					<Type GUID="{57C66ECA-DFDC-43B0-BC69-20AF5838CBA4}" Namespace="LCLS_Vacuum">E_ControlModeSP</Type>
+					<Type GUID="{9B2E8290-C346-4068-9819-46C99A3A0FAB}" Namespace="LCLS_Vacuum">E_ControlModeSP</Type>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_VCN_01.o_stGenCtrlSP</Name>
@@ -1394,6 +1414,10 @@ Link this to your VAT590 WcState variable under WcState]]>
 				</Var>
 				<Var>
 					<Name>GVL_Devices.MRCO_ROUGH_VRC_05.q_xCLS_DO</Name>
+					<Type>BOOL</Type>
+				</Var>
+				<Var>
+					<Name>GVL_Devices.MRCO_ROUGH_VRC_06.q_xOPN_DO</Name>
 					<Type>BOOL</Type>
 				</Var>
 				<Var>
@@ -1971,9 +1995,12 @@ Link this to your VAT590 WcState variable under WcState]]>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_02.q_xCLS_DO" VarB="Channel 15^Output" AutoLink="true"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^MRCO_PNL1_EP08_EP2338-0002">
-				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xClsLS" VarB="Channel 2^Input"/>
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_03.i_xOpnLS" VarB="Channel 1^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_06.i_xClsLS" VarB="Channel 6^Input" AutoLink="true"/>
+				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_ROUGH_VRC_06.i_xOpnLS" VarB="Channel 5^Input"/>
 				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_03.q_xOPN_DO" VarB="Channel 11^Output" AutoLink="true"/>
+				<Link VarA="PlcTask Outputs^GVL_Devices.MRCO_ROUGH_VRC_06.q_xOPN_DO" VarB="Channel 15^Output"/>
 			</OwnerB>
 			<OwnerB Name="TIID^Device 1 (EtherCAT)^MRCO_PLC_E00_EK1200^MRCO_PLC_E13_EK1122^VCN_1_VAT590">
 				<Link VarA="PlcTask Inputs^GVL_Devices.MRCO_VCN_01.i_bValveEthCatStatus" VarB="WcState^WcState" AutoLink="true"/>
