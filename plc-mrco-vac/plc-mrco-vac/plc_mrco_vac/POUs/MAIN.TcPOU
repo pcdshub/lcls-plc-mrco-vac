@@ -271,7 +271,7 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
     iq_stValve=> );
 
-    //Normally Closed 'manual' valve
+    //Normally Closed valve
 
     MRCO_ROUGH_VRC_06(
     i_xExtILK_OK:= MRCO_ROUGH_VRC_02.iq_stValve.i_xClsLS,
