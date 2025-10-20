@@ -249,7 +249,11 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
     END_IF
 
 
-    //Normally Open Bypass Valve: VRC-02, free to open and close.
+    //Normally Open Bypass Valve: VRC-02, is interlocked with VRC-06 where only one can be open at a time
+
+    IF (xOnBeamline AND MRCO_ROUGH_VRC_06.iq_stValve.i_xOpnLS) THEN
+        MRCO_ROUGH_VRC_02.M_Set_CLS_SW(TRUE);
+    END_IF
 
     MRCO_ROUGH_VRC_02(
     i_xExtILK_OK:= True,
@@ -267,7 +271,7 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
     iq_stValve=> );
 
-    //Normally Closed 'manual' valve
+    //Normally Closed valve
 
     MRCO_ROUGH_VRC_06(
     i_xExtILK_OK:= MRCO_ROUGH_VRC_02.iq_stValve.i_xClsLS,
