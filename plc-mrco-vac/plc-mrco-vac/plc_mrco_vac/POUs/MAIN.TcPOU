@@ -274,7 +274,7 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
     //Normally Closed valve
 
     MRCO_ROUGH_VRC_06(
-    i_xExtILK_OK:= MRCO_ROUGH_VRC_02.iq_stValve.i_xClsLS,
+    i_xExtILK_OK:= MRCO_ROUGH_VRC_02.iq_stValve.i_xClsLS AND MRCO_ROUGH_VRC_04.iq_stValve.i_xClsLS,
     i_xOverrideMode:= xSystemOverrideMode_MRCO,
     iq_stValve=> );
 
@@ -302,7 +302,7 @@ fb_TD400Com_MRCO_MSC_PTM_01(SerialRXBuffer := SerialRXBuffer_MRCO_MSC_PTM_01,
                 i_xDis_DPIlk := FALSE,
                 i_xEPS_OK := TRUE,
                 i_xPMPS_OK := TRUE ,
-                i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS,
+                i_xExt_OK := MRCO_ROUGH_VRC_05.iq_stValve.i_xClsLS and MRCO_ROUGH_VRC_06.iq_stValve.i_xClsLS,
                 i_xOverrideMode := xSystemOverrideMode_MRCO,
                 i_xReset := False,
                 io_fbFFHWO :=dummy_FFFO,
